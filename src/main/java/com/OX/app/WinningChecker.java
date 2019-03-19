@@ -114,21 +114,21 @@ class WinningChecker {
 
         for(int i=(row+inLineToWin);i>=row;i--){
             for(int j=(col+inLineToWin);j>=col;j--){
-                if(i>=board.playingBoard.length || j>=board.playingBoard.length || i<0  || j<0){
+                if(i>=board.playingBoard.length-1 || j>=board.playingBoard.length-1|| i<0  || j<0){
                     continue;
                 }
-                if(board.playingBoard[i][j]==board.playingBoard[i+1][j+1] && board.playingBoard[i][j]==sign){
+                if(board.playingBoard[row][col]==board.playingBoard[i+1][j+1] && board.playingBoard[i][j]==sign){
                     diagonalCounter++;
                 }
             }
         }
 
-        for(int i=(row-inLineToWin);i<=row;i++){
-            for(int j=(col-inLineToWin);j<=col;j++){
-                if(i>=board.playingBoard.length || j>=board.playingBoard.length || i<0  || j<0){
+        for(int i=(row-inLineToWin); i<row;i++){
+            for(int j=(col-inLineToWin);j<col;j++){
+                if(i>=board.playingBoard.length || j>=board.playingBoard.length|| i<0  || j<0){
                     continue;
                 }
-                if(board.playingBoard[i][j]==board.playingBoard[i+1][j-1] && board.playingBoard[i][j]==sign){
+                if(board.playingBoard[row][col]==board.playingBoard[i+1][j+1] && board.playingBoard[i][j]==sign){
                     diagonalCounter++;
                 }
             }

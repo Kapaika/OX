@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /**
- * @author Bartosz Kupajski
+ *  Bartosz Kupajski
  */
 @Test
 public class WinningTest {

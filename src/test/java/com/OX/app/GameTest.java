@@ -46,7 +46,8 @@ public class GameTest {
         game.addPlayer(playerOne);
         game.addPlayer(playerTwo);
         game.init();
-        Assert.assertNotEquals(playerOne.sign,playerTwo.sign);
+        assert playerOne.sign == Sign.O || playerOne.sign == Sign.X;
+        assert playerTwo.sign == Sign.O || playerTwo.sign == Sign.X;
     }
 
 }

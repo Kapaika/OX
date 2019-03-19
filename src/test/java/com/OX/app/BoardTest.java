@@ -33,4 +33,36 @@ public class BoardTest {
         board.createPlayingBoard(row, col);
     }
 
+    @DataProvider
+    public Object[][] fillingWithSignCreation(){
+        return new Object[][]{
+                {0,0},
+                {0,1},
+                {0,2},
+                {1,0},
+                {1,1},
+                {1,2},
+                {2,0},
+                {2,1},
+                {2,2},
+        };
+    }
+
+    @Test(dataProvider = "fillingWithSignCreation")
+    public void testOfCreationTheBoardByBoardCreator(int row, int col){
+        BoardCreator bd = new BoardCreator(3,3);
+        Sign[][] tabXO = bd.createBoard();
+        assert tabXO[row][col]==Sign.N;
+    }
+
+    @Test
+    public void testPrintBoard(){
+        BoardCreator bd = new BoardCreator(3,3);
+        Sign[][] tabXO = bd.createBoard();
+        BoardPrinter boardPrinter = new BoardPrinter();
+        boardPrinter.printBoard(tabXO);
+    }
+
+
+
 }

@@ -11,6 +11,7 @@ import java.util.List;
  class Game {
 
     private ArrayList<Player> listOfPlayers = new ArrayList<>();
+    private Board board = new Board();
 
     ArrayList<Player> getListOfPlayers() {
         return listOfPlayers;
@@ -24,7 +25,8 @@ import java.util.List;
     }
 
     void init() {
-       listOfPlayers.get(0).setSign(Sign.O);
-       listOfPlayers.get(1).setSign(Sign.X);
+       listOfPlayers.get(0).setState();
+       listOfPlayers.get(1).setState();
     }
+
 }

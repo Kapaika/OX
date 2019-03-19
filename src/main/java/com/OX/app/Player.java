@@ -21,7 +21,7 @@ class Player implements StateChangeInterface {
     @Override
     public void setState() {
         Random random = new Random();
-        sign = Sign.values()[random.nextInt(1)];
+        sign = Sign.values()[random.nextInt(2)];
     }
 
     @Override

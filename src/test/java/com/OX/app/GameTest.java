@@ -39,29 +39,21 @@ public class GameTest {
         game.addPlayer(new Player("Marcin"));
     }
 
-    @Test
-    public void testIfPlayersHaveDifferentSigns(){
-        Game game = new Game();
-        Player playerOne = new Player("Bartosz");
-        Player playerTwo = new Player("Maciej");
-        game.addPlayer(playerOne);
-        game.addPlayer(playerTwo);
-        game.init();
-        assert playerOne.sign == Sign.O || playerOne.sign == Sign.X;
-        assert playerTwo.sign == Sign.O || playerTwo.sign == Sign.X;
-    }
-
-    @Test
     public void testIfBoardIsCreatedWhenGameStarted(){
         Game game = new Game();
         Player playerOne = new Player("Bartosz");
         Player playerTwo = new Player("Maciej");
         game.addPlayer(playerOne);
         game.addPlayer(playerTwo);
-        Coordinates coordinates = new Coordinates(4,4);
-        BoardCreator boardCreator = new BoardCreator(coordinates.x,coordinates.y);
+        Coordinates boardCreatingCoordinates = new Coordinates(100,100);
+        BoardCreator boardCreator = new BoardCreator(boardCreatingCoordinates.x,boardCreatingCoordinates.y);
         Board board = new Board(boardCreator.createBoard());
         game.setBoard(board);
         game.init();
     }
+
+    public void testIfMoveCanBePlayed(){
+
+    }
+
 }

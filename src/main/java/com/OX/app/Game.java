@@ -29,7 +29,6 @@ import java.util.ArrayList;
 
         listOfPlayers.get(0).setState();
         listOfPlayers.get(1).setState();
-
         boardPrinter.printBoard();
 
     }

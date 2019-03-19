@@ -18,6 +18,10 @@ class Player implements StateChangeInterface {
         this.sign = sign;
     }
 
+    public Sign getSign() {
+        return sign;
+    }
+
     @Override
     public void setState() {
         Random random = new Random();

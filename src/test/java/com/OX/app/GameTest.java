@@ -58,7 +58,7 @@ public class GameTest {
         Player playerTwo = new Player("Maciej");
         game.addPlayer(playerOne);
         game.addPlayer(playerTwo);
-        Coordinates coordinates = new Coordinates(3,3);
+        Coordinates coordinates = new Coordinates(4,4);
         BoardCreator boardCreator = new BoardCreator(coordinates.x,coordinates.y);
         Board board = new Board(boardCreator.createBoard());
         game.setBoard(board);

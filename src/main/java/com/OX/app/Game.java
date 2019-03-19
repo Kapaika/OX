@@ -1,9 +1,7 @@
 package com.OX.app;
 
 import Exceptions.TooManyPlayersException;
-
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author Bartosz Kupajski
@@ -24,6 +22,7 @@ import java.util.List;
         listOfPlayers.add(player);
     }
 
+
     void init() {
 
         BoardPrinter boardPrinter = new BoardPrinter(this.board);
@@ -35,7 +34,7 @@ import java.util.List;
 
     }
 
-    public void setBoard(Board board) {
+    void setBoard(Board board) {
         this.board = board;
     }
 }

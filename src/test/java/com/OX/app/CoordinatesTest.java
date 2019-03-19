@@ -13,7 +13,6 @@ public class CoordinatesTest {
     public void createCoordinates(){
         Coordinates coordinates = new Coordinates(3,3);
 
-
         assert coordinates.x==3:"Wrong coordinates implementation";
         assert coordinates.y==3:"Wrong coordinates implementation";
     }

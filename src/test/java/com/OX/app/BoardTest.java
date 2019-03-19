@@ -38,12 +38,12 @@ public class BoardTest {
         assert tabXO[row][col]==Sign.N;
     }
 
-//    @Test
-//    public void testPrintBoard(){
-//        BoardCreator bd = new BoardCreator(3,3);
-//        Sign[][] tabXO = bd.createBoard();
-//        BoardPrinter boardPrinter = new BoardPrinter();
-//        boardPrinter.printBoard(tabXO);
-//    }
+    @Test
+    public void testPrintBoard(){
+        BoardCreator bd = new BoardCreator(3,4);
+        Board board =  new Board(bd.createBoard());
+        BoardPrinter boardPrinter = new BoardPrinter(board);
+        boardPrinter.printBoard();
+    }
 
 }

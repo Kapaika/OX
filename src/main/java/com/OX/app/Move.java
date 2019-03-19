@@ -21,6 +21,8 @@ public class Move {
 
     void makeAMove(Board tabX0) {
 
+        int length = tabX0.playingBoard.length;
+
         if(tabX0.playingBoard[coordinates.x][coordinates.y]!=Sign.N ){
             throw new FieldAlreadyTakenException();
         }else{

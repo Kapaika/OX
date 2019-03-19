@@ -140,6 +140,8 @@ public class WinningTest {
         return new Object[][] {
                 {0,1,2,3,Sign.X},
                 {3,2,1,0,Sign.X},
+                {2,3,1,0,Sign.X},
+                {4,3,2,0,Sign.X},
         };
     }
 

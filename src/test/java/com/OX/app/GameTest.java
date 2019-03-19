@@ -39,6 +39,7 @@ public class GameTest {
         game.addPlayer(new Player("Marcin"));
     }
 
+    @Test
     public void testIfPlayersHaveDifferentSigns(){
         Game game = new Game();
         Player playerOne = new Player("Bartosz");
@@ -50,4 +51,17 @@ public class GameTest {
         assert playerTwo.sign == Sign.O || playerTwo.sign == Sign.X;
     }
 
+    @Test
+    public void testIfBoardIsCreatedWhenGameStarted(){
+        Game game = new Game();
+        Player playerOne = new Player("Bartosz");
+        Player playerTwo = new Player("Maciej");
+        game.addPlayer(playerOne);
+        game.addPlayer(playerTwo);
+        Coordinates coordinates = new Coordinates(3,3);
+        BoardCreator boardCreator = new BoardCreator(coordinates.x,coordinates.y);
+        Board board = new Board(boardCreator.createBoard());
+        game.setBoard(board);
+        game.init();
+    }
 }

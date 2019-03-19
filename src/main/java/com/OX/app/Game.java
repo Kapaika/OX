@@ -11,7 +11,7 @@ import java.util.List;
  class Game {
 
     private ArrayList<Player> listOfPlayers = new ArrayList<>();
-    private Board board = new Board();
+    private Board board;
 
     ArrayList<Player> getListOfPlayers() {
         return listOfPlayers;
@@ -25,8 +25,17 @@ import java.util.List;
     }
 
     void init() {
-       listOfPlayers.get(0).setState();
-       listOfPlayers.get(1).setState();
+
+        BoardPrinter boardPrinter = new BoardPrinter(this.board);
+
+        listOfPlayers.get(0).setState();
+        listOfPlayers.get(1).setState();
+
+        boardPrinter.printBoard();
+
     }
 
+    public void setBoard(Board board) {
+        this.board = board;
+    }
 }

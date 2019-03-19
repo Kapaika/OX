@@ -6,9 +6,8 @@ package com.OX.app;
  class Board {
 
     Sign[][] playingBoard;
-    Game game;
 
-    Sign[][] createPlayingBoard(int row, int col) {
-        return playingBoard = new Sign[row][col];
+    public Board(Sign[][] playingBoard) {
+        this.playingBoard = playingBoard;
     }
 }

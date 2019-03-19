@@ -5,7 +5,15 @@ package com.OX.app;
  */
  class BoardPrinter {
 
-    void printBoard(Sign[][] tabXO){
+     Board board;
+
+    public BoardPrinter(Board board) {
+        this.board = board;
+    }
+
+    void printBoard(){
+
+        Sign[][] tabXO = board.playingBoard;
 
         for (int i = 0; i < tabXO.length; i++) {
             for (int j = 0; j < tabXO.length; j++) {
@@ -19,7 +27,7 @@ package com.OX.app;
             if(i!=tabXO.length-1) {
                 for (int j = 0; j < tabXO.length; j++) {
                     if (j == tabXO.length - 1) {
-                        System.out.println("--");
+                        System.out.println("---");
                     } else {
                         System.out.print("---+");
                     }

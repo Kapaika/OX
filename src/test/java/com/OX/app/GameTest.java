@@ -39,21 +39,17 @@ public class GameTest {
         game.addPlayer(new Player("Marcin"));
     }
 
-    public void testIfBoardIsCreatedWhenGameStarted(){
+
+    public void testIfPlayerHaveChanged(){
         Game game = new Game();
         Player playerOne = new Player("Bartosz");
         Player playerTwo = new Player("Maciej");
         game.addPlayer(playerOne);
         game.addPlayer(playerTwo);
-        Coordinates boardCreatingCoordinates = new Coordinates(100,100);
-        BoardCreator boardCreator = new BoardCreator(boardCreatingCoordinates.x,boardCreatingCoordinates.y);
-        Board board = new Board(boardCreator.createBoard());
-        game.setBoard(board);
-        game.init();
+        List<Player> playerList = game.getListOfPlayers();
+        Player playerChangedToPlayerOne = game.changePlayer(playerList,playerTwo);
+        Player playerChangedToPlayerTwo = game.changePlayer(playerList,playerOne);
+        assert playerChangedToPlayerOne.equals(playerOne);
+        assert playerChangedToPlayerTwo.equals(playerTwo);
     }
-
-    public void testIfMoveCanBePlayed(){
-
-    }
-
 }

@@ -18,7 +18,7 @@ public class WinningTest {
                 {2,0,1,2,Sign.X},
                 {0,0,1,2,Sign.O},
                 {1,0,1,2,Sign.O},
-                {2,0,1,2,Sign.O},
+                {4,0,1,2,Sign.O},
         };
     }
 
@@ -57,7 +57,7 @@ public class WinningTest {
         Player player = new Player("Bartosz");
         player.setSign(sign);
         Coordinates coordinates1 = new Coordinates(x,x);
-        Coordinates coordinates2 = new Coordinates(y,y);
+        Coordinates coordinates2 = new Coordinates(x,y);
         Coordinates coordinates3 = new Coordinates(z,z);
         Move firstMove = new Move(coordinates1,player);
         firstMove.makeAMove(board);
@@ -78,7 +78,6 @@ public class WinningTest {
                 {1,1,2,3,Sign.X},
                 {2,1,2,3,Sign.O},
                 {3,1,2,3,Sign.O},
-                {5,7,8,9,Sign.X},
                 {6,4,5,6,Sign.O},
                 {0,0,2,1,Sign.O},
         };
@@ -86,7 +85,7 @@ public class WinningTest {
 
     @Test(dataProvider = "winningHorizontalConditionInBothLinesCreated")
     public void testIfWinningCheckerIsWorkingHorizontalInBothWays(int x, int y, int z,int v, Sign sign){
-        BoardCreator boardCreator = new BoardCreator(15,15);
+        BoardCreator boardCreator = new BoardCreator(7,7);
         Board board = new Board(boardCreator.createBoard());
         Player player = new Player("Bartosz");
         player.setSign(sign);
@@ -154,6 +153,34 @@ public class WinningTest {
         Coordinates coordinates1 = new Coordinates(x,x);
         Coordinates coordinates2 = new Coordinates(y,y);
         Coordinates coordinates3 = new Coordinates(z,z);
+        Move firstMove = new Move(coordinates1,player);
+        firstMove.makeAMove(board);
+        Move secondMove = new Move(coordinates2,player);
+        secondMove.makeAMove(board);
+        Move thirdMove = new Move(coordinates3,player);
+        thirdMove.makeAMove(board);
+        WinningChecker winningChecker = new WinningChecker();
+        Boolean result = winningChecker.check(board,firstMove,3);
+        Assert.assertTrue(result);
+    }
+
+    @DataProvider
+    public Object[][] winningReverseDiagonalConditionInBothLinesCreated(){
+        return new Object[][] {
+                {0,1,2,3,4,Sign.X},
+
+        };
+    }
+
+    @Test(dataProvider = "winningReverseDiagonalConditionInBothLinesCreated")
+    public void testWinningReverseDiagonalScenario(int x, int y, int z, int v, int b, Sign sign){
+        BoardCreator boardCreator = new BoardCreator(5,    5);
+        Board board = new Board(boardCreator.createBoard());
+        Player player = new Player("Bartosz");
+        player.setSign(sign);
+        Coordinates coordinates1 = new Coordinates(z,z);
+        Coordinates coordinates2 = new Coordinates(y,v);
+        Coordinates coordinates3 = new Coordinates(x,b);
         Move firstMove = new Move(coordinates1,player);
         firstMove.makeAMove(board);
         Move secondMove = new Move(coordinates2,player);

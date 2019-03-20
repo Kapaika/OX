@@ -72,4 +72,28 @@ public class MoveTest {
         assert board.playingBoard[firstPlayerCoordinates.x][firstPlayerCoordinates.y] == Sign.O;
     }
 
+
+    @DataProvider
+    public Object[][] arrayOfBoundExceptionChecker(){
+        return new Object[][]{
+                {8,5,Sign.O},
+                {Integer.MAX_VALUE,5,Sign.O},
+        };
+    }
+
+
+    @Test(dataProvider = "arrayOfBoundExceptionChecker", expectedExceptions = {ArrayIndexOutOfBoundsException.class})
+    public void testArrayOfTheBoundException(int x, int y, Sign sign){
+        BoardCreator boardCreator = new BoardCreator(y,    y);
+        Board board = new Board(boardCreator.createBoard());
+        Player player = new Player("Bartosz");
+        player.setSign(sign);
+        Coordinates coordinates1 = new Coordinates(x,x);
+        Move firstMove = new Move(coordinates1,player);
+        firstMove.makeAMove(board);
+
+    }
+
+
+
 }

@@ -19,9 +19,9 @@ public class Move {
         return coordinates;
     }
 
-    void makeAMove(Board tabX0) {
 
-        int length = tabX0.playingBoard.length;
+    //TODO:Obsluzyc wyjatek wyzej
+    void makeAMove(Board tabX0) throws ArrayIndexOutOfBoundsException {
 
         if(tabX0.playingBoard[coordinates.x][coordinates.y]!=Sign.N ){
             throw new FieldAlreadyTakenException();

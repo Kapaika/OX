@@ -39,8 +39,9 @@ class WinningChecker {
         Boolean verticalResult = verticalChecker(row,col,inLineToWin,board,playersSign);
         Boolean horizontalResult = horizontalChecker(row,col,inLineToWin,board,playersSign);
         Boolean diagonalResult = diagonalChecker(row,col,inLineToWin,board,playersSign);
+        Boolean reverseDiagonalResult = reverseDiagonalChecker(row,col,inLineToWin,board,playersSign);
 
-        return verticalResult||horizontalResult||diagonalResult;
+        return verticalResult||horizontalResult||diagonalResult||reverseDiagonalResult;
     }
 
     private boolean horizontalChecker(Integer row, Integer col, Integer inLineToWin, Board board, Sign sign){
@@ -49,7 +50,7 @@ class WinningChecker {
         //Checking if horizontally on right from last move You have acquired line to win
         for(int i=row ; i==row; i++){
             for(int j=(col + inLineToWin);j>col;j--){
-                if(i>=board.playingBoard.length || j>=board.playingBoard.length || i<0  || j<0){
+                if(i>board.playingBoard.length - 1 || j>board.playingBoard[i].length -1 || i<0  || j<0){
                     continue;
                 }
                 if(board.playingBoard[i][j]==sign){
@@ -61,7 +62,7 @@ class WinningChecker {
         //Checking if horizontally on left from last move position You have acquired line to win
         for(int i=row; i==row; i++){
             for(int j=(col-inLineToWin);j<col;j++){
-                if(i>=board.playingBoard.length || j>=board.playingBoard.length || i<0  || j<0){
+                if(i>board.playingBoard.length - 1 || j>board.playingBoard[i].length -1 || i<0  || j<0){
                     continue;
                 }
                 if(board.playingBoard[i][j]==sign){
@@ -135,6 +136,39 @@ class WinningChecker {
         }
 
         if(diagonalCounter==2){
+            return true;
+        }
+        return false;
+    }
+
+    private boolean reverseDiagonalChecker(Integer row, Integer col, Integer inLineToWin, Board board, Sign sign){
+
+        Integer reverseDiagonalCounter = 0;
+
+        //TODO: Sprawdzić graniczne przypadki
+        for(int i=(row-inLineToWin);i<row;i++){
+            for(int j=(col+inLineToWin);j>col;j--){
+                if(i>board.playingBoard.length-1 || j>board.playingBoard.length-1|| i<0  || j<0){
+                    continue;
+                }
+                if(board.playingBoard[i][j]==board.playingBoard[i+1][j-1] && board.playingBoard[i][j]==sign){
+                    reverseDiagonalCounter++;
+                }
+            }
+        }
+
+        for(int i=(row+inLineToWin); i>row;i--){
+            for(int j=(col-inLineToWin);j<col;j++){
+                if(i>=board.playingBoard.length || j>=board.playingBoard.length|| i<0  || j<0){
+                    continue;
+                }
+                if(board.playingBoard[i][j]==board.playingBoard[i-1][j+1] && board.playingBoard[i][j]==sign){
+                    reverseDiagonalCounter++;
+                }
+            }
+        }
+
+        if(reverseDiagonalCounter==2){
             return true;
         }
         return false;

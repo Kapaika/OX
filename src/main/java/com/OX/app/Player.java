@@ -8,7 +8,8 @@ import java.util.Random;
 class Player implements StateChangeInterface {
 
     Sign sign;
-    private String name;
+    String name;
+    Integer score;
 
     Player(String name) {
         this.name = name;

@@ -1,3 +1,3 @@
 | PESIMISTIC                                 |  REALISTIC                  |  OPTIMISTIC                   |      
 |--------------------------------------------|-----------------------------|-------------------------------|
-|  I will be able to show that the Board is printed| I will be able to take a move and win single game| I will be able to make a move and win ( best in 3 game) and choose how many Xs or Os is winnign|
+| I will not be able to play a single game, just print and insert X/O| I will be able to take a move and win single game| I will be able to make a move and win ( best in 3 game) and choose how many Xs or Os is winnign|

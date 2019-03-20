@@ -5,7 +5,8 @@ package com.OX.app;
  */
  class BoardPrinter {
 
-     Board board;
+     private Board board;
+
      BoardPrinter(Board board) {
         this.board = board;
     }

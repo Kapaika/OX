@@ -5,11 +5,11 @@ import java.util.Random;
 /**
  * @author Bartosz Kupajski
  */
-class Player implements StateChangeInterface {
+class Player{
 
     Sign sign;
     String name;
-    Integer score;
+    int score;
 
     Player(String name) {
         this.name = name;
@@ -19,23 +19,16 @@ class Player implements StateChangeInterface {
         this.sign = sign;
     }
 
+    boolean isWinner(){
+        return this.score >= 6;
+    }
+
     public Sign getSign() {
         return sign;
     }
 
     @Override
-    public void setState() {
-        Random random = new Random();
-        sign = Sign.values()[random.nextInt(2)];
+    public String toString() {
+        return  name + " " + sign;
     }
-
-    @Override
-    public void changeState() {
-        if(this.sign == Sign.X){
-            this.sign=Sign.O;
-        }else if(this.sign == Sign.O){
-            this.sign =Sign.X;
-        }
-    }
-
 }

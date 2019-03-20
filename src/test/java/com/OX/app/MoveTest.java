@@ -16,7 +16,7 @@ public class MoveTest {
         BoardCreator boardCreator = new BoardCreator(3,3);
         Board board = new Board(boardCreator.createBoard());
         Player player = new Player("Bartosz");
-        player.setState();
+        player.setSign(Sign.O);
         Coordinates coordinates = new Coordinates(0,0);
         Move move = new Move(coordinates,player);
         move.makeAMove(board);
@@ -44,7 +44,7 @@ public class MoveTest {
         BoardCreator boardCreator = new BoardCreator(3,3);
         Board board = new Board(boardCreator.createBoard());
         Player player = new Player("Bartosz");
-        player.setState();
+        player.setSign(Sign.O);
         Coordinates coordinates = new Coordinates(x,y);
         Move move = new Move(coordinates,player);
         move.makeAMove(board);

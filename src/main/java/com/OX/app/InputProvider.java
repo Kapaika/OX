@@ -5,12 +5,16 @@ import java.util.Scanner;
 /**
  * @author Bartosz Kupajski
  */
-public class InputProvider {
+
+class InputProvider {
 
     private static final Scanner inputProvider = new Scanner(System.in);
 
-    public static int nextInt() {
+    static int nextInt() {
         return inputProvider.nextInt();
+    }
+    static String nextLine() {
+        return inputProvider.nextLine();
     }
 
 }

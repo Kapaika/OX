@@ -18,8 +18,8 @@ public class PlayerTest {
 
     public void testCheckingTheCorrectnessOfPlayerSignsX(){
         Player playerX = new Player("Bartosz");
-        playerX.setState();
-        assert playerX.sign == Sign.O || playerX.sign == Sign.X;
+        playerX.setSign(Sign.O);
+        assert playerX.sign == Sign.O;
     }
 
     @DataProvider
@@ -34,14 +34,5 @@ public class PlayerTest {
         };
     }
 
-    @Test(dataProvider = "numberOfChangingSignMethodsAndSignResult")
-    public void testChangingSignMethod(int numberOfMethodExecution, Sign currentSign, Sign expectedSign){
-        Player player = new Player("Bartosz");
-        player.setSign(currentSign);
-        for(int i = 1 ; i<=numberOfMethodExecution; i++){
-            player.changeState();
-        }
-        Assert.assertEquals(player.sign,expectedSign);
-    }
 
 }

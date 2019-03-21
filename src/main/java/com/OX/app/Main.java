@@ -16,7 +16,9 @@ public class Main {
         int gameStarterRequirements=0;
 
 
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("OX",new Locale("pl","PL"));
+        Language resourceBundle = Language.getInstance();
+
+        //ResourceBundle resourceBundle = ResourceBundle.getBundle("OX",new Locale("pl","PL"));
 
         while(gameStarterRequirements<4){
 

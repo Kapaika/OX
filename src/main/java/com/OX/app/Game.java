@@ -24,8 +24,8 @@ import java.util.List;
         Player currentPlayer = gameCompetitors.startingPlayer;
 
         singleGame(listOfPlayers,currentPlayer,boardCreator);
-
-        System.out.println(listOfPlayers.get(0).name + " " + listOfPlayers.get(0).score + " | " + listOfPlayers.get(1).name + " "  + listOfPlayers.get(1).score);
+        gameResult(currentPlayer,changePlayer(listOfPlayers,currentPlayer));
+        //System.out.println(listOfPlayers.get(0).name + " " + listOfPlayers.get(0).score + " | " + listOfPlayers.get(1).name + " "  + listOfPlayers.get(1).score);
     }
 
     private Player changePlayer(List<Player> list, Player player){
@@ -82,7 +82,6 @@ import java.util.List;
                     break;
                 }
                 winResult = winningChecker.check(board,move,3);
-
                 if(winResult){
                     System.out.println(currentPlayer + " won a round!");
                     currentPlayer.score = currentPlayer.score + 3 ;
@@ -92,7 +91,15 @@ import java.util.List;
                 currentPlayer = changePlayer(listOfPlayers,currentPlayer);
             }
         }
+    }
 
-
+    private void gameResult(Player firstPlayer, Player secondPlayer){
+        if(firstPlayer.score>secondPlayer.score){
+            System.out.println("Wygral" + firstPlayer);
+        }else if(firstPlayer.score<secondPlayer.score){
+            System.out.println("Wygral" + secondPlayer);
+        }else{
+            System.out.println("Remis");
+        }
     }
 }

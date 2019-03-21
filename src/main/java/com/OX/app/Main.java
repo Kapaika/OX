@@ -8,25 +8,29 @@ import java.util.Scanner;
 /**
  * @author Bartosz Kupajski
  */
-public class StartingMain {
+public class Main {
 
     public static void main(String[] args) {
+
         StringBuilder stringBuilder = new StringBuilder();
+        Scanner scanner = null;
         if (args.length == 1) {
             try (BufferedReader br = new BufferedReader(new FileReader(args[0]))) {
                 String line;
                 while ((line = br.readLine()) != null) {
-                    stringBuilder.append(line).append(System.lineSeparator());
+                    stringBuilder.append(line);
+                    stringBuilder.append("\n");
                 }
-                Menu menu = new Menu(new InputProvider(new Scanner(stringBuilder.toString())));
-                menu.start();
+                scanner = new Scanner(stringBuilder.toString());
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        } else {
-            Menu menu = new Menu(new InputProvider(new Scanner(System.in)));
-            menu.start();
         }
+        if (scanner == null) {
+            scanner = new Scanner(System.in);
+        }
+        Menu menu = new Menu(new InputProvider(scanner));
+        menu.start();
 
     }
 

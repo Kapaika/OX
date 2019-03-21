@@ -10,6 +10,9 @@ import Exceptions.FieldAlreadyTakenException;
     Coordinates coordinates;
     Player player;
 
+    public Move() {
+    }
+
     Move(Coordinates coordinates, Player player) {
         this.coordinates = coordinates;
         this.player = player;

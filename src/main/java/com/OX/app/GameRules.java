@@ -1,25 +1,22 @@
 package com.OX.app;
 
-import Exceptions.TooManyPlayersException;
-
-import java.util.ArrayList;
-
 /**
  * @author Bartosz Kupajski
  */
-class GameRules {
+ class GameRules {
 
     Integer inLineToWinCondition;
     Coordinates sizeOfABoard;
 
-    void setInLineToWinCondition(Integer inLineToWin){
-        System.out.println("How many in line to win?");
+    void setInLineToWinCondition(Integer inLineToWin) throws toSmallWinningConditionExceptionException {
+        if(inLineToWin<3){
+            throw new toSmallWinningConditionExceptionException();
+        }
         this.inLineToWinCondition = inLineToWin;
+        InputProvider.nextLine();
     }
 
     void setSizeOfABoard(int a, int b){
-//        Integer a = InputProvider.nextInt();
-//        Integer b = InputProvider.nextInt();s
         this.sizeOfABoard = new Coordinates(a,b);
     }
 

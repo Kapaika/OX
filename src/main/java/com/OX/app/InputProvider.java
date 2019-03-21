@@ -6,10 +6,9 @@ import java.util.Scanner;
  * @author Bartosz Kupajski
  */
 
-class InputProvider {
+ class InputProvider {
 
     private static final Scanner inputProvider = new Scanner(System.in);
-
     static int nextInt() {
         return inputProvider.nextInt();
     }

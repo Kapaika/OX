@@ -12,14 +12,14 @@ import java.util.List;
 @Test
 public class GameTest {
 
-    public void testGameCreation(){
-        Game game = new Game();
-    }
-
-    public void testIfGameIsNotANull(){
-        Game game = new Game();
-        Assert.assertNotNull(game);
-    }
+//    public void testGameCreation(){
+//        Game game = new Game();
+//    }
+//
+//    public void testIfGameIsNotANull(){
+//        Game game = new Game();
+//        Assert.assertNotNull(game);
+//    }
 
 //    public void testIfPlayersCanBeAddToTheList(){
 //        Game game = new Game();

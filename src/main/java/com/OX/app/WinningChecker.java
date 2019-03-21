@@ -12,30 +12,6 @@ class WinningChecker {
         Integer row = coordinates.x;
         Integer col = coordinates.y;
 
-        //Checking if horizontally on right from last move You have acquired line to win
-//        for(int i=row ; i==row; i++){
-//            for(int j=(col + inLineToWin);j>col;j--){
-//                if(i>board.playingBoard.length || j>board.playingBoard.length || i<0  || j<0){
-//                    break;
-//                }
-//                if(board.playingBoard[i][j]==move.player.getSign()){
-//                    horizontalCounter++;
-//                }
-//            }
-//        }
-//
-//        //Checking if horizontally on left from last move position You have acquired line to win
-//        for(int i=row; i==row; i++){
-//            for(int j=(col-inLineToWin);j<col;j++){
-//                if(i>board.playingBoard.length || j>board.playingBoard.length || i<0  || j<0){
-//                    break;
-//                }
-//                if(board.playingBoard[i][j]==move.player.getSign()){
-//                    horizontalCounter++;
-//                }
-//            }
-//        }
-
         Boolean verticalResult = verticalChecker(row,col,inLineToWin,board,playersSign);
         Boolean horizontalResult = horizontalChecker(row,col,inLineToWin,board,playersSign);
         Boolean diagonalResult = diagonalChecker(row,col,inLineToWin,board,playersSign);

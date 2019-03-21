@@ -24,12 +24,12 @@ import java.util.ArrayList;
 
     void addingPlayersWithNameAndSign(String name){
         if(listOfPlayers.size()<1){
-            System.out.println("First player name:" + name);
+            System.out.println("First player name: " + name);
             Player player = new Player(name);
             player.setSign(Sign.O);
             addPlayer(player);
         }else{
-            System.out.println("Second player name:" + name);
+            System.out.println("Second player name: " + name);
             Player player = new Player(name);
             player.setSign(Sign.X);
             addPlayer(player);

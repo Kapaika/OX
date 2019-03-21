@@ -8,9 +8,12 @@ package com.OX.app;
     Integer inLineToWinCondition;
     Coordinates sizeOfABoard;
 
-    void setInLineToWinCondition(Integer inLineToWin) throws toSmallWinningConditionExceptionException {
+    void setInLineToWinCondition(Integer inLineToWin) throws toSmallWinningConditionExceptionException, winningConditionMoreThanASizeOfBoard {
         if(inLineToWin<3){
             throw new toSmallWinningConditionExceptionException();
+        }
+        if(inLineToWin>sizeOfABoard.x || inLineToWin>sizeOfABoard.y){
+            throw new winningConditionMoreThanASizeOfBoard();
         }
         this.inLineToWinCondition = inLineToWin;
         InputProvider.nextLine();

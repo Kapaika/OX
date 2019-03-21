@@ -70,7 +70,7 @@
                         <index>true</index>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>#FQN of your MainClass</mainClass>
+                            <mainClass>com.OX.app.Main</mainClass>
                         </manifest>
                         <manifestEntries>
                             <mode>development</mode>
@@ -92,5 +92,10 @@
                 <version>${version.plugin.maven.resources}</version>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/java/resource</directory>
+            </resource>
+        </resources>
     </build>
 </project>

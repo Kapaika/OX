@@ -1,0 +1,14 @@
+com/OX/app/LanguageTest.class
+com/OX/app/GameTest.class
+com/OX/app/GameCompetitorsTest.class
+com/OX/app/BoardTest.class
+com/OX/app/CoordinatesTest.class
+com/OX/app/PlayerTest.class
+com/OX/app/SignTest.class
+com/OX/app/MenuTest.class
+com/OX/app/DisplayBoardTest.class
+com/OX/app/GameRulesTest.class
+com/OX/app/WinningTest.class
+com/OX/app/TieTest.class
+com/OX/app/MoveTest.class
+com/OX/app/InputProviderTest.class

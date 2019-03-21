@@ -1,0 +1,1165 @@
+<html>
+<head>
+<title>TestNG:  Command line test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Command line test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>74/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Mar 21 17:55:46 CET 2019</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (142 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.OX.app.CoordinatesTest.createCoordinates()'><b>createCoordinates</b><br>Test class: com.OX.app.CoordinatesTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.CoordinatesTest@6b26e945</td></tr>
+<tr>
+<td title='com.OX.app.PlayerTest.createPlayerTest()'><b>createPlayerTest</b><br>Test class: com.OX.app.PlayerTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.PlayerTest@45b9a632</td></tr>
+<tr>
+<td title='com.OX.app.GameTest.endToEndTestTie()'><b>endToEndTestTie</b><br>Test class: com.OX.app.GameTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.GameTest@18ce0030</td></tr>
+<tr>
+<td title='com.OX.app.GameTest.endToEndTestWinDiagonal()'><b>endToEndTestWinDiagonal</b><br>Test class: com.OX.app.GameTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.GameTest@18ce0030</td></tr>
+<tr>
+<td title='com.OX.app.GameTest.endToEndTestWinHorizontal()'><b>endToEndTestWinHorizontal</b><br>Test class: com.OX.app.GameTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.GameTest@18ce0030</td></tr>
+<tr>
+<td title='com.OX.app.GameTest.endToEndTestWinReverseDiagonal()'><b>endToEndTestWinReverseDiagonal</b><br>Test class: com.OX.app.GameTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.GameTest@18ce0030</td></tr>
+<tr>
+<td title='com.OX.app.MenuTest.firstMenuTest()'><b>firstMenuTest</b><br>Test class: com.OX.app.MenuTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.MenuTest@318ba8c8</td></tr>
+<tr>
+<td title='com.OX.app.MoveTest.testArrayOfTheBoundException()'><b>testArrayOfTheBoundException</b><br>Test class: com.OX.app.MoveTest</td>
+<td><div><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testArrayOfTheBoundException(MoveTest.java:107)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1362728240", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1362728240'><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testArrayOfTheBoundException(MoveTest.java:107)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.MoveTest@3c9d0b9d</td></tr>
+<tr>
+<td title='com.OX.app.MoveTest.testArrayOfTheBoundException()'><b>testArrayOfTheBoundException</b><br>Test class: com.OX.app.MoveTest<br>Parameters: 8, 5, O</td>
+<td><div><pre>java.lang.ArrayIndexOutOfBoundsException: Index 8 out of bounds for length 5
+	at com.OX.app.Move.makeAMove(Move.java:17)
+	at com.OX.app.MoveTest.testArrayOfTheBoundException(MoveTest.java:92)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1092572064", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1092572064'><pre>java.lang.ArrayIndexOutOfBoundsException: Index 8 out of bounds for length 5
+	at com.OX.app.Move.makeAMove(Move.java:17)
+	at com.OX.app.MoveTest.testArrayOfTheBoundException(MoveTest.java:92)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.MoveTest@3c9d0b9d</td></tr>
+<tr>
+<td title='com.OX.app.MoveTest.testArrayOfTheBoundException()'><b>testArrayOfTheBoundException</b><br>Test class: com.OX.app.MoveTest<br>Parameters: 2147483647, 5, O</td>
+<td><div><pre>java.lang.ArrayIndexOutOfBoundsException: Index 2147483647 out of bounds for length 5
+	at com.OX.app.Move.makeAMove(Move.java:17)
+	at com.OX.app.MoveTest.testArrayOfTheBoundException(MoveTest.java:92)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace728885526", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace728885526'><pre>java.lang.ArrayIndexOutOfBoundsException: Index 2147483647 out of bounds for length 5
+	at com.OX.app.Move.makeAMove(Move.java:17)
+	at com.OX.app.MoveTest.testArrayOfTheBoundException(MoveTest.java:92)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.MoveTest@3c9d0b9d</td></tr>
+<tr>
+<td title='com.OX.app.PlayerTest.testCheckingTheCorrectnessOfPlayerSignsX()'><b>testCheckingTheCorrectnessOfPlayerSignsX</b><br>Test class: com.OX.app.PlayerTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.PlayerTest@45b9a632</td></tr>
+<tr>
+<td title='com.OX.app.GameCompetitorsTest.testConstructorWithList()'><b>testConstructorWithList</b><br>Test class: com.OX.app.GameCompetitorsTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.GameCompetitorsTest@56a6d5a6</td></tr>
+<tr>
+<td title='com.OX.app.GameRulesTest.testCreationGameRulesTest()'><b>testCreationGameRulesTest</b><br>Test class: com.OX.app.GameRulesTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.GameRulesTest@25d250c6</td></tr>
+<tr>
+<td title='com.OX.app.GameCompetitorsTest.testDefaultConstructor()'><b>testDefaultConstructor</b><br>Test class: com.OX.app.GameCompetitorsTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.GameCompetitorsTest@56a6d5a6</td></tr>
+<tr>
+<td title='com.OX.app.MoveTest.testIfICanTakeAMoveWithDifferentSigns()'><b>testIfICanTakeAMoveWithDifferentSigns</b><br>Test class: com.OX.app.MoveTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.MoveTest@3c9d0b9d</td></tr>
+<tr>
+<td title='com.OX.app.TieTest.testIfItIsATie()'><b>testIfItIsATie</b><br>Test class: com.OX.app.TieTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.TieTest@63a65a25</td></tr>
+<tr>
+<td title='com.OX.app.TieTest.testIfItIsNotATie()'><b>testIfItIsNotATie</b><br>Test class: com.OX.app.TieTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.TieTest@63a65a25</td></tr>
+<tr>
+<td title='com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten()'><b>testIfMoveCantBeDoneIfFieldIsAlreadyWritten</b><br>Test class: com.OX.app.MoveTest<br>Parameters: 0, 0</td>
+<td><div><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace678433396", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace678433396'><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.MoveTest@3c9d0b9d</td></tr>
+<tr>
+<td title='com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten()'><b>testIfMoveCantBeDoneIfFieldIsAlreadyWritten</b><br>Test class: com.OX.app.MoveTest<br>Parameters: 0, 1</td>
+<td><div><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace331994761", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace331994761'><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.MoveTest@3c9d0b9d</td></tr>
+<tr>
+<td title='com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten()'><b>testIfMoveCantBeDoneIfFieldIsAlreadyWritten</b><br>Test class: com.OX.app.MoveTest<br>Parameters: 0, 2</td>
+<td><div><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace928294079", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace928294079'><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.MoveTest@3c9d0b9d</td></tr>
+<tr>
+<td title='com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten()'><b>testIfMoveCantBeDoneIfFieldIsAlreadyWritten</b><br>Test class: com.OX.app.MoveTest<br>Parameters: 1, 0</td>
+<td><div><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1647809929", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1647809929'><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.MoveTest@3c9d0b9d</td></tr>
+<tr>
+<td title='com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten()'><b>testIfMoveCantBeDoneIfFieldIsAlreadyWritten</b><br>Test class: com.OX.app.MoveTest<br>Parameters: 1, 1</td>
+<td><div><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1258084361", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1258084361'><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.MoveTest@3c9d0b9d</td></tr>
+<tr>
+<td title='com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten()'><b>testIfMoveCantBeDoneIfFieldIsAlreadyWritten</b><br>Test class: com.OX.app.MoveTest<br>Parameters: 1, 2</td>
+<td><div><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace391914049", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace391914049'><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.MoveTest@3c9d0b9d</td></tr>
+<tr>
+<td title='com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten()'><b>testIfMoveCantBeDoneIfFieldIsAlreadyWritten</b><br>Test class: com.OX.app.MoveTest<br>Parameters: 2, 0</td>
+<td><div><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace96406857", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace96406857'><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.MoveTest@3c9d0b9d</td></tr>
+<tr>
+<td title='com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten()'><b>testIfMoveCantBeDoneIfFieldIsAlreadyWritten</b><br>Test class: com.OX.app.MoveTest<br>Parameters: 2, 1</td>
+<td><div><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1534745514", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1534745514'><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.MoveTest@3c9d0b9d</td></tr>
+<tr>
+<td title='com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten()'><b>testIfMoveCantBeDoneIfFieldIsAlreadyWritten</b><br>Test class: com.OX.app.MoveTest<br>Parameters: 2, 2</td>
+<td><div><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2003496028", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2003496028'><pre>com.OX.app.FieldAlreadyTakenException
+	at com.OX.app.Move.makeAMove(Move.java:18)
+	at com.OX.app.MoveTest.testIfMoveCantBeDoneIfFieldIsAlreadyWritten(MoveTest.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.MoveTest@3c9d0b9d</td></tr>
+<tr>
+<td title='com.OX.app.MoveTest.testIfMoveIsDone()'><b>testIfMoveIsDone</b><br>Test class: com.OX.app.MoveTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.MoveTest@3c9d0b9d</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsNotWorkingHorizontalInBestScenario()'><b>testIfWinningCheckerIsNotWorkingHorizontalInBestScenario</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 0, 1, 2, X</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsNotWorkingHorizontalInBestScenario()'><b>testIfWinningCheckerIsNotWorkingHorizontalInBestScenario</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 0, 1, 2, O</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingHorizontalInBestScenario()'><b>testIfWinningCheckerIsWorkingHorizontalInBestScenario</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 0, 0, 1, 2, X</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingHorizontalInBestScenario()'><b>testIfWinningCheckerIsWorkingHorizontalInBestScenario</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 1, 0, 1, 2, X</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingHorizontalInBestScenario()'><b>testIfWinningCheckerIsWorkingHorizontalInBestScenario</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 2, 0, 1, 2, X</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingHorizontalInBestScenario()'><b>testIfWinningCheckerIsWorkingHorizontalInBestScenario</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 0, 0, 1, 2, O</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingHorizontalInBestScenario()'><b>testIfWinningCheckerIsWorkingHorizontalInBestScenario</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 1, 0, 1, 2, O</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingHorizontalInBestScenario()'><b>testIfWinningCheckerIsWorkingHorizontalInBestScenario</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 4, 0, 1, 2, O</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingHorizontalInBothWays()'><b>testIfWinningCheckerIsWorkingHorizontalInBothWays</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 0, 1, 2, 3, X</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingHorizontalInBothWays()'><b>testIfWinningCheckerIsWorkingHorizontalInBothWays</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 1, 1, 2, 3, X</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingHorizontalInBothWays()'><b>testIfWinningCheckerIsWorkingHorizontalInBothWays</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 2, 1, 2, 3, O</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingHorizontalInBothWays()'><b>testIfWinningCheckerIsWorkingHorizontalInBothWays</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 3, 1, 2, 3, O</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingHorizontalInBothWays()'><b>testIfWinningCheckerIsWorkingHorizontalInBothWays</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 6, 4, 5, 6, O</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingHorizontalInBothWays()'><b>testIfWinningCheckerIsWorkingHorizontalInBothWays</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 0, 0, 2, 1, O</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingVerticalInBothWays()'><b>testIfWinningCheckerIsWorkingVerticalInBothWays</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 0, 1, 2, 3, X</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingVerticalInBothWays()'><b>testIfWinningCheckerIsWorkingVerticalInBothWays</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 1, 1, 2, 3, X</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingVerticalInBothWays()'><b>testIfWinningCheckerIsWorkingVerticalInBothWays</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 2, 1, 2, 3, X</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingVerticalInBothWays()'><b>testIfWinningCheckerIsWorkingVerticalInBothWays</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 3, 1, 2, 3, X</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testIfWinningCheckerIsWorkingVerticalInBothWays()'><b>testIfWinningCheckerIsWorkingVerticalInBothWays</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 4, 1, 2, 3, X</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.LanguageTest.testLanguageChange()'><b>testLanguageChange</b><br>Test class: com.OX.app.LanguageTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.LanguageTest@309e345f</td></tr>
+<tr>
+<td title='com.OX.app.LanguageTest.testLanguageChangeTwice()'><b>testLanguageChangeTwice</b><br>Test class: com.OX.app.LanguageTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.LanguageTest@309e345f</td></tr>
+<tr>
+<td title='com.OX.app.GameCompetitorsTest.testNoSuchAPlayerException()'><b>testNoSuchAPlayerException</b><br>Test class: com.OX.app.GameCompetitorsTest</td>
+<td><div><pre>com.OX.app.NoSuchPlayerException
+	at com.OX.app.GameCompetitors.chooseStartingPlayer(GameCompetitors.java:39)
+	at com.OX.app.GameCompetitorsTest.testNoSuchAPlayerException(GameCompetitorsTest.java:37)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1610525991", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1610525991'><pre>com.OX.app.NoSuchPlayerException
+	at com.OX.app.GameCompetitors.chooseStartingPlayer(GameCompetitors.java:39)
+	at com.OX.app.GameCompetitorsTest.testNoSuchAPlayerException(GameCompetitorsTest.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.GameCompetitorsTest@56a6d5a6</td></tr>
+<tr>
+<td title='com.OX.app.GameRulesTest.testNormalInLineToWinCondition()'><b>testNormalInLineToWinCondition</b><br>Test class: com.OX.app.GameRulesTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.GameRulesTest@25d250c6</td></tr>
+<tr>
+<td title='com.OX.app.BoardTest.testOfBoardCreation()'><b>testOfBoardCreation</b><br>Test class: com.OX.app.BoardTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.BoardTest@54c562f7</td></tr>
+<tr>
+<td title='com.OX.app.BoardTest.testOfCreationTheBoardByBoardCreator()'><b>testOfCreationTheBoardByBoardCreator</b><br>Test class: com.OX.app.BoardTest<br>Parameters: 0, 0</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.BoardTest@54c562f7</td></tr>
+<tr>
+<td title='com.OX.app.BoardTest.testOfCreationTheBoardByBoardCreator()'><b>testOfCreationTheBoardByBoardCreator</b><br>Test class: com.OX.app.BoardTest<br>Parameters: 0, 1</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.BoardTest@54c562f7</td></tr>
+<tr>
+<td title='com.OX.app.BoardTest.testOfCreationTheBoardByBoardCreator()'><b>testOfCreationTheBoardByBoardCreator</b><br>Test class: com.OX.app.BoardTest<br>Parameters: 0, 2</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.BoardTest@54c562f7</td></tr>
+<tr>
+<td title='com.OX.app.BoardTest.testOfCreationTheBoardByBoardCreator()'><b>testOfCreationTheBoardByBoardCreator</b><br>Test class: com.OX.app.BoardTest<br>Parameters: 1, 0</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.BoardTest@54c562f7</td></tr>
+<tr>
+<td title='com.OX.app.BoardTest.testOfCreationTheBoardByBoardCreator()'><b>testOfCreationTheBoardByBoardCreator</b><br>Test class: com.OX.app.BoardTest<br>Parameters: 1, 1</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.BoardTest@54c562f7</td></tr>
+<tr>
+<td title='com.OX.app.BoardTest.testOfCreationTheBoardByBoardCreator()'><b>testOfCreationTheBoardByBoardCreator</b><br>Test class: com.OX.app.BoardTest<br>Parameters: 1, 2</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.BoardTest@54c562f7</td></tr>
+<tr>
+<td title='com.OX.app.BoardTest.testOfCreationTheBoardByBoardCreator()'><b>testOfCreationTheBoardByBoardCreator</b><br>Test class: com.OX.app.BoardTest<br>Parameters: 2, 0</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.BoardTest@54c562f7</td></tr>
+<tr>
+<td title='com.OX.app.BoardTest.testOfCreationTheBoardByBoardCreator()'><b>testOfCreationTheBoardByBoardCreator</b><br>Test class: com.OX.app.BoardTest<br>Parameters: 2, 1</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.BoardTest@54c562f7</td></tr>
+<tr>
+<td title='com.OX.app.BoardTest.testOfCreationTheBoardByBoardCreator()'><b>testOfCreationTheBoardByBoardCreator</b><br>Test class: com.OX.app.BoardTest<br>Parameters: 2, 2</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.BoardTest@54c562f7</td></tr>
+<tr>
+<td title='com.OX.app.BoardTest.testPrintBoard()'><b>testPrintBoard</b><br>Test class: com.OX.app.BoardTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.BoardTest@54c562f7</td></tr>
+<tr>
+<td title='com.OX.app.DisplayBoardTest.testPrintBoard()'><b>testPrintBoard</b><br>Test class: com.OX.app.DisplayBoardTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.DisplayBoardTest@6dbb137d</td></tr>
+<tr>
+<td title='com.OX.app.SignTest.testSignEquality()'><b>testSignEquality</b><br>Test class: com.OX.app.SignTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.SignTest@4df50bcc</td></tr>
+<tr>
+<td title='com.OX.app.SignTest.testSignNoEquality()'><b>testSignNoEquality</b><br>Test class: com.OX.app.SignTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.SignTest@4df50bcc</td></tr>
+<tr>
+<td title='com.OX.app.InputProviderTest.testTheNextLine()'><b>testTheNextLine</b><br>Test class: com.OX.app.InputProviderTest</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.InputProviderTest@43301423</td></tr>
+<tr>
+<td title='com.OX.app.GameRulesTest.testToSmallSizeOfABoardException()'><b>testToSmallSizeOfABoardException</b><br>Test class: com.OX.app.GameRulesTest</td>
+<td><div><pre>com.OX.app.toSmallBoardException
+	at com.OX.app.GameRules.sizeOfABoard(GameRules.java:33)
+	at com.OX.app.GameRulesTest.testToSmallSizeOfABoardException(GameRulesTest.java:29)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1427646530", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1427646530'><pre>com.OX.app.toSmallBoardException
+	at com.OX.app.GameRules.sizeOfABoard(GameRules.java:33)
+	at com.OX.app.GameRulesTest.testToSmallSizeOfABoardException(GameRulesTest.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.GameRulesTest@25d250c6</td></tr>
+<tr>
+<td title='com.OX.app.GameRulesTest.testToSmallWinnindContionsException()'><b>testToSmallWinnindContionsException</b><br>Test class: com.OX.app.GameRulesTest</td>
+<td><div><pre>com.OX.app.toSmallWinningConditionExceptionException
+	at com.OX.app.GameRules.setInLineToWinCondition(GameRules.java:23)
+	at com.OX.app.GameRulesTest.testToSmallWinnindContionsException(GameRulesTest.java:16)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace846254484", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace846254484'><pre>com.OX.app.toSmallWinningConditionExceptionException
+	at com.OX.app.GameRules.setInLineToWinCondition(GameRules.java:23)
+	at com.OX.app.GameRulesTest.testToSmallWinnindContionsException(GameRulesTest.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.GameRulesTest@25d250c6</td></tr>
+<tr>
+<td title='com.OX.app.GameCompetitorsTest.testTooManyPlayersException()'><b>testTooManyPlayersException</b><br>Test class: com.OX.app.GameCompetitorsTest</td>
+<td><div><pre>com.OX.app.TooManyPlayersException
+	at com.OX.app.GameCompetitors.addPlayer(GameCompetitors.java:44)
+	at com.OX.app.GameCompetitors.addingPlayersWithNameAndSign(GameCompetitors.java:29)
+	at com.OX.app.GameCompetitorsTest.testTooManyPlayersException(GameCompetitorsTest.java:46)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1666607455", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1666607455'><pre>com.OX.app.TooManyPlayersException
+	at com.OX.app.GameCompetitors.addPlayer(GameCompetitors.java:44)
+	at com.OX.app.GameCompetitors.addingPlayersWithNameAndSign(GameCompetitors.java:29)
+	at com.OX.app.GameCompetitorsTest.testTooManyPlayersException(GameCompetitorsTest.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.GameCompetitorsTest@56a6d5a6</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testWinningDiagonalScenario()'><b>testWinningDiagonalScenario</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 0, 1, 2, 3, X</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testWinningDiagonalScenario()'><b>testWinningDiagonalScenario</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 3, 2, 1, 0, X</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testWinningDiagonalScenario()'><b>testWinningDiagonalScenario</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 2, 3, 1, 0, X</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testWinningDiagonalScenario()'><b>testWinningDiagonalScenario</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 4, 3, 2, 0, X</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+<tr>
+<td title='com.OX.app.GameRulesTest.testWinningInLineBiggerThanSizeOfABoard()'><b>testWinningInLineBiggerThanSizeOfABoard</b><br>Test class: com.OX.app.GameRulesTest</td>
+<td><div><pre>com.OX.app.winningConditionMoreThanASizeOfBoardExcetpion
+	at com.OX.app.GameRules.setInLineToWinCondition(GameRules.java:26)
+	at com.OX.app.GameRulesTest.testWinningInLineBiggerThanSizeOfABoard(GameRulesTest.java:36)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace592983282", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace592983282'><pre>com.OX.app.winningConditionMoreThanASizeOfBoardExcetpion
+	at com.OX.app.GameRules.setInLineToWinCondition(GameRules.java:26)
+	at com.OX.app.GameRulesTest.testWinningInLineBiggerThanSizeOfABoard(GameRulesTest.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>com.OX.app.GameRulesTest@25d250c6</td></tr>
+<tr>
+<td title='com.OX.app.WinningTest.testWinningReverseDiagonalScenario()'><b>testWinningReverseDiagonalScenario</b><br>Test class: com.OX.app.WinningTest<br>Parameters: 0, 1, 2, 3, 4, X</td>
+<td></td>
+<td>0</td>
+<td>com.OX.app.WinningTest@4445629</td></tr>
+</table><p>
+</body>
+</html>

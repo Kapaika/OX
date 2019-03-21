@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Command_line_suite" class="navigator-link">
+              <span class="suite-name border-passed">Command line suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Command_line_suite" class="navigator-link ">
+                    <span>[unset file name]</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Command_line_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Command_line_suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Command_line_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Command_line_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Command_line_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Command_line_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">74 methods,   74 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Command_line_suite" class="hide-methods passed suite-Command_line_suite"> (hide)</a> <!-- hide-methods passed suite-Command_line_suite -->
+                      <a href="#" panel-name="suite-Command_line_suite" class="show-methods passed suite-Command_line_suite"> (show)</a> <!-- show-methods passed suite-Command_line_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Command_line_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.CoordinatesTest" class="method navigator-link" hash-for-method="createCoordinates">createCoordinates</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.PlayerTest" class="method navigator-link" hash-for-method="createPlayerTest">createPlayerTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.GameTest" class="method navigator-link" hash-for-method="endToEndTestTie">endToEndTestTie</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.GameTest" class="method navigator-link" hash-for-method="endToEndTestWinDiagonal">endToEndTestWinDiagonal</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.GameTest" class="method navigator-link" hash-for-method="endToEndTestWinHorizontal">endToEndTestWinHorizontal</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.GameTest" class="method navigator-link" hash-for-method="endToEndTestWinReverseDiagonal">endToEndTestWinReverseDiagonal</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.MenuTest" class="method navigator-link" hash-for-method="firstMenuTest">firstMenuTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.MoveTest" class="method navigator-link" hash-for-method="testArrayOfTheBoundException">testArrayOfTheBoundException</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.MoveTest" class="method navigator-link" hash-for-method="testArrayOfTheBoundException(8, 5, O)">testArrayOfTheBoundException(8, 5, O)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.MoveTest" class="method navigator-link" hash-for-method="testArrayOfTheBoundException(2147483647, 5, O)">testArrayOfTheBoundException(2147483647, 5, O)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.PlayerTest" class="method navigator-link" hash-for-method="testCheckingTheCorrectnessOfPlayerSignsX">testCheckingTheCorrectnessOfPlayerSignsX</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.GameCompetitorsTest" class="method navigator-link" hash-for-method="testConstructorWithList">testConstructorWithList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.GameRulesTest" class="method navigator-link" hash-for-method="testCreationGameRulesTest">testCreationGameRulesTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.GameCompetitorsTest" class="method navigator-link" hash-for-method="testDefaultConstructor">testDefaultConstructor</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.MoveTest" class="method navigator-link" hash-for-method="testIfICanTakeAMoveWithDifferentSigns">testIfICanTakeAMoveWithDifferentSigns</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.TieTest" class="method navigator-link" hash-for-method="testIfItIsATie">testIfItIsATie</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.TieTest" class="method navigator-link" hash-for-method="testIfItIsNotATie">testIfItIsNotATie</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.MoveTest" class="method navigator-link" hash-for-method="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(0, 0)">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(0, 0)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.MoveTest" class="method navigator-link" hash-for-method="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(1, 2)">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(1, 2)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.MoveTest" class="method navigator-link" hash-for-method="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(2, 2)">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(2, 2)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.MoveTest" class="method navigator-link" hash-for-method="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(1, 0)">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(1, 0)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.MoveTest" class="method navigator-link" hash-for-method="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(0, 1)">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(0, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.MoveTest" class="method navigator-link" hash-for-method="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(2, 1)">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(2, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.MoveTest" class="method navigator-link" hash-for-method="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(0, 2)">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(0, 2)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.MoveTest" class="method navigator-link" hash-for-method="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(1, 1)">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(1, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.MoveTest" class="method navigator-link" hash-for-method="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(2, 0)">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(2, 0)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.MoveTest" class="method navigator-link" hash-for-method="testIfMoveIsDone">testIfMoveIsDone</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsNotWorkingHorizontalInBestScenario(0, 1, 2, X)">testIfWinningCheckerIsNotWorkingHorizontalInBestScenario(0, 1, 2, X)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsNotWorkingHorizontalInBestScenario(0, 1, 2, O)">testIfWinningCheckerIsNotWorkingHorizontalInBestScenario(0, 1, 2, O)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingHorizontalInBestScenario(4, 0, 1, 2, O)">testIfWinningCheckerIsWorkingHorizontalInBestScenario(4, 0, 1, 2, O)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingHorizontalInBestScenario(1, 0, 1, 2, O)">testIfWinningCheckerIsWorkingHorizontalInBestScenario(1, 0, 1, 2, O)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingHorizontalInBestScenario(2, 0, 1, 2, X)">testIfWinningCheckerIsWorkingHorizontalInBestScenario(2, 0, 1, 2, X)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingHorizontalInBestScenario(1, 0, 1, 2, X)">testIfWinningCheckerIsWorkingHorizontalInBestScenario(1, 0, 1, 2, X)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingHorizontalInBestScenario(0, 0, 1, 2, O)">testIfWinningCheckerIsWorkingHorizontalInBestScenario(0, 0, 1, 2, O)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingHorizontalInBestScenario(0, 0, 1, 2, X)">testIfWinningCheckerIsWorkingHorizontalInBestScenario(0, 0, 1, 2, X)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingHorizontalInBothWays(0, 1, 2, 3, X)">testIfWinningCheckerIsWorkingHorizontalInBothWays(0, 1, 2, 3, X)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingHorizontalInBothWays(3, 1, 2, 3, O)">testIfWinningCheckerIsWorkingHorizontalInBothWays(3, 1, 2, 3, O)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingHorizontalInBothWays(1, 1, 2, 3, X)">testIfWinningCheckerIsWorkingHorizontalInBothWays(1, 1, 2, 3, X)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingHorizontalInBothWays(2, 1, 2, 3, O)">testIfWinningCheckerIsWorkingHorizontalInBothWays(2, 1, 2, 3, O)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingHorizontalInBothWays(0, 0, 2, 1, O)">testIfWinningCheckerIsWorkingHorizontalInBothWays(0, 0, 2, 1, O)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingHorizontalInBothWays(6, 4, 5, 6, O)">testIfWinningCheckerIsWorkingHorizontalInBothWays(6, 4, 5, 6, O)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingVerticalInBothWays(3, 1, 2, 3, X)">testIfWinningCheckerIsWorkingVerticalInBothWays(3, 1, 2, 3, X)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingVerticalInBothWays(2, 1, 2, 3, X)">testIfWinningCheckerIsWorkingVerticalInBothWays(2, 1, 2, 3, X)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingVerticalInBothWays(0, 1, 2, 3, X)">testIfWinningCheckerIsWorkingVerticalInBothWays(0, 1, 2, 3, X)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingVerticalInBothWays(1, 1, 2, 3, X)">testIfWinningCheckerIsWorkingVerticalInBothWays(1, 1, 2, 3, X)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testIfWinningCheckerIsWorkingVerticalInBothWays(4, 1, 2, 3, X)">testIfWinningCheckerIsWorkingVerticalInBothWays(4, 1, 2, 3, X)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.LanguageTest" class="method navigator-link" hash-for-method="testLanguageChange">testLanguageChange</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.LanguageTest" class="method navigator-link" hash-for-method="testLanguageChangeTwice">testLanguageChangeTwice</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.GameCompetitorsTest" class="method navigator-link" hash-for-method="testNoSuchAPlayerException">testNoSuchAPlayerException</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.GameRulesTest" class="method navigator-link" hash-for-method="testNormalInLineToWinCondition">testNormalInLineToWinCondition</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.BoardTest" class="method navigator-link" hash-for-method="testOfBoardCreation">testOfBoardCreation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.BoardTest" class="method navigator-link" hash-for-method="testOfCreationTheBoardByBoardCreator(0, 1)">testOfCreationTheBoardByBoardCreator(0, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.BoardTest" class="method navigator-link" hash-for-method="testOfCreationTheBoardByBoardCreator(1, 1)">testOfCreationTheBoardByBoardCreator(1, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.BoardTest" class="method navigator-link" hash-for-method="testOfCreationTheBoardByBoardCreator(2, 2)">testOfCreationTheBoardByBoardCreator(2, 2)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.BoardTest" class="method navigator-link" hash-for-method="testOfCreationTheBoardByBoardCreator(1, 0)">testOfCreationTheBoardByBoardCreator(1, 0)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.BoardTest" class="method navigator-link" hash-for-method="testOfCreationTheBoardByBoardCreator(1, 2)">testOfCreationTheBoardByBoardCreator(1, 2)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.BoardTest" class="method navigator-link" hash-for-method="testOfCreationTheBoardByBoardCreator(2, 0)">testOfCreationTheBoardByBoardCreator(2, 0)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.BoardTest" class="method navigator-link" hash-for-method="testOfCreationTheBoardByBoardCreator(2, 1)">testOfCreationTheBoardByBoardCreator(2, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.BoardTest" class="method navigator-link" hash-for-method="testOfCreationTheBoardByBoardCreator(0, 2)">testOfCreationTheBoardByBoardCreator(0, 2)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.BoardTest" class="method navigator-link" hash-for-method="testOfCreationTheBoardByBoardCreator(0, 0)">testOfCreationTheBoardByBoardCreator(0, 0)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.BoardTest" class="method navigator-link" hash-for-method="testPrintBoard">testPrintBoard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.DisplayBoardTest" class="method navigator-link" hash-for-method="testPrintBoard">testPrintBoard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.SignTest" class="method navigator-link" hash-for-method="testSignEquality">testSignEquality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.SignTest" class="method navigator-link" hash-for-method="testSignNoEquality">testSignNoEquality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.InputProviderTest" class="method navigator-link" hash-for-method="testTheNextLine">testTheNextLine</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.GameRulesTest" class="method navigator-link" hash-for-method="testToSmallSizeOfABoardException">testToSmallSizeOfABoardException</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.GameRulesTest" class="method navigator-link" hash-for-method="testToSmallWinnindContionsException">testToSmallWinnindContionsException</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.GameCompetitorsTest" class="method navigator-link" hash-for-method="testTooManyPlayersException">testTooManyPlayersException</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testWinningDiagonalScenario(4, 3, 2, 0, X)">testWinningDiagonalScenario(4, 3, 2, 0, X)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testWinningDiagonalScenario(2, 3, 1, 0, X)">testWinningDiagonalScenario(2, 3, 1, 0, X)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testWinningDiagonalScenario(0, 1, 2, 3, X)">testWinningDiagonalScenario(0, 1, 2, 3, X)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testWinningDiagonalScenario(3, 2, 1, 0, X)">testWinningDiagonalScenario(3, 2, 1, 0, X)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.GameRulesTest" class="method navigator-link" hash-for-method="testWinningInLineBiggerThanSizeOfABoard">testWinningInLineBiggerThanSizeOfABoard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.OX.app.WinningTest" class="method navigator-link" hash-for-method="testWinningReverseDiagonalScenario(0, 1, 2, 3, 4, X)">testWinningReverseDiagonalScenario(0, 1, 2, 3, 4, X)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Command_line_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Command_line_suite" class="panel Command_line_suite">
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.OX.app.LanguageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLanguageChange">
+                  </a> <!-- testLanguageChange -->
+                  <span class="method-name">testLanguageChange</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLanguageChangeTwice">
+                  </a> <!-- testLanguageChangeTwice -->
+                  <span class="method-name">testLanguageChangeTwice</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.OX.app.TieTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfItIsATie">
+                  </a> <!-- testIfItIsATie -->
+                  <span class="method-name">testIfItIsATie</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfItIsNotATie">
+                  </a> <!-- testIfItIsNotATie -->
+                  <span class="method-name">testIfItIsNotATie</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.OX.app.DisplayBoardTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPrintBoard">
+                  </a> <!-- testPrintBoard -->
+                  <span class="method-name">testPrintBoard</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.OX.app.MenuTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="firstMenuTest">
+                  </a> <!-- firstMenuTest -->
+                  <span class="method-name">firstMenuTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.OX.app.GameCompetitorsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testConstructorWithList">
+                  </a> <!-- testConstructorWithList -->
+                  <span class="method-name">testConstructorWithList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDefaultConstructor">
+                  </a> <!-- testDefaultConstructor -->
+                  <span class="method-name">testDefaultConstructor</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNoSuchAPlayerException">
+                  </a> <!-- testNoSuchAPlayerException -->
+                  <span class="method-name">testNoSuchAPlayerException</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testTooManyPlayersException">
+                  </a> <!-- testTooManyPlayersException -->
+                  <span class="method-name">testTooManyPlayersException</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.OX.app.CoordinatesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createCoordinates">
+                  </a> <!-- createCoordinates -->
+                  <span class="method-name">createCoordinates</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.OX.app.PlayerTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createPlayerTest">
+                  </a> <!-- createPlayerTest -->
+                  <span class="method-name">createPlayerTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckingTheCorrectnessOfPlayerSignsX">
+                  </a> <!-- testCheckingTheCorrectnessOfPlayerSignsX -->
+                  <span class="method-name">testCheckingTheCorrectnessOfPlayerSignsX</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.OX.app.GameTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="endToEndTestTie">
+                  </a> <!-- endToEndTestTie -->
+                  <span class="method-name">endToEndTestTie</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="endToEndTestWinDiagonal">
+                  </a> <!-- endToEndTestWinDiagonal -->
+                  <span class="method-name">endToEndTestWinDiagonal</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="endToEndTestWinHorizontal">
+                  </a> <!-- endToEndTestWinHorizontal -->
+                  <span class="method-name">endToEndTestWinHorizontal</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="endToEndTestWinReverseDiagonal">
+                  </a> <!-- endToEndTestWinReverseDiagonal -->
+                  <span class="method-name">endToEndTestWinReverseDiagonal</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.OX.app.MoveTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testArrayOfTheBoundException">
+                  </a> <!-- testArrayOfTheBoundException -->
+                  <span class="method-name">testArrayOfTheBoundException</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testArrayOfTheBoundException(8, 5, O)">
+                  </a> <!-- testArrayOfTheBoundException(8, 5, O) -->
+                  <span class="method-name">testArrayOfTheBoundException</span>
+                  <span class="parameters">(8, 5, O)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testArrayOfTheBoundException(2147483647, 5, O)">
+                  </a> <!-- testArrayOfTheBoundException(2147483647, 5, O) -->
+                  <span class="method-name">testArrayOfTheBoundException</span>
+                  <span class="parameters">(2147483647, 5, O)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfICanTakeAMoveWithDifferentSigns">
+                  </a> <!-- testIfICanTakeAMoveWithDifferentSigns -->
+                  <span class="method-name">testIfICanTakeAMoveWithDifferentSigns</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(0, 0)">
+                  </a> <!-- testIfMoveCantBeDoneIfFieldIsAlreadyWritten(0, 0) -->
+                  <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten</span>
+                  <span class="parameters">(0, 0)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(1, 2)">
+                  </a> <!-- testIfMoveCantBeDoneIfFieldIsAlreadyWritten(1, 2) -->
+                  <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten</span>
+                  <span class="parameters">(1, 2)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(2, 2)">
+                  </a> <!-- testIfMoveCantBeDoneIfFieldIsAlreadyWritten(2, 2) -->
+                  <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten</span>
+                  <span class="parameters">(2, 2)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(1, 0)">
+                  </a> <!-- testIfMoveCantBeDoneIfFieldIsAlreadyWritten(1, 0) -->
+                  <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten</span>
+                  <span class="parameters">(1, 0)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(0, 1)">
+                  </a> <!-- testIfMoveCantBeDoneIfFieldIsAlreadyWritten(0, 1) -->
+                  <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten</span>
+                  <span class="parameters">(0, 1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(2, 1)">
+                  </a> <!-- testIfMoveCantBeDoneIfFieldIsAlreadyWritten(2, 1) -->
+                  <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten</span>
+                  <span class="parameters">(2, 1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(0, 2)">
+                  </a> <!-- testIfMoveCantBeDoneIfFieldIsAlreadyWritten(0, 2) -->
+                  <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten</span>
+                  <span class="parameters">(0, 2)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(1, 1)">
+                  </a> <!-- testIfMoveCantBeDoneIfFieldIsAlreadyWritten(1, 1) -->
+                  <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten</span>
+                  <span class="parameters">(1, 1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfMoveCantBeDoneIfFieldIsAlreadyWritten(2, 0)">
+                  </a> <!-- testIfMoveCantBeDoneIfFieldIsAlreadyWritten(2, 0) -->
+                  <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten</span>
+                  <span class="parameters">(2, 0)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfMoveIsDone">
+                  </a> <!-- testIfMoveIsDone -->
+                  <span class="method-name">testIfMoveIsDone</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.OX.app.InputProviderTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testTheNextLine">
+                  </a> <!-- testTheNextLine -->
+                  <span class="method-name">testTheNextLine</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.OX.app.WinningTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsNotWorkingHorizontalInBestScenario(0, 1, 2, X)">
+                  </a> <!-- testIfWinningCheckerIsNotWorkingHorizontalInBestScenario(0, 1, 2, X) -->
+                  <span class="method-name">testIfWinningCheckerIsNotWorkingHorizontalInBestScenario</span>
+                  <span class="parameters">(0, 1, 2, X)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsNotWorkingHorizontalInBestScenario(0, 1, 2, O)">
+                  </a> <!-- testIfWinningCheckerIsNotWorkingHorizontalInBestScenario(0, 1, 2, O) -->
+                  <span class="method-name">testIfWinningCheckerIsNotWorkingHorizontalInBestScenario</span>
+                  <span class="parameters">(0, 1, 2, O)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingHorizontalInBestScenario(4, 0, 1, 2, O)">
+                  </a> <!-- testIfWinningCheckerIsWorkingHorizontalInBestScenario(4, 0, 1, 2, O) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBestScenario</span>
+                  <span class="parameters">(4, 0, 1, 2, O)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingHorizontalInBestScenario(1, 0, 1, 2, O)">
+                  </a> <!-- testIfWinningCheckerIsWorkingHorizontalInBestScenario(1, 0, 1, 2, O) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBestScenario</span>
+                  <span class="parameters">(1, 0, 1, 2, O)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingHorizontalInBestScenario(2, 0, 1, 2, X)">
+                  </a> <!-- testIfWinningCheckerIsWorkingHorizontalInBestScenario(2, 0, 1, 2, X) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBestScenario</span>
+                  <span class="parameters">(2, 0, 1, 2, X)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingHorizontalInBestScenario(1, 0, 1, 2, X)">
+                  </a> <!-- testIfWinningCheckerIsWorkingHorizontalInBestScenario(1, 0, 1, 2, X) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBestScenario</span>
+                  <span class="parameters">(1, 0, 1, 2, X)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingHorizontalInBestScenario(0, 0, 1, 2, O)">
+                  </a> <!-- testIfWinningCheckerIsWorkingHorizontalInBestScenario(0, 0, 1, 2, O) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBestScenario</span>
+                  <span class="parameters">(0, 0, 1, 2, O)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingHorizontalInBestScenario(0, 0, 1, 2, X)">
+                  </a> <!-- testIfWinningCheckerIsWorkingHorizontalInBestScenario(0, 0, 1, 2, X) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBestScenario</span>
+                  <span class="parameters">(0, 0, 1, 2, X)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingHorizontalInBothWays(0, 1, 2, 3, X)">
+                  </a> <!-- testIfWinningCheckerIsWorkingHorizontalInBothWays(0, 1, 2, 3, X) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBothWays</span>
+                  <span class="parameters">(0, 1, 2, 3, X)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingHorizontalInBothWays(3, 1, 2, 3, O)">
+                  </a> <!-- testIfWinningCheckerIsWorkingHorizontalInBothWays(3, 1, 2, 3, O) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBothWays</span>
+                  <span class="parameters">(3, 1, 2, 3, O)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingHorizontalInBothWays(1, 1, 2, 3, X)">
+                  </a> <!-- testIfWinningCheckerIsWorkingHorizontalInBothWays(1, 1, 2, 3, X) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBothWays</span>
+                  <span class="parameters">(1, 1, 2, 3, X)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingHorizontalInBothWays(2, 1, 2, 3, O)">
+                  </a> <!-- testIfWinningCheckerIsWorkingHorizontalInBothWays(2, 1, 2, 3, O) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBothWays</span>
+                  <span class="parameters">(2, 1, 2, 3, O)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingHorizontalInBothWays(0, 0, 2, 1, O)">
+                  </a> <!-- testIfWinningCheckerIsWorkingHorizontalInBothWays(0, 0, 2, 1, O) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBothWays</span>
+                  <span class="parameters">(0, 0, 2, 1, O)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingHorizontalInBothWays(6, 4, 5, 6, O)">
+                  </a> <!-- testIfWinningCheckerIsWorkingHorizontalInBothWays(6, 4, 5, 6, O) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBothWays</span>
+                  <span class="parameters">(6, 4, 5, 6, O)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingVerticalInBothWays(3, 1, 2, 3, X)">
+                  </a> <!-- testIfWinningCheckerIsWorkingVerticalInBothWays(3, 1, 2, 3, X) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingVerticalInBothWays</span>
+                  <span class="parameters">(3, 1, 2, 3, X)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingVerticalInBothWays(2, 1, 2, 3, X)">
+                  </a> <!-- testIfWinningCheckerIsWorkingVerticalInBothWays(2, 1, 2, 3, X) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingVerticalInBothWays</span>
+                  <span class="parameters">(2, 1, 2, 3, X)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingVerticalInBothWays(0, 1, 2, 3, X)">
+                  </a> <!-- testIfWinningCheckerIsWorkingVerticalInBothWays(0, 1, 2, 3, X) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingVerticalInBothWays</span>
+                  <span class="parameters">(0, 1, 2, 3, X)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingVerticalInBothWays(1, 1, 2, 3, X)">
+                  </a> <!-- testIfWinningCheckerIsWorkingVerticalInBothWays(1, 1, 2, 3, X) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingVerticalInBothWays</span>
+                  <span class="parameters">(1, 1, 2, 3, X)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfWinningCheckerIsWorkingVerticalInBothWays(4, 1, 2, 3, X)">
+                  </a> <!-- testIfWinningCheckerIsWorkingVerticalInBothWays(4, 1, 2, 3, X) -->
+                  <span class="method-name">testIfWinningCheckerIsWorkingVerticalInBothWays</span>
+                  <span class="parameters">(4, 1, 2, 3, X)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWinningDiagonalScenario(4, 3, 2, 0, X)">
+                  </a> <!-- testWinningDiagonalScenario(4, 3, 2, 0, X) -->
+                  <span class="method-name">testWinningDiagonalScenario</span>
+                  <span class="parameters">(4, 3, 2, 0, X)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWinningDiagonalScenario(2, 3, 1, 0, X)">
+                  </a> <!-- testWinningDiagonalScenario(2, 3, 1, 0, X) -->
+                  <span class="method-name">testWinningDiagonalScenario</span>
+                  <span class="parameters">(2, 3, 1, 0, X)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWinningDiagonalScenario(0, 1, 2, 3, X)">
+                  </a> <!-- testWinningDiagonalScenario(0, 1, 2, 3, X) -->
+                  <span class="method-name">testWinningDiagonalScenario</span>
+                  <span class="parameters">(0, 1, 2, 3, X)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWinningDiagonalScenario(3, 2, 1, 0, X)">
+                  </a> <!-- testWinningDiagonalScenario(3, 2, 1, 0, X) -->
+                  <span class="method-name">testWinningDiagonalScenario</span>
+                  <span class="parameters">(3, 2, 1, 0, X)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWinningReverseDiagonalScenario(0, 1, 2, 3, 4, X)">
+                  </a> <!-- testWinningReverseDiagonalScenario(0, 1, 2, 3, 4, X) -->
+                  <span class="method-name">testWinningReverseDiagonalScenario</span>
+                  <span class="parameters">(0, 1, 2, 3, 4, X)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.OX.app.GameRulesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreationGameRulesTest">
+                  </a> <!-- testCreationGameRulesTest -->
+                  <span class="method-name">testCreationGameRulesTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNormalInLineToWinCondition">
+                  </a> <!-- testNormalInLineToWinCondition -->
+                  <span class="method-name">testNormalInLineToWinCondition</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testToSmallSizeOfABoardException">
+                  </a> <!-- testToSmallSizeOfABoardException -->
+                  <span class="method-name">testToSmallSizeOfABoardException</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testToSmallWinnindContionsException">
+                  </a> <!-- testToSmallWinnindContionsException -->
+                  <span class="method-name">testToSmallWinnindContionsException</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWinningInLineBiggerThanSizeOfABoard">
+                  </a> <!-- testWinningInLineBiggerThanSizeOfABoard -->
+                  <span class="method-name">testWinningInLineBiggerThanSizeOfABoard</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.OX.app.BoardTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testOfBoardCreation">
+                  </a> <!-- testOfBoardCreation -->
+                  <span class="method-name">testOfBoardCreation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testOfCreationTheBoardByBoardCreator(0, 1)">
+                  </a> <!-- testOfCreationTheBoardByBoardCreator(0, 1) -->
+                  <span class="method-name">testOfCreationTheBoardByBoardCreator</span>
+                  <span class="parameters">(0, 1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testOfCreationTheBoardByBoardCreator(1, 1)">
+                  </a> <!-- testOfCreationTheBoardByBoardCreator(1, 1) -->
+                  <span class="method-name">testOfCreationTheBoardByBoardCreator</span>
+                  <span class="parameters">(1, 1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testOfCreationTheBoardByBoardCreator(2, 2)">
+                  </a> <!-- testOfCreationTheBoardByBoardCreator(2, 2) -->
+                  <span class="method-name">testOfCreationTheBoardByBoardCreator</span>
+                  <span class="parameters">(2, 2)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testOfCreationTheBoardByBoardCreator(1, 0)">
+                  </a> <!-- testOfCreationTheBoardByBoardCreator(1, 0) -->
+                  <span class="method-name">testOfCreationTheBoardByBoardCreator</span>
+                  <span class="parameters">(1, 0)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testOfCreationTheBoardByBoardCreator(1, 2)">
+                  </a> <!-- testOfCreationTheBoardByBoardCreator(1, 2) -->
+                  <span class="method-name">testOfCreationTheBoardByBoardCreator</span>
+                  <span class="parameters">(1, 2)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testOfCreationTheBoardByBoardCreator(2, 0)">
+                  </a> <!-- testOfCreationTheBoardByBoardCreator(2, 0) -->
+                  <span class="method-name">testOfCreationTheBoardByBoardCreator</span>
+                  <span class="parameters">(2, 0)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testOfCreationTheBoardByBoardCreator(2, 1)">
+                  </a> <!-- testOfCreationTheBoardByBoardCreator(2, 1) -->
+                  <span class="method-name">testOfCreationTheBoardByBoardCreator</span>
+                  <span class="parameters">(2, 1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testOfCreationTheBoardByBoardCreator(0, 2)">
+                  </a> <!-- testOfCreationTheBoardByBoardCreator(0, 2) -->
+                  <span class="method-name">testOfCreationTheBoardByBoardCreator</span>
+                  <span class="parameters">(0, 2)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testOfCreationTheBoardByBoardCreator(0, 0)">
+                  </a> <!-- testOfCreationTheBoardByBoardCreator(0, 0) -->
+                  <span class="method-name">testOfCreationTheBoardByBoardCreator</span>
+                  <span class="parameters">(0, 0)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPrintBoard">
+                  </a> <!-- testPrintBoard -->
+                  <span class="method-name">testPrintBoard</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.OX.app.SignTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignEquality">
+                  </a> <!-- testSignEquality -->
+                  <span class="method-name">testSignEquality</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignNoEquality">
+                  </a> <!-- testSignNoEquality -->
+                  <span class="method-name">testSignNoEquality</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+        </div> <!-- panel Command_line_suite -->
+        <div panel-name="test-xml-Command_line_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Command line suite&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Command line test&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.OX.app.LanguageTest&quot;/&gt;
+      &lt;class name=&quot;com.OX.app.GameCompetitorsTest&quot;/&gt;
+      &lt;class name=&quot;com.OX.app.GameTest&quot;/&gt;
+      &lt;class name=&quot;com.OX.app.WinningTest&quot;/&gt;
+      &lt;class name=&quot;com.OX.app.PlayerTest&quot;/&gt;
+      &lt;class name=&quot;com.OX.app.GameRulesTest&quot;/&gt;
+      &lt;class name=&quot;com.OX.app.SignTest&quot;/&gt;
+      &lt;class name=&quot;com.OX.app.CoordinatesTest&quot;/&gt;
+      &lt;class name=&quot;com.OX.app.TieTest&quot;/&gt;
+      &lt;class name=&quot;com.OX.app.BoardTest&quot;/&gt;
+      &lt;class name=&quot;com.OX.app.MenuTest&quot;/&gt;
+      &lt;class name=&quot;com.OX.app.DisplayBoardTest&quot;/&gt;
+      &lt;class name=&quot;com.OX.app.MoveTest&quot;/&gt;
+      &lt;class name=&quot;com.OX.app.InputProviderTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Command line test --&gt;
+&lt;/suite&gt; &lt;!-- Command line suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Command_line_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Command line suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Command line test (14 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Command_line_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Command line suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Command_line_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Command line suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Command_line_suite');
+function tableData_Command_line_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(74);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'endToEndTestTie')
+data.setCell(0, 2, 'com.OX.app.GameTest')
+data.setCell(0, 3, 32);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'firstMenuTest')
+data.setCell(1, 2, 'com.OX.app.MenuTest')
+data.setCell(1, 3, 17);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'endToEndTestWinReverseDiagonal')
+data.setCell(2, 2, 'com.OX.app.GameTest')
+data.setCell(2, 3, 10);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'endToEndTestWinHorizontal')
+data.setCell(3, 2, 'com.OX.app.GameTest')
+data.setCell(3, 3, 9);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testLanguageChange')
+data.setCell(4, 2, 'com.OX.app.LanguageTest')
+data.setCell(4, 3, 8);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'endToEndTestWinDiagonal')
+data.setCell(5, 2, 'com.OX.app.GameTest')
+data.setCell(5, 3, 8);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testTooManyPlayersException')
+data.setCell(6, 2, 'com.OX.app.GameCompetitorsTest')
+data.setCell(6, 3, 1);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testPrintBoard')
+data.setCell(7, 2, 'com.OX.app.BoardTest')
+data.setCell(7, 3, 1);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testIfICanTakeAMoveWithDifferentSigns')
+data.setCell(8, 2, 'com.OX.app.MoveTest')
+data.setCell(8, 3, 1);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testIfWinningCheckerIsWorkingHorizontalInBestScenario')
+data.setCell(9, 2, 'com.OX.app.WinningTest')
+data.setCell(9, 3, 1);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testToSmallSizeOfABoardException')
+data.setCell(10, 2, 'com.OX.app.GameRulesTest')
+data.setCell(10, 3, 1);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testIfWinningCheckerIsNotWorkingHorizontalInBestScenario')
+data.setCell(11, 2, 'com.OX.app.WinningTest')
+data.setCell(11, 3, 1);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testIfWinningCheckerIsWorkingVerticalInBothWays')
+data.setCell(12, 2, 'com.OX.app.WinningTest')
+data.setCell(12, 3, 1);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testIfWinningCheckerIsWorkingHorizontalInBothWays')
+data.setCell(13, 2, 'com.OX.app.WinningTest')
+data.setCell(13, 3, 1);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testIfMoveCantBeDoneIfFieldIsAlreadyWritten')
+data.setCell(14, 2, 'com.OX.app.MoveTest')
+data.setCell(14, 3, 0);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'testOfCreationTheBoardByBoardCreator')
+data.setCell(15, 2, 'com.OX.app.BoardTest')
+data.setCell(15, 3, 0);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testIfMoveIsDone')
+data.setCell(16, 2, 'com.OX.app.MoveTest')
+data.setCell(16, 3, 0);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'testIfWinningCheckerIsWorkingVerticalInBothWays')
+data.setCell(17, 2, 'com.OX.app.WinningTest')
+data.setCell(17, 3, 0);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testArrayOfTheBoundException')
+data.setCell(18, 2, 'com.OX.app.MoveTest')
+data.setCell(18, 3, 0);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'testOfCreationTheBoardByBoardCreator')
+data.setCell(19, 2, 'com.OX.app.BoardTest')
+data.setCell(19, 3, 0);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'testWinningReverseDiagonalScenario')
+data.setCell(20, 2, 'com.OX.app.WinningTest')
+data.setCell(20, 3, 0);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'testOfCreationTheBoardByBoardCreator')
+data.setCell(21, 2, 'com.OX.app.BoardTest')
+data.setCell(21, 3, 0);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'testConstructorWithList')
+data.setCell(22, 2, 'com.OX.app.GameCompetitorsTest')
+data.setCell(22, 3, 0);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'testTheNextLine')
+data.setCell(23, 2, 'com.OX.app.InputProviderTest')
+data.setCell(23, 3, 0);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'testWinningDiagonalScenario')
+data.setCell(24, 2, 'com.OX.app.WinningTest')
+data.setCell(24, 3, 0);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'testCreationGameRulesTest')
+data.setCell(25, 2, 'com.OX.app.GameRulesTest')
+data.setCell(25, 3, 0);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'testIfWinningCheckerIsWorkingHorizontalInBothWays')
+data.setCell(26, 2, 'com.OX.app.WinningTest')
+data.setCell(26, 3, 0);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'testWinningDiagonalScenario')
+data.setCell(27, 2, 'com.OX.app.WinningTest')
+data.setCell(27, 3, 0);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'testIfMoveCantBeDoneIfFieldIsAlreadyWritten')
+data.setCell(28, 2, 'com.OX.app.MoveTest')
+data.setCell(28, 3, 0);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'testIfItIsNotATie')
+data.setCell(29, 2, 'com.OX.app.TieTest')
+data.setCell(29, 3, 0);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'testPrintBoard')
+data.setCell(30, 2, 'com.OX.app.DisplayBoardTest')
+data.setCell(30, 3, 0);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'testIfWinningCheckerIsWorkingHorizontalInBothWays')
+data.setCell(31, 2, 'com.OX.app.WinningTest')
+data.setCell(31, 3, 0);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'testIfWinningCheckerIsWorkingHorizontalInBothWays')
+data.setCell(32, 2, 'com.OX.app.WinningTest')
+data.setCell(32, 3, 0);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'testWinningInLineBiggerThanSizeOfABoard')
+data.setCell(33, 2, 'com.OX.app.GameRulesTest')
+data.setCell(33, 3, 0);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'testCheckingTheCorrectnessOfPlayerSignsX')
+data.setCell(34, 2, 'com.OX.app.PlayerTest')
+data.setCell(34, 3, 0);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'testIfWinningCheckerIsWorkingHorizontalInBestScenario')
+data.setCell(35, 2, 'com.OX.app.WinningTest')
+data.setCell(35, 3, 0);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'testIfWinningCheckerIsWorkingHorizontalInBothWays')
+data.setCell(36, 2, 'com.OX.app.WinningTest')
+data.setCell(36, 3, 0);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'testIfWinningCheckerIsWorkingHorizontalInBestScenario')
+data.setCell(37, 2, 'com.OX.app.WinningTest')
+data.setCell(37, 3, 0);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'testIfWinningCheckerIsWorkingHorizontalInBothWays')
+data.setCell(38, 2, 'com.OX.app.WinningTest')
+data.setCell(38, 3, 0);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'testIfMoveCantBeDoneIfFieldIsAlreadyWritten')
+data.setCell(39, 2, 'com.OX.app.MoveTest')
+data.setCell(39, 3, 0);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'testOfCreationTheBoardByBoardCreator')
+data.setCell(40, 2, 'com.OX.app.BoardTest')
+data.setCell(40, 3, 0);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'testOfCreationTheBoardByBoardCreator')
+data.setCell(41, 2, 'com.OX.app.BoardTest')
+data.setCell(41, 3, 0);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'testIfWinningCheckerIsWorkingVerticalInBothWays')
+data.setCell(42, 2, 'com.OX.app.WinningTest')
+data.setCell(42, 3, 0);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'testSignEquality')
+data.setCell(43, 2, 'com.OX.app.SignTest')
+data.setCell(43, 3, 0);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'testLanguageChangeTwice')
+data.setCell(44, 2, 'com.OX.app.LanguageTest')
+data.setCell(44, 3, 0);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'testIfWinningCheckerIsWorkingHorizontalInBestScenario')
+data.setCell(45, 2, 'com.OX.app.WinningTest')
+data.setCell(45, 3, 0);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'createCoordinates')
+data.setCell(46, 2, 'com.OX.app.CoordinatesTest')
+data.setCell(46, 3, 0);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'testIfItIsATie')
+data.setCell(47, 2, 'com.OX.app.TieTest')
+data.setCell(47, 3, 0);
+data.setCell(48, 0, 48)
+data.setCell(48, 1, 'testIfMoveCantBeDoneIfFieldIsAlreadyWritten')
+data.setCell(48, 2, 'com.OX.app.MoveTest')
+data.setCell(48, 3, 0);
+data.setCell(49, 0, 49)
+data.setCell(49, 1, 'testArrayOfTheBoundException')
+data.setCell(49, 2, 'com.OX.app.MoveTest')
+data.setCell(49, 3, 0);
+data.setCell(50, 0, 50)
+data.setCell(50, 1, 'testIfMoveCantBeDoneIfFieldIsAlreadyWritten')
+data.setCell(50, 2, 'com.OX.app.MoveTest')
+data.setCell(50, 3, 0);
+data.setCell(51, 0, 51)
+data.setCell(51, 1, 'testIfWinningCheckerIsWorkingHorizontalInBestScenario')
+data.setCell(51, 2, 'com.OX.app.WinningTest')
+data.setCell(51, 3, 0);
+data.setCell(52, 0, 52)
+data.setCell(52, 1, 'testDefaultConstructor')
+data.setCell(52, 2, 'com.OX.app.GameCompetitorsTest')
+data.setCell(52, 3, 0);
+data.setCell(53, 0, 53)
+data.setCell(53, 1, 'testOfCreationTheBoardByBoardCreator')
+data.setCell(53, 2, 'com.OX.app.BoardTest')
+data.setCell(53, 3, 0);
+data.setCell(54, 0, 54)
+data.setCell(54, 1, 'testOfCreationTheBoardByBoardCreator')
+data.setCell(54, 2, 'com.OX.app.BoardTest')
+data.setCell(54, 3, 0);
+data.setCell(55, 0, 55)
+data.setCell(55, 1, 'testIfWinningCheckerIsNotWorkingHorizontalInBestScenario')
+data.setCell(55, 2, 'com.OX.app.WinningTest')
+data.setCell(55, 3, 0);
+data.setCell(56, 0, 56)
+data.setCell(56, 1, 'testIfMoveCantBeDoneIfFieldIsAlreadyWritten')
+data.setCell(56, 2, 'com.OX.app.MoveTest')
+data.setCell(56, 3, 0);
+data.setCell(57, 0, 57)
+data.setCell(57, 1, 'testWinningDiagonalScenario')
+data.setCell(57, 2, 'com.OX.app.WinningTest')
+data.setCell(57, 3, 0);
+data.setCell(58, 0, 58)
+data.setCell(58, 1, 'testSignNoEquality')
+data.setCell(58, 2, 'com.OX.app.SignTest')
+data.setCell(58, 3, 0);
+data.setCell(59, 0, 59)
+data.setCell(59, 1, 'testIfWinningCheckerIsWorkingVerticalInBothWays')
+data.setCell(59, 2, 'com.OX.app.WinningTest')
+data.setCell(59, 3, 0);
+data.setCell(60, 0, 60)
+data.setCell(60, 1, 'testOfCreationTheBoardByBoardCreator')
+data.setCell(60, 2, 'com.OX.app.BoardTest')
+data.setCell(60, 3, 0);
+data.setCell(61, 0, 61)
+data.setCell(61, 1, 'testNoSuchAPlayerException')
+data.setCell(61, 2, 'com.OX.app.GameCompetitorsTest')
+data.setCell(61, 3, 0);
+data.setCell(62, 0, 62)
+data.setCell(62, 1, 'testIfWinningCheckerIsWorkingVerticalInBothWays')
+data.setCell(62, 2, 'com.OX.app.WinningTest')
+data.setCell(62, 3, 0);
+data.setCell(63, 0, 63)
+data.setCell(63, 1, 'testOfCreationTheBoardByBoardCreator')
+data.setCell(63, 2, 'com.OX.app.BoardTest')
+data.setCell(63, 3, 0);
+data.setCell(64, 0, 64)
+data.setCell(64, 1, 'testWinningDiagonalScenario')
+data.setCell(64, 2, 'com.OX.app.WinningTest')
+data.setCell(64, 3, 0);
+data.setCell(65, 0, 65)
+data.setCell(65, 1, 'testToSmallWinnindContionsException')
+data.setCell(65, 2, 'com.OX.app.GameRulesTest')
+data.setCell(65, 3, 0);
+data.setCell(66, 0, 66)
+data.setCell(66, 1, 'testArrayOfTheBoundException')
+data.setCell(66, 2, 'com.OX.app.MoveTest')
+data.setCell(66, 3, 0);
+data.setCell(67, 0, 67)
+data.setCell(67, 1, 'testIfMoveCantBeDoneIfFieldIsAlreadyWritten')
+data.setCell(67, 2, 'com.OX.app.MoveTest')
+data.setCell(67, 3, 0);
+data.setCell(68, 0, 68)
+data.setCell(68, 1, 'createPlayerTest')
+data.setCell(68, 2, 'com.OX.app.PlayerTest')
+data.setCell(68, 3, 0);
+data.setCell(69, 0, 69)
+data.setCell(69, 1, 'testIfMoveCantBeDoneIfFieldIsAlreadyWritten')
+data.setCell(69, 2, 'com.OX.app.MoveTest')
+data.setCell(69, 3, 0);
+data.setCell(70, 0, 70)
+data.setCell(70, 1, 'testIfMoveCantBeDoneIfFieldIsAlreadyWritten')
+data.setCell(70, 2, 'com.OX.app.MoveTest')
+data.setCell(70, 3, 0);
+data.setCell(71, 0, 71)
+data.setCell(71, 1, 'testOfBoardCreation')
+data.setCell(71, 2, 'com.OX.app.BoardTest')
+data.setCell(71, 3, 0);
+data.setCell(72, 0, 72)
+data.setCell(72, 1, 'testNormalInLineToWinCondition')
+data.setCell(72, 2, 'com.OX.app.GameRulesTest')
+data.setCell(72, 3, 0);
+data.setCell(73, 0, 73)
+data.setCell(73, 1, 'testIfWinningCheckerIsWorkingHorizontalInBestScenario')
+data.setCell(73, 2, 'com.OX.app.WinningTest')
+data.setCell(73, 3, 0);
+window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 92 ms</span>
+              <div id="times-div-Command_line_suite">
+              </div> <!-- times-div-Command_line_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Command_line_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Command line suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Command_line_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Command_line_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.OX.app.LanguageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testLanguageChange</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testLanguageChangeTwice</span>
+                <span class="method-start">9 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.OX.app.GameCompetitorsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testConstructorWithList</span>
+                <span class="method-start">10 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDefaultConstructor</span>
+                <span class="method-start">11 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testNoSuchAPlayerException</span>
+                <span class="method-start">11 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testTooManyPlayersException</span>
+                <span class="method-start">11 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.OX.app.GameTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">endToEndTestTie</span>
+                <span class="method-start">12 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">endToEndTestWinDiagonal</span>
+                <span class="method-start">45 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">endToEndTestWinHorizontal</span>
+                <span class="method-start">54 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">endToEndTestWinReverseDiagonal</span>
+                <span class="method-start">63 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.OX.app.WinningTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsNotWorkingHorizontalInBestScenario(0, 1, 2, X)</span>
+                <span class="method-start">77 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsNotWorkingHorizontalInBestScenario(0, 1, 2, O)</span>
+                <span class="method-start">77 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBestScenario(0, 0, 1, 2, X)</span>
+                <span class="method-start">78 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBestScenario(1, 0, 1, 2, X)</span>
+                <span class="method-start">79 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBestScenario(2, 0, 1, 2, X)</span>
+                <span class="method-start">79 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBestScenario(0, 0, 1, 2, O)</span>
+                <span class="method-start">79 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBestScenario(1, 0, 1, 2, O)</span>
+                <span class="method-start">80 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBestScenario(4, 0, 1, 2, O)</span>
+                <span class="method-start">80 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBothWays(0, 1, 2, 3, X)</span>
+                <span class="method-start">81 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBothWays(1, 1, 2, 3, X)</span>
+                <span class="method-start">81 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBothWays(2, 1, 2, 3, O)</span>
+                <span class="method-start">82 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBothWays(3, 1, 2, 3, O)</span>
+                <span class="method-start">82 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBothWays(6, 4, 5, 6, O)</span>
+                <span class="method-start">82 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingHorizontalInBothWays(0, 0, 2, 1, O)</span>
+                <span class="method-start">83 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingVerticalInBothWays(0, 1, 2, 3, X)</span>
+                <span class="method-start">84 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingVerticalInBothWays(1, 1, 2, 3, X)</span>
+                <span class="method-start">84 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingVerticalInBothWays(2, 1, 2, 3, X)</span>
+                <span class="method-start">85 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingVerticalInBothWays(3, 1, 2, 3, X)</span>
+                <span class="method-start">85 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfWinningCheckerIsWorkingVerticalInBothWays(4, 1, 2, 3, X)</span>
+                <span class="method-start">85 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWinningDiagonalScenario(0, 1, 2, 3, X)</span>
+                <span class="method-start">86 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWinningDiagonalScenario(3, 2, 1, 0, X)</span>
+                <span class="method-start">87 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWinningDiagonalScenario(2, 3, 1, 0, X)</span>
+                <span class="method-start">87 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWinningDiagonalScenario(4, 3, 2, 0, X)</span>
+                <span class="method-start">87 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWinningReverseDiagonalScenario(0, 1, 2, 3, 4, X)</span>
+                <span class="method-start">88 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.OX.app.PlayerTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">createPlayerTest</span>
+                <span class="method-start">89 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCheckingTheCorrectnessOfPlayerSignsX</span>
+                <span class="method-start">89 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.OX.app.GameRulesTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testCreationGameRulesTest</span>
+                <span class="method-start">90 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testNormalInLineToWinCondition</span>
+                <span class="method-start">90 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testToSmallSizeOfABoardException</span>
+                <span class="method-start">90 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testToSmallWinnindContionsException</span>
+                <span class="method-start">91 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWinningInLineBiggerThanSizeOfABoard</span>
+                <span class="method-start">91 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.OX.app.SignTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testSignEquality</span>
+                <span class="method-start">92 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSignNoEquality</span>
+                <span class="method-start">93 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.OX.app.CoordinatesTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">createCoordinates</span>
+                <span class="method-start">93 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.OX.app.TieTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testIfItIsATie</span>
+                <span class="method-start">94 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfItIsNotATie</span>
+                <span class="method-start">94 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.OX.app.BoardTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testOfBoardCreation</span>
+                <span class="method-start">95 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testOfCreationTheBoardByBoardCreator(0, 0)</span>
+                <span class="method-start">95 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testOfCreationTheBoardByBoardCreator(0, 1)</span>
+                <span class="method-start">96 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testOfCreationTheBoardByBoardCreator(0, 2)</span>
+                <span class="method-start">96 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testOfCreationTheBoardByBoardCreator(1, 0)</span>
+                <span class="method-start">96 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testOfCreationTheBoardByBoardCreator(1, 1)</span>
+                <span class="method-start">96 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testOfCreationTheBoardByBoardCreator(1, 2)</span>
+                <span class="method-start">97 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testOfCreationTheBoardByBoardCreator(2, 0)</span>
+                <span class="method-start">97 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testOfCreationTheBoardByBoardCreator(2, 1)</span>
+                <span class="method-start">97 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testOfCreationTheBoardByBoardCreator(2, 2)</span>
+                <span class="method-start">97 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testPrintBoard</span>
+                <span class="method-start">98 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.OX.app.MenuTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">firstMenuTest</span>
+                <span class="method-start">99 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.OX.app.DisplayBoardTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testPrintBoard</span>
+                <span class="method-start">117 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.OX.app.MoveTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testArrayOfTheBoundException</span>
+                <span class="method-start">118 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testArrayOfTheBoundException(8, 5, O)</span>
+                <span class="method-start">119 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testArrayOfTheBoundException(2147483647, 5, O)</span>
+                <span class="method-start">120 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfICanTakeAMoveWithDifferentSigns</span>
+                <span class="method-start">125 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(0, 0)</span>
+                <span class="method-start">127 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(0, 1)</span>
+                <span class="method-start">128 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(0, 2)</span>
+                <span class="method-start">128 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(1, 0)</span>
+                <span class="method-start">128 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(1, 1)</span>
+                <span class="method-start">128 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(1, 2)</span>
+                <span class="method-start">128 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(2, 0)</span>
+                <span class="method-start">128 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(2, 1)</span>
+                <span class="method-start">129 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfMoveCantBeDoneIfFieldIsAlreadyWritten(2, 2)</span>
+                <span class="method-start">129 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIfMoveIsDone</span>
+                <span class="method-start">129 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.OX.app.InputProviderTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testTheNextLine</span>
+                <span class="method-start">130 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

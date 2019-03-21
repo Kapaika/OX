@@ -1,5 +1,3 @@
 | PESIMISTIC                                 |  REALISTIC                  |  OPTIMISTIC                   |      
 |--------------------------------------------|-----------------------------|-------------------------------|
-|    I will meet the deadline                | I will finish project       | I will meet all requierements |      
-|   with basic functionality ( e.g 3/3 board)|but it will need a refactor. |   and it will look good.      |   
-|                                            |                             |                               |      
+| I will not be able to play a single game, just print and insert X/O| I will be able to take a move and win single game| I will be able to make a move and win ( best in 3 game) and choose how many Xs or Os is winnign|

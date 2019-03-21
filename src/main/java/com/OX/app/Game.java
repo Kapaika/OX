@@ -53,7 +53,7 @@ import java.util.List;
             while(!winResult){
                 Coordinates moveCoordinates;
                 Move move;
-                System.out.println("What's you move " + currentPlayer.name + " ?");
+                System.out.println("What's you move " + currentPlayer.name + " ?  [r,c]");
                 try{
                     moveCoordinates = new Coordinates(InputProvider.nextInt(),InputProvider.nextInt());
                     move = new Move(moveCoordinates,currentPlayer);

@@ -19,10 +19,6 @@ class Player{
         this.sign = sign;
     }
 
-    boolean isWinner(){
-        return this.score >= 6;
-    }
-
     public Sign getSign() {
         return sign;
     }

@@ -2,50 +2,73 @@ package com.OX.app;
 
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  * @author Bartosz Kupajski
  */
 @Test
 public class GameTest {
 
-//    public void testGameCreation(){
-//        Game game = new Game();
-//    }
-//
-//    public void testIfGameIsNotANull(){
-//        Game game = new Game();
-//        Assert.assertNotNull(game);
-//    }
+    public void endToEndTestWinHorizontal(){
+        InputProvider inputProvider = new InputProvider(new Scanner("0\n0\n1\n1\n0\n1\n2\n2\n0\n2\n0\n0\n1\n1\n0\n1\n2\n2\n0\n2\n0\n0\n1\n1\n0\n1\n2\n2\n0\n2"));
+        ArrayList<Player> playerArrayList = new ArrayList<>();
+        GameRules gameRules = new GameRules(3,new Coordinates(3,3));
+        GameCompetitors gameCompetitors = new GameCompetitors(playerArrayList);
+        gameCompetitors.addingPlayersWithNameAndSign("Bartosz");
+        gameCompetitors.addingPlayersWithNameAndSign("Maciej");
+        gameCompetitors.chooseStartingPlayerRandomly();
+        Game game = new Game(gameCompetitors,gameRules, inputProvider);
+        game.init();
 
-//    public void testIfPlayersCanBeAddToTheList(){
-//        Game game = new Game();
-//        game.addPlayer(new Player("Bartosz"));
-//        game.addPlayer(new Player("Maciej"));
-//        List<Player> playerList = game.getListOfPlayers();
-//        Integer sizeOfAPlayerList = playerList.size();
-//        Assert.assertEquals(sizeOfAPlayerList,Integer.valueOf(2));
-//    }
-//
-//    @Test(expectedExceptions = {TooManyPlayersException.class})
-//    public void testIfGamesCantHaveMoreThanTwoPlayers(){
-//        Game game = new Game();
-//        game.addPlayer(new Player("Bartosz"));
-//        game.addPlayer(new Player("Maciej"));
-//        game.addPlayer(new Player("Wojciech"));
-//        game.addPlayer(new Player("Marcin"));
-//    }
+        assert gameCompetitors.listOfPlayers.get(0).score == 6 ;
+    }
 
+    public void endToEndTestWinDiagonal(){
+        InputProvider inputProvider = new InputProvider(new Scanner("0\n0\n0\n1\n1\n1\n0\n2\n2\n2\n0\n0\n0\n1\n1\n1\n0\n2\n2\n2\n0\n0\n0\n1\n1\n1\n0\n2\n2\n2"));
+        ArrayList<Player> playerArrayList = new ArrayList<>();
+        GameRules gameRules = new GameRules(3,new Coordinates(3,3));
+        GameCompetitors gameCompetitors = new GameCompetitors(playerArrayList);
+        gameCompetitors.addingPlayersWithNameAndSign("Bartosz");
+        gameCompetitors.addingPlayersWithNameAndSign("Maciej");
+        gameCompetitors.chooseStartingPlayerRandomly();
+        Game game = new Game(gameCompetitors,gameRules, inputProvider);
+        game.init();
 
-//    public void testIfPlayerHaveChanged(){
-//        Game game = new Game();
-//        Player playerOne = new Player("Bartosz");
-//        Player playerTwo = new Player("Maciej");
-//        game.addPlayer(playerOne);
-//        game.addPlayer(playerTwo);
-//        List<Player> playerList = game.getListOfPlayers();
-//        Player playerChangedToPlayerOne = game.changePlayer(playerList,playerTwo);
-//        Player playerChangedToPlayerTwo = game.changePlayer(playerList,playerOne);
-//        assert playerChangedToPlayerOne.equals(playerOne);
-//        assert playerChangedToPlayerTwo.equals(playerTwo);
-//    }
+        assert gameCompetitors.listOfPlayers.get(0).score == 6 && gameCompetitors.listOfPlayers.get(1).score == 3;
+    }
+
+    public void endToEndTestWinReverseDiagonal(){
+        InputProvider inputProvider = new InputProvider(new Scanner("0\n2\n0\n0\n1\n1\n0\n1\n2\n0\n0\n2\n0\n0\n1\n1\n0\n1\n2\n0\n0\n2\n0\n0\n1\n1\n0\n1\n2\n0\n"));
+        ArrayList<Player> playerArrayList = new ArrayList<>();
+        GameRules gameRules = new GameRules(3,new Coordinates(3,3));
+        GameCompetitors gameCompetitors = new GameCompetitors(playerArrayList);
+        gameCompetitors.addingPlayersWithNameAndSign("Bartosz");
+        gameCompetitors.addingPlayersWithNameAndSign("Maciej");
+        gameCompetitors.chooseStartingPlayerRandomly();
+        Game game = new Game(gameCompetitors,gameRules, inputProvider);
+        game.init();
+
+        assert gameCompetitors.listOfPlayers.get(0).score == 6 && gameCompetitors.listOfPlayers.get(1).score == 3;
+
+    }
+
+    public void endToEndTestTie(){
+        InputProvider inputProvider = new InputProvider(new Scanner("0\n0\n0\n1\n1\n1\n0\n2\n2\n2\n0\n0\n0\n1\n1\n1\n0\n2\n2\n2" +
+                "\n0\n0\n0\n1\n0\n2\n1\n1\n1\n0\n2\n0\n2\n1\n1\n2\n2\n2" +
+                ""));
+        ArrayList<Player> playerArrayList = new ArrayList<>();
+        GameRules gameRules = new GameRules(3,new Coordinates(3,3));
+        GameCompetitors gameCompetitors = new GameCompetitors(playerArrayList);
+        gameCompetitors.addingPlayersWithNameAndSign("Bartosz");
+        gameCompetitors.addingPlayersWithNameAndSign("Maciej");
+        gameCompetitors.chooseStartingPlayerRandomly();
+        Game game = new Game(gameCompetitors,gameRules, inputProvider);
+        game.init();
+
+        assert gameCompetitors.listOfPlayers.get(0).score == 4
+                && gameCompetitors.listOfPlayers.get(1).score == 4;
+
+    }
 }

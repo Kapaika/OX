@@ -7,13 +7,16 @@ import java.util.Scanner;
  */
  class InputProvider {
 
-    private static final Scanner inputProvider = new Scanner(System.in);
+    private Scanner scanner;
 
-    static int nextInt() {
-        return inputProvider.nextInt();
-    }
-    static String nextLine() {
-        return inputProvider.nextLine();
+    InputProvider(Scanner scanner) {
+        this.scanner = scanner;
     }
 
+    int nextInt() {
+        return this.scanner.nextInt();
+    }
+    String nextLine() {
+        return this.scanner.nextLine();
+    }
 }

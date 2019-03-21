@@ -3,7 +3,7 @@ package com.OX.app;
 /**
  * @author Bartosz Kupajski
  */
-public enum Sign {
+enum Sign {
     X("X"),
     O("O"),
     N(" ");

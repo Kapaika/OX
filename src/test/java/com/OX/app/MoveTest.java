@@ -93,6 +93,20 @@ public class MoveTest {
 
     }
 
+    @Test(expectedExceptions = FieldAlreadyTakenException.class)
+    public void testArrayOfTheBoundException(){
+        BoardCreator boardCreator = new BoardCreator(3,3);
+        Board board = new Board(boardCreator.createBoard());
+        Player player = new Player("Bartosz");
+        player.setSign(Sign.X);
+        Coordinates coordinates1 = new Coordinates(1,1);
+        Coordinates coordinates2 = new Coordinates(1,1);
+        Move firstMove = new Move(coordinates1,player);
+        Move secondMove = new Move(coordinates2,player);
+        firstMove.makeAMove(board);
+        secondMove.makeAMove(board);
+    }
+
 
 
 }

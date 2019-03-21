@@ -3,5 +3,5 @@ package com.OX.app;
 /**
  * @author Bartosz Kupajski
  */
-public class TooManyPlayersException extends RuntimeException {
+class TooManyPlayersException extends RuntimeException {
 }

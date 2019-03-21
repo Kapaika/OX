@@ -5,10 +5,10 @@ package com.OX.app;
  */
 class TieChecker {
 
-     boolean check(Sign[][] tabX0){
-        for(Sign[] tabSigns : tabX0){
-            for(Sign sign : tabSigns){
-                if(sign==Sign.N){
+    boolean check(Sign[][] tabX0) {
+        for (Sign[] tabSigns : tabX0) {
+            for (Sign sign : tabSigns) {
+                if (sign == Sign.N) {
                     return false;
                 }
             }

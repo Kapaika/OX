@@ -9,7 +9,14 @@ import java.util.Scanner;
 
     Integer inLineToWinCondition;
     Coordinates sizeOfABoard;
-    private InputProvider2 inputProvider2 = new InputProvider2(new Scanner(System.in));
+
+    GameRules() {
+    }
+
+    GameRules(Integer inLineToWinCondition, Coordinates sizeOfABoard) {
+        this.inLineToWinCondition = inLineToWinCondition;
+        this.sizeOfABoard = sizeOfABoard;
+    }
 
     void setInLineToWinCondition(Integer inLineToWin) throws toSmallWinningConditionExceptionException, winningConditionMoreThanASizeOfBoardExcetpion {
         if(inLineToWin<3){

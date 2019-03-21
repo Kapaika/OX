@@ -2,7 +2,6 @@ package com.OX.app;
 
 import java.util.InputMismatchException;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * @author Bartosz Kupajski
@@ -12,15 +11,15 @@ import java.util.Scanner;
      private GameCompetitors gameCompetitors;
      private GameRules gameRules;
      private Language language = Language.getInstance();
-     private InputProvider2 inputProvider2;
+     private InputProvider inputProvider;
 
-    Game(GameCompetitors gameCompetitors, GameRules gameRules, InputProvider2 inputProvider2) {
+    Game(GameCompetitors gameCompetitors, GameRules gameRules, InputProvider inputProvider) {
         this.gameCompetitors = gameCompetitors;
         this.gameRules = gameRules;
-        this.inputProvider2=inputProvider2;
+        this.inputProvider = inputProvider;
     }
 
-     void init(){
+    void init(){
 
         List<Player> listOfPlayers = gameCompetitors.getListOfPlayers();
         BoardCreator boardCreator = new BoardCreator(gameRules.sizeOfABoard.x,gameRules.sizeOfABoard.y);
@@ -30,13 +29,6 @@ import java.util.Scanner;
         singleGame(listOfPlayers,currentPlayer,boardCreator);
         gameResult(currentPlayer,changePlayer(listOfPlayers,currentPlayer));
         //System.out.println(listOfPlayers.get(0).name + " " + listOfPlayers.get(0).score + " | " + listOfPlayers.get(1).name + " "  + listOfPlayers.get(1).score);
-    }
-
-    private Player changePlayer(List<Player> list, Player player){
-        if(player == list.get(0)){
-            return list.get(1);
-        }
-        return list.get(0);
     }
 
     private void singleGame(List<Player> listOfPlayers, Player currentPlayer, BoardCreator boardCreator){
@@ -61,11 +53,11 @@ import java.util.Scanner;
 
                 //Checking if boardSize is not illegal
                 try{
-                    moveCoordinates = new Coordinates(inputProvider2.nextInt(),inputProvider2.nextInt());
+                    moveCoordinates = new Coordinates(inputProvider.nextInt(), inputProvider.nextInt());
                     move = new Move(moveCoordinates,currentPlayer);
                 }
                 catch(InputMismatchException e){
-                    inputProvider2.nextLine();
+                    inputProvider.nextLine();
                     continue;
                 }
 
@@ -104,6 +96,13 @@ import java.util.Scanner;
                 currentPlayer = changePlayer(listOfPlayers,currentPlayer);
             }
         }
+    }
+
+    private Player changePlayer(List<Player> list, Player player){
+        if(player == list.get(0)){
+            return list.get(1);
+        }
+        return list.get(0);
     }
 
     private void gameResult(Player firstPlayer, Player secondPlayer){

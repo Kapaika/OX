@@ -12,7 +12,7 @@ class Language {
     private static ResourceBundle resourceBundle;
 
     private Language() {
-        resourceBundle = ResourceBundle.getBundle("OX",new Locale("pl","PL"));
+        resourceBundle = ResourceBundle.getBundle("OX", new Locale("pl", "PL"));
     }
 
     static synchronized Language getInstance() {
@@ -27,11 +27,11 @@ class Language {
         return resourceBundle.getString(key);
     }
 
-    public void changeLangugae(){
-        if(resourceBundle.getLocale().getCountry().equals("EN")){
-            resourceBundle = ResourceBundle.getBundle("OX",new Locale("pl","PL"));
-        }else{
-            resourceBundle = ResourceBundle.getBundle("OX",new Locale("en","EN"));
+    public void changeLangugae() {
+        if (resourceBundle.getLocale().getCountry().equals("EN")) {
+            resourceBundle = ResourceBundle.getBundle("OX", new Locale("pl", "PL"));
+        } else {
+            resourceBundle = ResourceBundle.getBundle("OX", new Locale("en", "EN"));
         }
     }
 

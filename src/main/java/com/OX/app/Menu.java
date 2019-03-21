@@ -13,12 +13,24 @@ import java.util.InputMismatchException;
  */
 class Menu {
 
+    /**
+     * InputProvider is as Scanner wrapper
+     */
     InputProvider inputProvider;
 
+    /**
+     * Create new Meny with InputProvider in it.
+     * @param inputProvider
+     */
     Menu(InputProvider inputProvider) {
         this.inputProvider = inputProvider;
     }
 
+    /**
+     *  Creation of the game Settings; Language, Who is playing, Size of a Board and Winning Condition
+     *  and passing them to the game.
+     *
+     */
     void start() {
 
         Language resourceBundle = Language.getInstance();

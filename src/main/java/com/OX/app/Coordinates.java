@@ -10,9 +10,6 @@ class Coordinates {
     Integer x;
     Integer y;
 
-    Coordinates() {
-    }
-
     Coordinates(Integer x, Integer y) {
         this.x = x;
         this.y = y;

@@ -1,4 +1,4 @@
-package Exceptions;
+package com.OX.app;
 
 /**
  * @author Bartosz Kupajski

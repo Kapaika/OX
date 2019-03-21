@@ -1,10 +1,6 @@
 package com.OX.app;
 
-import Exceptions.TooManyPlayersException;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.List;
 
 /**
  * @author Bartosz Kupajski

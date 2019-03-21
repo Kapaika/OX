@@ -5,7 +5,6 @@ import java.util.Scanner;
 /**
  * @author Bartosz Kupajski
  */
-
  class InputProvider {
 
     private static final Scanner inputProvider = new Scanner(System.in);

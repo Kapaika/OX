@@ -1,6 +1,5 @@
 package com.OX.app;
 
-import Exceptions.FieldAlreadyTakenException;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

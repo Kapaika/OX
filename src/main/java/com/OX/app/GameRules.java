@@ -19,7 +19,7 @@ package com.OX.app;
         InputProvider.nextLine();
     }
 
-    void setSizeOfABoard(int a, int b) throws toSmallBoardException {
+    void sizeOfABoard(int a, int b) throws toSmallBoardException {
         if(a <3 || b<3){
             throw new toSmallBoardException();
         }

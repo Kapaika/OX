@@ -15,6 +15,7 @@ public class Main {
         GameRules gameRules = new GameRules();
         int gameStarterRequirements=0;
 
+
         ResourceBundle resourceBundle = ResourceBundle.getBundle("OX",new Locale("pl","PL"));
 
         while(gameStarterRequirements<4){
@@ -28,7 +29,7 @@ public class Main {
             if(gameRules.sizeOfABoard == null){
                 System.out.println(resourceBundle.getString("size"));
                 try{
-                    gameRules.setSizeOfABoard(InputProvider.nextInt(),InputProvider.nextInt());
+                    gameRules.sizeOfABoard(InputProvider.nextInt(),InputProvider.nextInt());
                 }catch(InputMismatchException e){
                     System.out.println(resourceBundle.getString("shouldBeNumeric"));
                     InputProvider.nextLine();

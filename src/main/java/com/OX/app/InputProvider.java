@@ -8,6 +8,7 @@ import java.util.Scanner;
  class InputProvider {
 
     private static final Scanner inputProvider = new Scanner(System.in);
+
     static int nextInt() {
         return inputProvider.nextInt();
     }

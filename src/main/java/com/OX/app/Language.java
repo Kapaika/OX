@@ -12,7 +12,7 @@ class Language {
     private static ResourceBundle resourceBundle;
 
     private Language() {
-        resourceBundle = ResourceBundle.getBundle("OX",new Locale("en","EN"));
+        resourceBundle = ResourceBundle.getBundle("OX",new Locale("pl","PL"));
     }
 
     static synchronized Language getInstance() {

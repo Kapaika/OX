@@ -1,5 +1,7 @@
 package com.OX.app;
 
+import java.util.Scanner;
+
 /**
  * @author Bartosz Kupajski
  */
@@ -7,6 +9,7 @@ package com.OX.app;
 
     Integer inLineToWinCondition;
     Coordinates sizeOfABoard;
+    private InputProvider2 inputProvider2 = new InputProvider2(new Scanner(System.in));
 
     void setInLineToWinCondition(Integer inLineToWin) throws toSmallWinningConditionExceptionException, winningConditionMoreThanASizeOfBoardExcetpion {
         if(inLineToWin<3){
@@ -16,7 +19,6 @@ package com.OX.app;
             throw new winningConditionMoreThanASizeOfBoardExcetpion();
         }
         this.inLineToWinCondition = inLineToWin;
-        InputProvider.nextLine();
     }
 
     void sizeOfABoard(int a, int b) throws toSmallBoardException {

@@ -1,19 +1,33 @@
 package com.OX.app;
 
+import java.awt.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * @author Bartosz Kupajski
+ * Menu program contain implemented TicTacToe game that firstly ask player
+ *  about settings and next leads game turns and display playing Board.
+ *
+ * @author  Bartosz Kupajski
+ * @version 1.0
+ * @since   2019-03-21
  */
-public class Main {
+class Menu {
 
-    public static void main(String[] args) {
+    InputProvider inputProvider;
+
+    Menu(InputProvider inputProvider) {
+        this.inputProvider = inputProvider;
+    }
+
+    void start() {
 
         GameCompetitors gameCompetitors = new GameCompetitors();
         GameRules gameRules = new GameRules();
         int gameStarterRequirements = 0;
-        InputProvider inputProvider = new InputProvider(new Scanner(System.in));
 
 
         Language resourceBundle = Language.getInstance();
@@ -22,7 +36,7 @@ public class Main {
 
             if (gameCompetitors.listOfPlayers.size() < 2) {
                 System.out.println(resourceBundle.getString("who'splaying"));
-                gameCompetitors.addingPlayersWithNameAndSign(inputProvider.nextLine());
+                gameCompetitors.addingPlayersWithNameAndSign(this.inputProvider.nextLine());
                 gameCompetitors.addingPlayersWithNameAndSign(inputProvider.nextLine());
                 gameStarterRequirements++;
             }

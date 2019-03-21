@@ -6,6 +6,7 @@ package com.OX.app;
 class WinningChecker {
 
     Boolean check(Board board, Move lastMove, Integer inLineToWin) {
+
         Sign playersSign = lastMove.player.sign;
         inLineToWin = inLineToWin - 1;
         Coordinates coordinates = lastMove.coordinates;
@@ -47,10 +48,7 @@ class WinningChecker {
             }
         }
 
-        if (horizontalCounter.equals(inLineToWin)) {
-            return true;
-        }
-        return false;
+        return horizontalCounter.equals(inLineToWin);
     }
 
     private boolean verticalChecker(Integer row, Integer col, Integer inLineToWin, Board board, Sign sign) {
@@ -79,10 +77,7 @@ class WinningChecker {
             }
         }
 
-        if (diagonalCounter.equals(inLineToWin)) {
-            return true;
-        }
-        return false;
+        return diagonalCounter.equals(inLineToWin);
     }
 
     private boolean diagonalChecker(Integer row, Integer col, Integer inLineToWin, Board board, Sign sign) {
@@ -111,17 +106,13 @@ class WinningChecker {
             }
         }
 
-        if (diagonalCounter == 2) {
-            return true;
-        }
-        return false;
+        return diagonalCounter.equals(inLineToWin);
     }
 
     private boolean reverseDiagonalChecker(Integer row, Integer col, Integer inLineToWin, Board board, Sign sign) {
 
         Integer reverseDiagonalCounter = 0;
 
-        //TODO: Sprawdzić graniczne przypadki
         for (int i = (row - inLineToWin); i < row; i++) {
             for (int j = (col + inLineToWin); j > col; j--) {
                 if (i > board.playingBoard.length - 1 || j > board.playingBoard.length - 1 || i < 0 || j < 0) {
@@ -144,10 +135,7 @@ class WinningChecker {
             }
         }
 
-        if (reverseDiagonalCounter == 2) {
-            return true;
-        }
-        return false;
+        return reverseDiagonalCounter.equals(inLineToWin);
     }
 
 

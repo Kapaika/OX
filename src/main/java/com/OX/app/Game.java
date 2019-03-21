@@ -21,7 +21,7 @@ import java.util.List;
 
     void init(){
 
-        List<Player> listOfPlayers = gameCompetitors.getListOfPlayers();
+        List<Player> listOfPlayers = gameCompetitors.listOfPlayers;
         BoardCreator boardCreator = new BoardCreator(gameRules.sizeOfABoard.x,gameRules.sizeOfABoard.y);
 
         Player currentPlayer = gameCompetitors.startingPlayer;
@@ -40,6 +40,7 @@ import java.util.List;
 
             //single game inside
             Boolean winResult = false;
+            Integer inLineToWin = gameRules.inLineToWinCondition;
             Board board = new Board(boardCreator.createBoard());
             BoardPrinter boardPrinter = new BoardPrinter(board);
             boardPrinter.printBoard();
@@ -74,7 +75,6 @@ import java.util.List;
                     continue;
                 }
                 boardPrinter.printBoard();
-
                 //Checking tie situation
                 if(tieChecker.check(board.playingBoard)){
                     System.out.println(language.getString("tie"));
@@ -86,7 +86,7 @@ import java.util.List;
                 }
 
                 //Checking Win situation
-                winResult = winningChecker.check(board,move,3);
+                winResult = winningChecker.check(board,move,inLineToWin);
                 if(winResult){
                     System.out.println(currentPlayer + " " +  language.getString("wonARound"));
                     currentPlayer.score = currentPlayer.score + 3 ;

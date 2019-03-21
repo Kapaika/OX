@@ -1,5 +1,6 @@
 package com.OX.app;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -12,7 +13,8 @@ public class GameCompetitorsTest{
 
     @Test
     public void testDefaultConstructor(){
-        GameCompetitors gameCompetitors;
+        GameCompetitors gameCompetitors = new GameCompetitors();
+        Assert.assertNotNull(gameCompetitors);
     }
 
 
@@ -33,5 +35,14 @@ public class GameCompetitorsTest{
         gameCompetitors.addingPlayersWithNameAndSign("Bartosz");
         gameCompetitors.addingPlayersWithNameAndSign("Maciej");
         gameCompetitors.chooseStartingPlayer("Grzegorz");
+    }
+
+    @Test(expectedExceptions = {TooManyPlayersException.class})
+    public void testTooManyPlayersException(){
+        ArrayList<Player> playersList = new ArrayList<>();
+        GameCompetitors gameCompetitors = new GameCompetitors(playersList);
+        gameCompetitors.addingPlayersWithNameAndSign("Bartosz");
+        gameCompetitors.addingPlayersWithNameAndSign("Maciej");
+        gameCompetitors.addingPlayersWithNameAndSign("Bohdan");
     }
 }

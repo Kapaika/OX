@@ -24,6 +24,7 @@ class WinningChecker {
     private boolean horizontalChecker(Integer row, Integer col, Integer inLineToWin, Board board, Sign sign) {
 
         Integer horizontalCounter = 0;
+
         //Checking if horizontally on right from last move You have acquired line to win
         for (int i = row; i == row; i++) {
             for (int j = (col + inLineToWin); j > col; j--) {
@@ -86,10 +87,10 @@ class WinningChecker {
 
         for (int i = (row + inLineToWin); i >= row; i--) {
             for (int j = (col + inLineToWin); j >= col; j--) {
-                if (i >= board.playingBoard.length - 1 || j >= board.playingBoard.length - 1 || i < 0 || j < 0) {
+                if (i >= board.playingBoard.length -1  || j >= board.playingBoard.length -1 || i < 0 || j < 0) {
                     continue;
                 }
-                if (board.playingBoard[row][col] == board.playingBoard[i + 1][j + 1] && board.playingBoard[i][j] == sign) {
+                if (board.playingBoard[i][j] == board.playingBoard[i + 1][j + 1] && board.playingBoard[i][j] == sign) {
                     diagonalCounter++;
                 }
             }
@@ -100,7 +101,7 @@ class WinningChecker {
                 if (i >= board.playingBoard.length || j >= board.playingBoard.length || i < 0 || j < 0) {
                     continue;
                 }
-                if (board.playingBoard[row][col] == board.playingBoard[i + 1][j + 1] && board.playingBoard[i][j] == sign) {
+                if (board.playingBoard[i][j] == board.playingBoard[i+1][j+1] && board.playingBoard[i][j] == sign) {
                     diagonalCounter++;
                 }
             }

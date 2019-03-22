@@ -9,21 +9,14 @@ import java.util.List;
 class Game {
 
 
-    private GameCompetitors gameCompetitors;
-    private GameRules gameRules;
+//    private GameCompetitors gameCompetitors;
+//    private GameRules gameRules;
+    private Settings settings;
     private Language language = Language.getInstance();
     private InputProvider inputProvider;
 
-    /**
-     * Creates new Game with all rules, competitors
-     * and InputProvider to contact with user.
-     * @param gameCompetitors
-     * @param gameRules
-     * @param inputProvider
-     */
-    Game(GameCompetitors gameCompetitors, GameRules gameRules, InputProvider inputProvider) {
-        this.gameCompetitors = gameCompetitors;
-        this.gameRules = gameRules;
+    Game(Settings settings, InputProvider inputProvider) {
+        this.settings = settings;
         this.inputProvider = inputProvider;
     }
 
@@ -35,6 +28,8 @@ class Game {
      */
     void init() {
 
+        GameCompetitors gameCompetitors = settings.gameCompetitors;
+        GameRules gameRules = settings.gameRules;
         List<Player> listOfPlayers = gameCompetitors.listOfPlayers;
         BoardCreator boardCreator = new BoardCreator(gameRules.sizeOfABoard.x, gameRules.sizeOfABoard.y);
 
@@ -117,7 +112,7 @@ class Game {
 
         boolean gameResult = false;
         Board board = new Board(boardCreator.createBoard());
-        Integer inLineToWin = gameRules.inLineToWinCondition;
+        Integer inLineToWin = settings.gameRules.inLineToWinCondition;
         BoardPrinter boardPrinter = new BoardPrinter(board);
         boardPrinter.printBoard();
 

@@ -40,11 +40,14 @@ class Game {
 
         Player currentPlayer = gameCompetitors.startingPlayer;
 
-        singleGame(listOfPlayers, currentPlayer, boardCreator);
+        //Playing a game
+        bestOfThreeGame(listOfPlayers, currentPlayer, boardCreator);
+
+        //Printing the result
         gameResult(currentPlayer, changePlayer(listOfPlayers, currentPlayer));
     }
 
-    private void singleGame(List<Player> listOfPlayers, Player currentPlayer, BoardCreator boardCreator) {
+    private void bestOfThreeGame(List<Player> listOfPlayers, Player currentPlayer, BoardCreator boardCreator) {
 
         int counter = 0;
 
@@ -52,55 +55,115 @@ class Game {
         while (counter < 3) {
 
             //single game inside
-            Boolean winResult = false;
-            Integer inLineToWin = gameRules.inLineToWinCondition;
-            Board board = new Board(boardCreator.createBoard());
-            BoardPrinter boardPrinter = new BoardPrinter(board);
-            boardPrinter.printBoard();
-            WinningChecker winningChecker = new WinningChecker();
-            TieChecker tieChecker = new TieChecker();
+//            boolean gameResult = false;
+//            Integer inLineToWin = gameRules.inLineToWinCondition;
+//            Board board = new Board(boardCreator.createBoard());
+////            BoardPrinter boardPrinter = new BoardPrinter(board);
+////            boardPrinter.printBoard();
 
-            while (!winResult) {
-                Move move;
-                System.out.println(currentPlayer.name + " " + language.getString("move"));
-
-                //Checking if move coordinates are valid
-                move = moveCreation(inputProvider,currentPlayer);
-
-                //Checking if move is valid
-                moveValidation(move,board);
-
-                //Printing Board after correct move
-                boardPrinter.printBoard();
-
-                //Checking tie situation
-                if (tieChecker.check(board.playingBoard)) {
-                    System.out.println(language.getString("tie"));
-                    for (Player player : listOfPlayers) {
-                        player.score = player.score + 1;
-                    }
-                    counter++;
-                    break;
-                }
-
-                //Checking Win situation
-                winResult = winningChecker.check(board, move, inLineToWin);
-                if (winResult) {
-                    System.out.println(currentPlayer + " " + language.getString("wonARound"));
-                    currentPlayer.score = currentPlayer.score + 3;
-                    counter++;
-                }
-
-                currentPlayer = changePlayer(listOfPlayers, currentPlayer);
+//            while (!gameResult) {
+//
+//                Move move;
+//                System.out.println(currentPlayer.name + " " + language.getString("move"));
+//
+//                //Checking if move coordinates are valid
+//                move = moveCreation(inputProvider,currentPlayer);
+//
+//                //Checking if move is valid
+//                moveValidation(move,board);
+//
+//                //Printing Board after correct move
+//                boardPrinter.printBoard();
+//
+//                //Checking tie situation
+//
+//
+////                if (tieChecker.check(board.playingBoard)) {
+////                    System.out.println(language.getString("tie"));
+////                    for (Player player : listOfPlayers) {
+////                        player.score = player.score + 1;
+////                    }
+////                    counter++;
+////                    break;
+////                }
+//
+//
+///*
+////                winResult = winningChecker.check(board, move, inLineToWin);
+////                if (winResult) {
+////                    System.out.println(currentPlayer + " " + language.getString("wonARound"));
+////                    currentPlayer.score = currentPlayer.score + 3;
+////                    counter++;
+////                }
+//*/
+//
+//                //Checking game result
+//                gameResult = resultChecker(listOfPlayers,inLineToWin,board,move,currentPlayer);
+//
+//                if(gameResult){
+//                    counter++;
+//                }
+//
+//                currentPlayer = changePlayer(listOfPlayers, currentPlayer);
+//            }
+            if(singleGame(listOfPlayers,currentPlayer,boardCreator)){
+                counter++;
             }
+            currentPlayer = changePlayer(listOfPlayers,currentPlayer);
         }
     }
 
-    private Player changePlayer(List<Player> list, Player player) {
-        if (player == list.get(0)) {
-            return list.get(1);
+    private boolean singleGame(List<Player> listOfPlayers,Player currentPlayer, BoardCreator boardCreator){
+
+        boolean gameResult = false;
+        Board board = new Board(boardCreator.createBoard());
+        Integer inLineToWin = gameRules.inLineToWinCondition;
+        BoardPrinter boardPrinter = new BoardPrinter(board);
+        boardPrinter.printBoard();
+
+        while (!gameResult) {
+
+            System.out.println(currentPlayer.name + " " + language.getString("move"));
+
+            //Checking if move coordinates are valid
+            Move move = moveCreation(inputProvider,currentPlayer);
+
+            //Checking if move is valid
+            moveValidation(move,board);
+
+            //Printing Board after correct move
+            boardPrinter.printBoard();
+
+            //Checking tie situation
+
+
+//                if (tieChecker.check(board.playingBoard)) {
+//                    System.out.println(language.getString("tie"));
+//                    for (Player player : listOfPlayers) {
+//                        player.score = player.score + 1;
+//                    }
+//                    counter++;
+//                    break;
+//                }
+
+
+
+//                winResult = winningChecker.check(board, move, inLineToWin);
+//                if (winResult) {
+//                    System.out.println(currentPlayer + " " + language.getString("wonARound"));
+//                    currentPlayer.score = currentPlayer.score + 3;
+//                    counter++;
+//                }
+
+
+            //Checking game result
+            gameResult = resultChecker(listOfPlayers,inLineToWin,board,move,currentPlayer);
+
+            currentPlayer = changePlayer(listOfPlayers, currentPlayer);
+
         }
-        return list.get(0);
+
+        return true;
     }
 
     private void gameResult(Player firstPlayer, Player secondPlayer) {
@@ -111,6 +174,13 @@ class Game {
         } else {
             System.out.println(language.getString("tie"));
         }
+    }
+
+    private Player changePlayer(List<Player> list, Player player) {
+        if (player == list.get(0)) {
+            return list.get(1);
+        }
+        return list.get(0);
     }
 
     private Move moveCreation(InputProvider inputProvider, Player currentPlayer){

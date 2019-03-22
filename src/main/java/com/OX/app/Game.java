@@ -49,61 +49,12 @@ class Game {
         //Best of Three here
         while (counter < 3) {
 
-            //single game inside
-//            boolean gameResult = false;
-//            Integer inLineToWin = gameRules.inLineToWinCondition;
-//            Board board = new Board(boardCreator.createBoard());
-////            BoardPrinter boardPrinter = new BoardPrinter(board);
-////            boardPrinter.printBoard();
-
-//            while (!gameResult) {
-//
-//                Move move;
-//                System.out.println(currentPlayer.name + " " + language.getString("move"));
-//
-//                //Checking if move coordinates are valid
-//                move = moveCreation(inputProvider,currentPlayer);
-//
-//                //Checking if move is valid
-//                moveValidation(move,board);
-//
-//                //Printing Board after correct move
-//                boardPrinter.printBoard();
-//
-//                //Checking tie situation
-//
-//
-////                if (tieChecker.check(board.playingBoard)) {
-////                    System.out.println(language.getString("tie"));
-////                    for (Player player : listOfPlayers) {
-////                        player.score = player.score + 1;
-////                    }
-////                    counter++;
-////                    break;
-////                }
-//
-//
-///*
-////                winResult = winningChecker.check(board, move, inLineToWin);
-////                if (winResult) {
-////                    System.out.println(currentPlayer + " " + language.getString("wonARound"));
-////                    currentPlayer.score = currentPlayer.score + 3;
-////                    counter++;
-////                }
-//*/
-//
-//                //Checking game result
-//                gameResult = resultChecker(listOfPlayers,inLineToWin,board,move,currentPlayer);
-//
-//                if(gameResult){
-//                    counter++;
-//                }
-//
-//                currentPlayer = changePlayer(listOfPlayers, currentPlayer);
-//            }
+            //Single game played 3 times
             if(singleGame(listOfPlayers,currentPlayer,boardCreator)){
                 counter++;
             }
+
+            //Changing player after every game
             currentPlayer = changePlayer(listOfPlayers,currentPlayer);
         }
     }
@@ -120,40 +71,16 @@ class Game {
 
             System.out.println(currentPlayer.name + " " + language.getString("move"));
 
-            //Checking if move coordinates are valid
-            Move move = moveCreation(inputProvider,currentPlayer);
-
             //Checking if move is valid
-            moveValidation(move,board);
+            Move move = moveValidator(inputProvider,currentPlayer,board);
 
             //Printing Board after correct move
             boardPrinter.printBoard();
 
-            //Checking tie situation
-
-
-//                if (tieChecker.check(board.playingBoard)) {
-//                    System.out.println(language.getString("tie"));
-//                    for (Player player : listOfPlayers) {
-//                        player.score = player.score + 1;
-//                    }
-//                    counter++;
-//                    break;
-//                }
-
-
-
-//                winResult = winningChecker.check(board, move, inLineToWin);
-//                if (winResult) {
-//                    System.out.println(currentPlayer + " " + language.getString("wonARound"));
-//                    currentPlayer.score = currentPlayer.score + 3;
-//                    counter++;
-//                }
-
-
             //Checking game result
             gameResult = resultChecker(listOfPlayers,inLineToWin,board,move,currentPlayer);
 
+            //Changing player after every move
             currentPlayer = changePlayer(listOfPlayers, currentPlayer);
 
         }
@@ -163,11 +90,11 @@ class Game {
 
     private void gameResult(Player firstPlayer, Player secondPlayer) {
         if (firstPlayer.score > secondPlayer.score) {
-            System.out.println(language.getString("won") + firstPlayer);
+            System.out.println(language.getString("wonAGame") + " " + firstPlayer);
         } else if (firstPlayer.score < secondPlayer.score) {
-            System.out.println(language.getString("won") + secondPlayer);
+            System.out.println(language.getString("wonAGame") + " " + secondPlayer);
         } else {
-            System.out.println(language.getString("tie"));
+            System.out.println(language.getString("tieAGame"));
         }
     }
 
@@ -197,18 +124,31 @@ class Game {
         return move;
     }
 
-    private void moveValidation(Move move, Board board){
+    private boolean moveValidation(Move move, Board board){
 
-        while (true){
             try {
                 move.makeAMove(board);
-                break;
+                return true;
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println(language.getString("outOfBounds"));
+                return false;
             } catch (FieldAlreadyTakenException e) {
                 System.out.println(language.getString("alreadyTaken"));
+                return false;
             }
-        }
+
+    }
+
+    private Move moveValidator(InputProvider inputProvider, Player currentPlayer, Board board){
+
+        Move move;
+
+        do {
+             move = moveCreation(inputProvider, currentPlayer);
+
+        } while (!moveValidation(move, board));
+
+        return move;
     }
 
     private boolean resultChecker(List<Player> listOfPlayers , Integer inLineToWin, Board board, Move move, Player currentPlayer){
@@ -225,7 +165,7 @@ class Game {
            return true;
         }
 
-        //Checking Win situation
+        //Checking winning situation
         if (winningChecker.check(board, move, inLineToWin)){
             System.out.println(currentPlayer + " " + language.getString("wonARound"));
             currentPlayer.score = currentPlayer.score + 3;

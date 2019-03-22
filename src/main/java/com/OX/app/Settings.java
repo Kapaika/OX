@@ -17,7 +17,6 @@ class Settings {
     }
 
     void setSettings(){
-
         languageChoice();
         addingPlayer(gameCompetitors);
         sizeOfBoard(gameRules);

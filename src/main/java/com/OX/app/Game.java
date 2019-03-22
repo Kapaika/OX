@@ -61,30 +61,18 @@ class Game {
             TieChecker tieChecker = new TieChecker();
 
             while (!winResult) {
-                Coordinates moveCoordinates;
                 Move move;
                 System.out.println(currentPlayer.name + " " + language.getString("move"));
 
-                //Checking if boardSize is not illegal
-                try {
-                    moveCoordinates = new Coordinates(inputProvider.nextInt(), inputProvider.nextInt());
-                    move = new Move(moveCoordinates, currentPlayer);
-                } catch (InputMismatchException e) {
-                    inputProvider.nextLine();
-                    continue;
-                }
+                //Checking if move coordinates are valid
+                move = moveCreation(inputProvider,currentPlayer);
 
                 //Checking if move is valid
-                try {
-                    move.makeAMove(board);
-                } catch (ArrayIndexOutOfBoundsException e) {
-                    System.out.println(language.getString("outOfBounds"));
-                    continue;
-                } catch (FieldAlreadyTakenException e) {
-                    System.out.println(language.getString("alreadyTaken"));
-                    continue;
-                }
+                moveValidation(move,board);
+
+                //Printing Board after correct move
                 boardPrinter.printBoard();
+
                 //Checking tie situation
                 if (tieChecker.check(board.playingBoard)) {
                     System.out.println(language.getString("tie"));
@@ -124,4 +112,62 @@ class Game {
             System.out.println(language.getString("tie"));
         }
     }
+
+    private Move moveCreation(InputProvider inputProvider, Player currentPlayer){
+
+        Coordinates moveCoordinates;
+        Move move;
+        Language language = Language.getInstance();
+
+        while(true){
+            try {
+                moveCoordinates = new Coordinates(inputProvider.nextInt(), inputProvider.nextInt());
+                move = new Move(moveCoordinates, currentPlayer);
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println(language.getString("shouldBeNumeric"));
+                inputProvider.nextLine();
+            }
+        }
+        return move;
+    }
+
+    private void moveValidation(Move move, Board board){
+
+        while (true){
+            try {
+                move.makeAMove(board);
+                break;
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println(language.getString("outOfBounds"));
+            } catch (FieldAlreadyTakenException e) {
+                System.out.println(language.getString("alreadyTaken"));
+            }
+        }
+    }
+
+    private boolean resultChecker(List<Player> listOfPlayers , Integer inLineToWin, Board board, Move move, Player currentPlayer){
+
+        WinningChecker winningChecker = new WinningChecker();
+        TieChecker tieChecker = new TieChecker();
+
+        //Checking tie situation
+        if(tieChecker.check(board.playingBoard)){
+            System.out.println(language.getString("tie"));
+            for (Player player : listOfPlayers) {
+                player.score = player.score + 1;
+            }
+           return true;
+        }
+
+        //Checking Win situation
+        if (winningChecker.check(board, move, inLineToWin)){
+            System.out.println(currentPlayer + " " + language.getString("wonARound"));
+            currentPlayer.score = currentPlayer.score + 3;
+            return true;
+        }
+
+        return false;
+    }
+
 }

@@ -34,14 +34,14 @@ public class BoardTest {
     @Test(dataProvider = "fillingWithSignCreation")
     public void testOfCreationTheBoardByBoardCreator(int row, int col){
         BoardCreator bd = new BoardCreator(3,3);
-        Sign[][] tabXO = bd.createBoard();
-        assert tabXO[row][col]==Sign.N;
+        Board board = bd.createBoard();
+        assert board.playingBoard[row][col]==Sign.N;
     }
 
     @Test
     public void testPrintBoard(){
         BoardCreator bd = new BoardCreator(3,4);
-        Board board =  new Board(bd.createBoard());
+        Board board = bd.createBoard();
         BoardPrinter boardPrinter = new BoardPrinter(board);
         boardPrinter.printBoard();
     }

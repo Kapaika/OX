@@ -12,6 +12,7 @@ class GameCompetitors {
 
     ArrayList<Player> listOfPlayers = new ArrayList<>();
     Player startingPlayer;
+    private Language language = Language.getInstance();
 
     GameCompetitors() {
     }
@@ -28,10 +29,12 @@ class GameCompetitors {
     void addingPlayersWithNameAndSign(String name) {
         if (listOfPlayers.size() < 1) {
             Player player = new Player(name);
+            System.out.println(language.getString("firstPlayer") + " : " + name);
             player.setSign(Sign.O);
             addPlayer(player);
         } else {
             Player player = new Player(name);
+            System.out.println(language.getString("secondPlayer") + " :  " + name);
             player.setSign(Sign.X);
             addPlayer(player);
         }

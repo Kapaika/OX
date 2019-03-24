@@ -10,29 +10,29 @@ public class GameRulesTest {
         GameRules gameRules = new GameRules();
     }
 
-    @Test(expectedExceptions = {toSmallWinningConditionExceptionException.class})
-    public void testToSmallWinnindContionsException() throws toSmallWinningConditionExceptionException, winningConditionMoreThanASizeOfBoardExcetpion {
+    @Test(expectedExceptions = {TooSmallWinningConditionExceptionException.class})
+    public void testToSmallWinnindContionsException() throws TooSmallWinningConditionExceptionException, WinningConditionMoreThanASizeOfBoardExcetpion {
         GameRules gameRules = new GameRules();
         gameRules.setInLineToWinCondition(2);
     }
 
     @Test()
-    public void testNormalInLineToWinCondition() throws toSmallWinningConditionExceptionException, winningConditionMoreThanASizeOfBoardExcetpion, toSmallBoardException {
+    public void testNormalInLineToWinCondition() throws TooSmallWinningConditionExceptionException, WinningConditionMoreThanASizeOfBoardExcetpion, TooSmallBoardException {
         GameRules gameRules = new GameRules();
-        gameRules.sizeOfABoard(4,4);
+        gameRules.sizeOfABoard(new Coordinates(4,4));
         gameRules.setInLineToWinCondition(3);
     }
 
-    @Test(expectedExceptions = {toSmallBoardException.class})
-    public void testToSmallSizeOfABoardException() throws toSmallBoardException {
+    @Test(expectedExceptions = {TooSmallBoardException.class})
+    public void testToSmallSizeOfABoardException() throws TooSmallBoardException {
         GameRules gameRules = new GameRules();
-        gameRules.sizeOfABoard(2,2);
+        gameRules.sizeOfABoard(new Coordinates(2,2));
     }
 
-    @Test(expectedExceptions = {winningConditionMoreThanASizeOfBoardExcetpion.class})
-    public void testWinningInLineBiggerThanSizeOfABoard() throws toSmallBoardException, toSmallWinningConditionExceptionException, winningConditionMoreThanASizeOfBoardExcetpion {
+    @Test(expectedExceptions = {WinningConditionMoreThanASizeOfBoardExcetpion.class})
+    public void testWinningInLineBiggerThanSizeOfABoard() throws TooSmallBoardException, TooSmallWinningConditionExceptionException, WinningConditionMoreThanASizeOfBoardExcetpion {
         GameRules gameRules = new GameRules();
-        gameRules.sizeOfABoard(4,4);
+        gameRules.sizeOfABoard(new Coordinates(4,4));
         gameRules.setInLineToWinCondition(5);
     }
 }

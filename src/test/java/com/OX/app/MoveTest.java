@@ -13,7 +13,7 @@ public class MoveTest {
     @Test
     public void testIfMoveIsDone(){
         BoardCreator boardCreator = new BoardCreator(3,3);
-        Board board = new Board(boardCreator.createBoard());
+        Board board = boardCreator.createBoard();
         Player player = new Player("Bartosz");
         player.setSign(Sign.O);
         Coordinates coordinates = new Coordinates(0,0);
@@ -41,7 +41,7 @@ public class MoveTest {
     @Test(dataProvider = "coordinatesToTestAlreadyTakenField", expectedExceptions = {FieldAlreadyTakenException.class})
     public void testIfMoveCantBeDoneIfFieldIsAlreadyWritten(int x, int y){
         BoardCreator boardCreator = new BoardCreator(3,3);
-        Board board = new Board(boardCreator.createBoard());
+        Board board = boardCreator.createBoard();
         Player player = new Player("Bartosz");
         player.setSign(Sign.O);
         Coordinates coordinates = new Coordinates(x,y);
@@ -54,7 +54,7 @@ public class MoveTest {
     @Test()
     public void testIfICanTakeAMoveWithDifferentSigns(){
         BoardCreator boardCreator = new BoardCreator(3,3);
-        Board board = new Board(boardCreator.createBoard());
+        Board board = boardCreator.createBoard();
         Player firstPlayer = new Player("Bartosz");
         firstPlayer.setSign(Sign.O);
         Coordinates firstPlayerCoordinates = new Coordinates(0,0);
@@ -84,7 +84,7 @@ public class MoveTest {
     @Test(dataProvider = "arrayOfBoundExceptionChecker", expectedExceptions = {ArrayIndexOutOfBoundsException.class})
     public void testArrayOfTheBoundException(int x, int y, Sign sign){
         BoardCreator boardCreator = new BoardCreator(y,    y);
-        Board board = new Board(boardCreator.createBoard());
+        Board board = boardCreator.createBoard();
         Player player = new Player("Bartosz");
         player.setSign(sign);
         Coordinates coordinates1 = new Coordinates(x,x);
@@ -96,7 +96,7 @@ public class MoveTest {
     @Test(expectedExceptions = FieldAlreadyTakenException.class)
     public void testArrayOfTheBoundException(){
         BoardCreator boardCreator = new BoardCreator(3,3);
-        Board board = new Board(boardCreator.createBoard());
+        Board board = boardCreator.createBoard();
         Player player = new Player("Bartosz");
         player.setSign(Sign.X);
         Coordinates coordinates1 = new Coordinates(1,1);

@@ -14,7 +14,7 @@ public class TieTest {
     @Test
     public void testIfItIsATie(){
         BoardCreator boardCreator = new BoardCreator(3,    3);
-        Board board = new Board(boardCreator.createBoard());
+        Board board = boardCreator.createBoard();
         TieChecker tieChecker = new TieChecker();
         Player firstPlayer = new Player("Bartosz");
         firstPlayer.setSign(Sign.O);
@@ -54,7 +54,7 @@ public class TieTest {
     @Test
     public void testIfItIsNotATie(){
         BoardCreator boardCreator = new BoardCreator(3,    3);
-        Board board = new Board(boardCreator.createBoard());
+        Board board = boardCreator.createBoard();
         TieChecker tieChecker = new TieChecker();
         Player firstPlayer = new Player("Bartosz");
         firstPlayer.setSign(Sign.O);

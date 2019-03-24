@@ -10,10 +10,4 @@ import java.util.Scanner;
 @Test
 public class InputProviderTest {
 
-    @Test
-    public void testTheNextLine(){
-        InputProvider inputProvider = new InputProvider(new Scanner("Siemanko"));
-        String elo = inputProvider.nextLine();
-        assert elo.equals("Siemanko");
-    }
 }

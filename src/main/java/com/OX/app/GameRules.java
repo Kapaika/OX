@@ -1,7 +1,5 @@
 package com.OX.app;
 
-import java.util.Scanner;
-
 /**
  * @author Bartosz Kupajski
  */
@@ -22,28 +20,27 @@ import java.util.Scanner;
      * Setting the winningCondition providing the situation with smaller than 3 condition
      * as well as too big(bigger than board)
      * @param inLineToWin
-     * @throws toSmallWinningConditionExceptionException
-     * @throws winningConditionMoreThanASizeOfBoardExcetpion
+     * @throws TooSmallWinningConditionExceptionException
+     * @throws WinningConditionMoreThanASizeOfBoardExcetpion
      */
-    void setInLineToWinCondition(Integer inLineToWin) throws toSmallWinningConditionExceptionException, winningConditionMoreThanASizeOfBoardExcetpion {
+    void setInLineToWinCondition(Integer inLineToWin) throws TooSmallWinningConditionExceptionException, WinningConditionMoreThanASizeOfBoardExcetpion {
         if(inLineToWin<3){
-            throw new toSmallWinningConditionExceptionException();
+            throw new TooSmallWinningConditionExceptionException();
         }
         if(inLineToWin>sizeOfABoard.x || inLineToWin>sizeOfABoard.y){
-            throw new winningConditionMoreThanASizeOfBoardExcetpion();
+            throw new WinningConditionMoreThanASizeOfBoardExcetpion();
         }
         this.inLineToWinCondition = inLineToWin;
     }
 
-    /**
-     * Setting the size of a Board providing the situation with Board smaller than 3x3.
-     * @param a
-     * @param b
-     * @throws toSmallBoardException
-     */
-    void sizeOfABoard(int a, int b) throws toSmallBoardException {
+
+    void sizeOfABoard(Coordinates coordinates) throws TooSmallBoardException {
+
+        int a = coordinates.x;
+        int b = coordinates.y;
+
         if(a <3 || b<3){
-            throw new toSmallBoardException();
+            throw new TooSmallBoardException();
         }
         this.sizeOfABoard = new Coordinates(a,b);
     }

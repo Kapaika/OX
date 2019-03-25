@@ -13,7 +13,7 @@ public class VerticalChecker implements GameChecker {
 
         for (int i = col; i == col; i++) {
             for (int j = (row + inLineToWin); j > row; j--) {
-                if (i < 0 || i > board.playingBoard[i].length - 1 || j > board.playingBoard.length - 1  || j < 0) {
+                if (i < 0 || j < 0 ||  i > board.playingBoard[0].length - 1 || j > board.playingBoard.length - 1 ) {
                     continue;
                 }
                 if (board.playingBoard[j][i] == sign) {
@@ -24,7 +24,7 @@ public class VerticalChecker implements GameChecker {
 
         for (int i = col; i == col; i++) {
             for (int j = (row - inLineToWin); j < row; j++) {
-                if (i < 0 || i > board.playingBoard[i].length - 1 || j > board.playingBoard.length - 1 ||  j < 0) {
+                if (i < 0 ||  j < 0 || i > board.playingBoard[0].length - 1 || j > board.playingBoard.length - 1 ) {
                     continue;
                 }
                 if (board.playingBoard[j][i] == sign) {

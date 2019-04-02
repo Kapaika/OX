@@ -1,5 +1,7 @@
 package com.OX.app;
 
+import java.util.Scanner;
+
 /**
  * @author Bartosz Kupajski
  */
@@ -15,4 +17,5 @@ class TieChecker {
         }
         return true;
     }
+
 }

@@ -48,13 +48,13 @@ class GameCompetitors {
      * @throws NoSuchPlayerException - Thrown when there is no player given as an argument in method
      */
     void chooseStartingPlayer(String startingPlayerName) throws NoSuchPlayerException {
-        if (startingPlayer == null) {
-            throw new NoSuchPlayerException();
-        }
         for (Player player : listOfPlayers) {
             if (player.name.equals(startingPlayerName)) {
                 this.startingPlayer = player;
             }
+        }
+        if (startingPlayer == null) {
+            throw new NoSuchPlayerException();
         }
     }
 

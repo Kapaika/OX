@@ -8,6 +8,7 @@ import java.util.Scanner;
  class InputProvider {
 
     final private Scanner scanner;
+    final Language language = Language.getInstance();
 
     InputProvider(Scanner scanner) {
         this.scanner = scanner;
@@ -22,7 +23,7 @@ import java.util.Scanner;
                 }
                 return input;
             } catch (NumberFormatException ignored) {
-                System.out.println("Bledne dane");
+                language.getString("wrongData");
             }
         } while (true);
     }
@@ -36,7 +37,7 @@ import java.util.Scanner;
                 }
                 return Integer.parseInt(input);
             } catch (NumberFormatException ignored) {
-                System.out.println("Bledne dane");
+                language.getString("wrongData");
             }
         } while (true);
     }

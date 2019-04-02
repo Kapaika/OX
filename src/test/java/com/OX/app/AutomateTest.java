@@ -8,8 +8,8 @@ import java.util.Random;
 @Test
 public class AutomateTest {
 
-    int numberOfRows = 8;
-    int numberOfCols = 8;
+    int numberOfRows = 5;
+    int numberOfCols = 5;
     int conditionToWin = 3;
 
     @DataProvider
@@ -199,6 +199,7 @@ public class AutomateTest {
             }
         }
     }
+
     @Test(dataProvider = "reverseDiagonalAutomateData")
     public void tieAutomateTest(int numberOfRows, int numberOfBoardCols, int inLineToWin) {
         Player player = new Player("Bartosz");
@@ -213,41 +214,39 @@ public class AutomateTest {
 
         TieChecker tieChecker = new TieChecker();
 
-        for (int smallSquareX = 0 ; smallSquareX < numberOfBoardCols; smallSquareX++) {
+        for (int smallSquareX = 0; smallSquareX < numberOfBoardCols; smallSquareX++) {
 
-            if(changeSignFirst==2){
-               if(player.sign==Sign.X){
-                   player.setSign(Sign.O);
-                   secondPlayer.setSign(Sign.X);
-               }else{
-                   player.setSign(Sign.X);
-                   secondPlayer.setSign(Sign.O);
-               }
-               changeSignFirst=0;
+            if (changeSignFirst == 2) {
+                if (player.sign == Sign.X) {
+                    player.setSign(Sign.O);
+                    secondPlayer.setSign(Sign.X);
+                } else {
+                    player.setSign(Sign.X);
+                    secondPlayer.setSign(Sign.O);
+                }
+                changeSignFirst = 0;
             }
-
 
             for (int smallSquareY = 0; smallSquareY < numberOfRows; smallSquareY++) {
 
-                Coordinates coordinates = new Coordinates(smallSquareX,smallSquareY);
+                Coordinates coordinates = new Coordinates(smallSquareX, smallSquareY);
 
-                if(smallSquareY%2==0){
+                if (smallSquareY % 2 == 0) {
                     Move move = new Move(coordinates, player);
                     board.makeAMove(move);
-                    if(tieChecker.check(board.playingBoard)){
+                    if (tieChecker.check(board.playingBoard)) {
                         boardPrinter.printBoard();
                         System.out.println("Remis");
                     }
-                }else{
-                    Move move = new Move(coordinates,secondPlayer);
+                } else {
+                    Move move = new Move(coordinates, secondPlayer);
                     board.makeAMove(move);
-                    if(tieChecker.check(board.playingBoard)){
+                    if (tieChecker.check(board.playingBoard)) {
                         boardPrinter.printBoard();
                         System.out.println("Remis");
                     }
                 }
             }
-
             changeSignFirst++;
         }
     }

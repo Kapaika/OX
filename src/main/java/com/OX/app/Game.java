@@ -170,8 +170,8 @@ class Game {
 
         //Checking winning situation
         if (winningChecker.check2(board, move, inLineToWin)){
-            System.out.println(currentPlayer + " " + language.getString("wonARound") + " points:"  + currentPlayer.score);
             currentPlayer.score = currentPlayer.score + 3;
+            System.out.println(currentPlayer + " " + language.getString("wonARound") + " points:"  + currentPlayer.score);
             return true;
         }
 

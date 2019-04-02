@@ -1,6 +1,7 @@
 package com.OX.app;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Keep information about players who playing game
@@ -10,9 +11,9 @@ import java.util.ArrayList;
  */
 class GameCompetitors {
 
-    ArrayList<Player> listOfPlayers = new ArrayList<>();
+    List<Player> listOfPlayers = new ArrayList<>();
     Player startingPlayer;
-    private Language language = Language.getInstance();
+    private final Language language = Language.getInstance();
 
     GameCompetitors() {
     }
@@ -24,7 +25,7 @@ class GameCompetitors {
     /**
      * Adding player to game by passing its name -
      * sign of a player is also added here.
-     * @param name
+     * @param name - name of the Player
      */
     void addingPlayersWithNameAndSign(String name) {
         if (listOfPlayers.size() < 1) {
@@ -43,17 +44,17 @@ class GameCompetitors {
     /**
      * Game have to choose who is starting first. It provides the situation
      * adding more than 2 players.
-     * @param startingPlayerName
-     * @throws NoSuchPlayerException
+     * @param startingPlayerName - Name of the player who should start
+     * @throws NoSuchPlayerException - Thrown when there is no player given as an argument in method
      */
     void chooseStartingPlayer(String startingPlayerName) throws NoSuchPlayerException {
+        if (startingPlayer == null) {
+            throw new NoSuchPlayerException();
+        }
         for (Player player : listOfPlayers) {
             if (player.name.equals(startingPlayerName)) {
                 this.startingPlayer = player;
             }
-        }
-        if (startingPlayer == null) {
-            throw new NoSuchPlayerException();
         }
     }
 

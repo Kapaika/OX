@@ -5,8 +5,8 @@ package com.OX.app;
  */
 class BoardCreator {
 
-    private int rows;
-    private int cols;
+    final private int rows;
+    final private int cols;
 
     BoardCreator(int rows, int cols) {
         this.rows = rows;

@@ -10,10 +10,10 @@ import java.util.Scanner;
 @Test
 public class MenuTest {
 
-    @Test
-    public void firstMenuTest(){
-        InputProvider inputProvider = new InputProvider(new Scanner("1\nbartosz\ntomasz\n3\n3\n3\nbartosz\n0\n0\n0\n1\n1\n1\n0\n2\n2\n2\n0\n0\n0\n1\n1\n1\n0\n2\n2\n2\n0\n0\n0\n1\n1\n1\n0\n2\n2\n2"));
-        Menu menu = new Menu(inputProvider);
-        menu.start();
-    }
+//    @Test
+//    public void firstMenuTest(){
+//        InputProvider inputProvider = new InputProvider(new Scanner("1\nbartosz\ntomasz\n3\n3\n3\nbartosz\n0\n0\n0\n1\n1\n1\n0\n2\n2\n2\n0\n0\n0\n1\n1\n1\n0\n2\n2\n2\n0\n0\n0\n1\n1\n1\n0\n2\n2\n2"));
+//        Menu menu = new Menu(inputProvider);
+//        menu.start();
+//    }
 }

@@ -3,6 +3,7 @@ import org.testng.annotations.Test;
 /**
  * @author Bartosz Kupajski
  */
+@SuppressWarnings("unused")
 @Test
 public class GameRulesTest {
 

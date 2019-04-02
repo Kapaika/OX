@@ -47,7 +47,7 @@ public class TieTest {
         eightMove.makeAMove(board);
         Move ninenthMove = new Move(coordinates9,firstPlayer);
         ninenthMove.makeAMove(board);
-        Boolean result = tieChecker.check(board.playingBoard);
+        boolean result = tieChecker.check(board.playingBoard);
         Assert.assertTrue(result);
     }
 
@@ -85,7 +85,7 @@ public class TieTest {
         seventhMove.makeAMove(board);
         Move eightMove = new Move(coordinates8,secondPlayer);
         eightMove.makeAMove(board);
-        Boolean result = tieChecker.check(board.playingBoard);
+        boolean result = tieChecker.check(board.playingBoard);
         Assert.assertFalse(result);
     }
 

@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 /**
  * @author Bartosz Kupajski
  */
+@SuppressWarnings("SuspiciousNameCombination")
 @Test
 public class MoveTest {
 

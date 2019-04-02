@@ -3,6 +3,7 @@ package com.OX.app;
 /**
  * @author Bartosz Kupajski
  */
+@SuppressWarnings("SameParameterValue")
 class WinningChecker {
 
 
@@ -44,8 +45,6 @@ class WinningChecker {
         Coordinates coordinates = lastMove.coordinates;
         Integer row = coordinates.x;
         Integer col = coordinates.y;
-        Integer boardLength = board.playingBoard.length;
-        Integer boardWeight = board.playingBoard[0].length;
 
         boolean verticalResult = verticalChecker(row, col, inLineToWin, board, playersSign);
         boolean horizontalResult = horizontalChecker(row, col, inLineToWin, board, playersSign);

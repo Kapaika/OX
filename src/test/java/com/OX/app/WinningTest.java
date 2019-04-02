@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 /**
  *  Bartosz Kupajski
  */
+@SuppressWarnings("SuspiciousNameCombination")
 @Test
 public class WinningTest {
 

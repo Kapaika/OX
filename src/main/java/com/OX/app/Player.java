@@ -1,6 +1,5 @@
 package com.OX.app;
 
-import java.util.Random;
 
 /**
  * @author Bartosz Kupajski
@@ -8,7 +7,7 @@ import java.util.Random;
 class Player{
 
     Sign sign;
-    String name;
+    final String name;
     int score;
 
     Player(String name) {

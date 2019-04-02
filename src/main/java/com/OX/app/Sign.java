@@ -8,7 +8,7 @@ enum Sign {
     O("O"),
     N(" ");
 
-    private String text;
+    final private String text;
 
     Sign(String text) {
         this.text = text;

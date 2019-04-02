@@ -3,7 +3,8 @@ package com.OX.app;
 /**
  * @author Bartosz Kupajski
  */
- class GameRules {
+@SuppressWarnings("SameParameterValue")
+class GameRules {
 
     Integer inLineToWinCondition;
     Coordinates sizeOfABoard;
@@ -19,9 +20,10 @@ package com.OX.app;
     /**
      * Setting the winningCondition providing the situation with smaller than 3 condition
      * as well as too big(bigger than board)
-     * @param inLineToWin
-     * @throws TooSmallWinningConditionExceptionException
-     * @throws WinningConditionMoreThanASizeOfBoardExcetpion
+     * @param inLineToWin - condition to win XO game
+     * @throws TooSmallWinningConditionExceptionException - thrown when a condition is lower than 3
+     * @throws WinningConditionMoreThanASizeOfBoardExcetpion - thrown when a condition is bigger
+     * than a size of the playing board
      */
     void setInLineToWinCondition(Integer inLineToWin) throws TooSmallWinningConditionExceptionException, WinningConditionMoreThanASizeOfBoardExcetpion {
         if(inLineToWin<3){

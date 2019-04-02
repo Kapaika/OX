@@ -1,9 +1,5 @@
 package com.OX.app;
 
-
-import java.util.InputMismatchException;
-import java.util.List;
-
 /**
  * Menu contain implemented TicTacToe game that firstly ask player
  * about settings and next leads game turns and display playing Board.
@@ -20,9 +16,9 @@ class Menu {
     private InputProvider inputProvider;
 
     /**
-     * Create new Meny with InputProvider in it.
+     * Create new Menu with InputProvider in it.
      *
-     * @param inputProvider
+     * @param inputProvider - a Scanner wrapper
      */
     Menu(InputProvider inputProvider) {
         this.inputProvider = inputProvider;

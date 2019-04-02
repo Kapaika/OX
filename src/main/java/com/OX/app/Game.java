@@ -11,9 +11,9 @@ class Game {
 
 //    private GameCompetitors gameCompetitors;
 //    private GameRules gameRules;
-    private Settings settings;
-    private Language language = Language.getInstance();
-    private InputProvider inputProvider;
+    final private Settings settings;
+    final private Language language = Language.getInstance();
+    final private InputProvider inputProvider;
 
     Game(Settings settings, InputProvider inputProvider) {
         this.settings = settings;
@@ -59,7 +59,8 @@ class Game {
         }
     }
 
-    private boolean singleGame(List<Player> listOfPlayers,Player currentPlayer, BoardCreator boardCreator){
+    @SuppressWarnings("SameReturnValue")
+    private boolean singleGame(List<Player> listOfPlayers, Player currentPlayer, BoardCreator boardCreator){
 
         boolean gameResult = false;
         Board board = boardCreator.createBoard();
@@ -169,7 +170,7 @@ class Game {
 
         //Checking winning situation
         if (winningChecker.check2(board, move, inLineToWin)){
-            System.out.println(currentPlayer + " " + language.getString("wonARound"));
+            System.out.println(currentPlayer + " " + language.getString("wonARound") + " points:"  + currentPlayer.score);
             currentPlayer.score = currentPlayer.score + 3;
             return true;
         }

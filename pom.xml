@@ -38,6 +38,16 @@
         </dependency>
     </dependencies>
 
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.11.0</version>
+            </plugin>
+        </plugins>
+    </reporting>
+
     <build>
         <plugins>
             <plugin>
@@ -91,7 +101,21 @@
 <!-- if diff enconding than UTF8 is needed: https://maven.apache.org/plugins/maven-resources-plugin/examples/encoding.html -->
                 <version>${version.plugin.maven.resources}</version>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+                <configuration>
+                    <port>9000</port>
+                    <tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
+                </configuration>
+            </plugin>
+
         </plugins>
+
+
+
         <resources>
             <resource>
                 <directory>src/main/resource</directory>

@@ -5,7 +5,7 @@ package com.OX.app;
  */
  class Board {
 
-    Sign[][] playingBoard;
+    final Sign[][] playingBoard;
 
     Board(Sign[][] playingBoard) {
         this.playingBoard = playingBoard;

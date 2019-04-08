@@ -9,6 +9,7 @@ import java.util.Scanner;
 
     final private Scanner scanner;
     final Language language = Language.getInstance();
+    final private Output output = new ConsoleOutput();
 
     InputProvider(Scanner scanner) {
         this.scanner = scanner;
@@ -23,7 +24,7 @@ import java.util.Scanner;
                 }
                 return input;
             } catch (NumberFormatException ignored) {
-                language.getString("wrongData");
+                output.displayMessage(language.getString("wrongData"));
             }
         } while (true);
     }
@@ -37,7 +38,7 @@ import java.util.Scanner;
                 }
                 return Integer.parseInt(input);
             } catch (NumberFormatException ignored) {
-                language.getString("wrongData");
+                output.displayMessage(language.getString("wrongData"));
             }
         } while (true);
     }

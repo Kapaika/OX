@@ -1,19 +1,11 @@
 package com.OX.app;
 
-import java.io.PrintStream;
-
 /**
  * @author Bartosz Kupajski
  */
-public class Output {
+public interface Output {
 
-    private final PrintStream printStream;
+    void displayMessage(String message);
+    void displayError(String error);
 
-    public Output(PrintStream printStream) {
-        this.printStream = printStream;
-    }
-
-    public void print(String text) {
-        printStream.println(text);
-    }
 }

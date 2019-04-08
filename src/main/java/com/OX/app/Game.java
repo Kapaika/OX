@@ -8,12 +8,10 @@ import java.util.List;
  */
 class Game {
 
-
-//    private GameCompetitors gameCompetitors;
-//    private GameRules gameRules;
     final private Settings settings;
     final private Language language = Language.getInstance();
     final private InputProvider inputProvider;
+    final private Output output = new ConsoleOutput();
 
     Game(Settings settings, InputProvider inputProvider) {
         this.settings = settings;
@@ -70,18 +68,13 @@ class Game {
 
         while (!gameResult) {
 
-            System.out.println(currentPlayer.name + " " + language.getString("move"));
+            output.displayMessage(currentPlayer.name + " " + language.getString("move"));
 
             //Checking if move is valid
             Move move = moveValidator(inputProvider,currentPlayer,board);
 
             //Printing Board after correct move
             boardPrinter.printBoard();
-//            try {
-//                Thread.sleep(500);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
 
             //Checking game result
             gameResult = resultChecker(listOfPlayers,inLineToWin,board,move,currentPlayer);
@@ -96,11 +89,11 @@ class Game {
 
     private void gameResult(Player firstPlayer, Player secondPlayer) {
         if (firstPlayer.score > secondPlayer.score) {
-            System.out.println(language.getString("wonAGame") + " " + firstPlayer);
+            output.displayMessage(language.getString("wonAGame") + " " + firstPlayer);
         } else if (firstPlayer.score < secondPlayer.score) {
-            System.out.println(language.getString("wonAGame") + " " + secondPlayer);
+            output.displayMessage(language.getString("wonAGame") + " " + secondPlayer);
         } else {
-            System.out.println(language.getString("tieAGame"));
+            output.displayMessage(language.getString("tieAGame"));
         }
     }
 
@@ -123,9 +116,9 @@ class Game {
                 move = new Move(moveCoordinates, currentPlayer);
                 break;
             } catch (InputMismatchException e) {
-                System.out.println(language.getString("shouldBeNumeric"));
+                output.displayMessage(language.getString("shouldBeNumeric"));
             } catch (GameInterruptedByUserException e) {
-                System.out.println("Wyszedles z gry, przegrales!");
+                output.displayMessage("Wyszedles z gry, przegrales!");
                 System.exit(0);
             }
         }
@@ -138,10 +131,10 @@ class Game {
                 board.makeAMove(move);
                 return true;
             } catch (ArrayIndexOutOfBoundsException e) {
-                System.out.println(language.getString("outOfBounds"));
+                output.displayMessage(language.getString("outOfBounds"));
                 return false;
             } catch (FieldAlreadyTakenException e) {
-                System.out.println(language.getString("alreadyTaken"));
+                output.displayMessage(language.getString("alreadyTaken"));
                 return false;
             }
 
@@ -166,7 +159,7 @@ class Game {
 
         //Checking tie situation
         if(tieChecker.check(board.playingBoard)){
-            System.out.println(language.getString("tie"));
+            output.displayMessage(language.getString("tie"));
             for (Player player : listOfPlayers) {
                 player.score = player.score + 1;
             }
@@ -176,7 +169,7 @@ class Game {
         //Checking winning situation
         if (winningChecker.check2(board, move, inLineToWin)){
             currentPlayer.score = currentPlayer.score + 3;
-            System.out.println(currentPlayer + " " + language.getString("wonARound") + " points:"  + currentPlayer.score);
+            output.displayMessage(currentPlayer + " " + language.getString("wonARound") + " points:"  + currentPlayer.score);
             return true;
         }
 

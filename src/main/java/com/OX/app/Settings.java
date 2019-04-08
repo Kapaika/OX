@@ -17,7 +17,7 @@ class Settings {
         this.inputProvider = inputProvider;
     }
 
-    void setSettings(){
+    void setSettings() {
         languageChoice();
         addingPlayer(gameCompetitors);
         sizeOfBoard(gameRules);
@@ -78,7 +78,7 @@ class Settings {
             output.displayMessage(language.getString("size"));
             while (true) {
                 try {
-                    Coordinates sizesOfBoard = new Coordinates(inputProvider.getIntFromUser(),inputProvider.getIntFromUser());
+                    Coordinates sizesOfBoard = new Coordinates(inputProvider.getIntFromUser(), inputProvider.getIntFromUser());
                     gameRules.sizeOfABoard(sizesOfBoard);
                     break;
                 } catch (InputMismatchException e) {

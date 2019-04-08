@@ -7,7 +7,7 @@ package com.OX.app;
 class WinningChecker {
 
 
-    Boolean check2(Board board, Move lastMove, Integer inLineToWin){
+    Boolean check2(Board board, Move lastMove, Integer inLineToWin) {
 
         inLineToWin = inLineToWin - 1;
         int winningCheckerCounter = 0;
@@ -16,7 +16,7 @@ class WinningChecker {
         DiagonalChecker diagonalChecker = new DiagonalChecker();
         ReverseDiagonalChecker reverseDiagonalChecker = new ReverseDiagonalChecker();
 
-        while(winningCheckerCounter<4){
+        while (winningCheckerCounter < 4) {
             if (!horizontalChecker.check(board, lastMove, inLineToWin)) {
                 winningCheckerCounter++;
                 if (verticalChecker.check(board, lastMove, inLineToWin)) {
@@ -60,7 +60,7 @@ class WinningChecker {
         //Checking if horizontally on right from last move You have acquired line to win
         for (int i = row; i == row; i++) {
             for (int j = (col + inLineToWin); j > col; j--) {
-                if (i < 0 || i > board.playingBoard.length - 1 || j > board.playingBoard[i].length - 1 ||  j < 0) {
+                if (i < 0 || i > board.playingBoard.length - 1 || j > board.playingBoard[i].length - 1 || j < 0) {
                     continue;
                 }
                 if (board.playingBoard[i][j] == sign) {
@@ -72,7 +72,7 @@ class WinningChecker {
         //Checking if horizontally on left from last move position You have acquired line to win
         for (int i = row; i == row; i++) {
             for (int j = (col - inLineToWin); j < col; j++) {
-                if (i < 0 || i > board.playingBoard.length - 1 || j > board.playingBoard[i].length - 1 ||  j < 0) {
+                if (i < 0 || i > board.playingBoard.length - 1 || j > board.playingBoard[i].length - 1 || j < 0) {
                     continue;
                 }
                 if (board.playingBoard[i][j] == sign) {
@@ -101,7 +101,7 @@ class WinningChecker {
 
         for (int i = col; i == col; i++) {
             for (int j = (row - inLineToWin); j < row; j++) {
-                if (i < 0 || i >= board.playingBoard.length || j >= board.playingBoard[i].length ||  j < 0) {
+                if (i < 0 || i >= board.playingBoard.length || j >= board.playingBoard[i].length || j < 0) {
                     continue;
                 }
                 if (board.playingBoard[j][i] == sign) {
@@ -120,7 +120,7 @@ class WinningChecker {
         for (int i = (row + inLineToWin); i >= row; i--) {
             for (int j = (col + inLineToWin); j >= col; j--) {
                 if (i < 0 || i >= board.playingBoard.length - 1 || j >= board.playingBoard[i].length - 1
-                        ||  j < 0 ) {
+                        || j < 0) {
                     continue;
                 }
                 if (board.playingBoard[i][j] == board.playingBoard[i + 1][j + 1] && board.playingBoard[i][j] == sign) {
@@ -131,7 +131,7 @@ class WinningChecker {
 
         for (int i = (row - inLineToWin); i < row; i++) {
             for (int j = (col - inLineToWin); j < col; j++) {
-                if (i<0 || i >= board.playingBoard.length || j >= board.playingBoard[i].length ||  j < 0) {
+                if (i < 0 || i >= board.playingBoard.length || j >= board.playingBoard[i].length || j < 0) {
                     continue;
                 }
                 if (board.playingBoard[i][j] == board.playingBoard[i + 1][j + 1] && board.playingBoard[i][j] == sign) {
@@ -150,7 +150,7 @@ class WinningChecker {
         for (int i = (row - inLineToWin); i < row; i++) {
             for (int j = (col + inLineToWin); j > col; j--) {
                 if (i < 0 || i > board.playingBoard.length - 1 || j > board.playingBoard[i].length - 1
-                        ||  j < 0 ) {
+                        || j < 0) {
                     continue;
                 }
                 if (board.playingBoard[i][j] == board.playingBoard[i + 1][j - 1] && board.playingBoard[i][j] == sign) {

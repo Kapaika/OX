@@ -20,16 +20,17 @@ class GameRules {
     /**
      * Setting the winningCondition providing the situation with smaller than 3 condition
      * as well as too big(bigger than board)
+     *
      * @param inLineToWin - condition to win XO game
-     * @throws TooSmallWinningConditionExceptionException - thrown when a condition is lower than 3
+     * @throws TooSmallWinningConditionExceptionException    - thrown when a condition is lower than 3
      * @throws WinningConditionMoreThanASizeOfBoardExcetpion - thrown when a condition is bigger
-     * than a size of the playing board
+     *                                                       than a size of the playing board
      */
     void setInLineToWinCondition(Integer inLineToWin) throws TooSmallWinningConditionExceptionException, WinningConditionMoreThanASizeOfBoardExcetpion {
-        if(inLineToWin<3){
+        if (inLineToWin < 3) {
             throw new TooSmallWinningConditionExceptionException();
         }
-        if(inLineToWin>sizeOfABoard.x || inLineToWin>sizeOfABoard.y){
+        if (inLineToWin > sizeOfABoard.x || inLineToWin > sizeOfABoard.y) {
             throw new WinningConditionMoreThanASizeOfBoardExcetpion();
         }
         this.inLineToWinCondition = inLineToWin;
@@ -41,10 +42,10 @@ class GameRules {
         int a = coordinates.x;
         int b = coordinates.y;
 
-        if(a <3 || b<3){
+        if (a < 3 || b < 3) {
             throw new TooSmallBoardException();
         }
-        this.sizeOfABoard = new Coordinates(a,b);
+        this.sizeOfABoard = new Coordinates(a, b);
     }
 
 }

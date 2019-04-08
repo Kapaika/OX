@@ -1,7 +1,5 @@
 package com.OX.app;
 
-import java.util.Scanner;
-
 /**
  * @author Bartosz Kupajski
  */

@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @author Bartosz Kupajski
  */
- class InputProvider {
+class InputProvider {
 
     final private Scanner scanner;
     final Language language = Language.getInstance();

@@ -21,17 +21,17 @@ public class Automate {
 
     public static void main(String[] args) {
         //Automate automate = new Automate(5,5,3);
-        Automate automate = new Automate(Integer.parseInt(args[0]),Integer.parseInt(args[1]),Integer.parseInt(args[2]));
+        Automate automate = new Automate(Integer.parseInt(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2]));
         automate.automateGenerator();
     }
 
     void automateGenerator() {
         beginningOfTheGameCreator();
-        horizontalGenerator(numberOfRows,numberOfCols,conditionToWin);
-        verticalGenerator(numberOfRows,numberOfCols,conditionToWin);
-        tieGenerator(numberOfRows,numberOfCols,conditionToWin);
-        diagonalGenerator(numberOfRows,numberOfCols,conditionToWin);
-        reverseGenerator(numberOfRows,numberOfCols,conditionToWin);
+        horizontalGenerator(numberOfRows, numberOfCols, conditionToWin);
+        verticalGenerator(numberOfRows, numberOfCols, conditionToWin);
+        tieGenerator(numberOfRows, numberOfCols, conditionToWin);
+        diagonalGenerator(numberOfRows, numberOfCols, conditionToWin);
+        reverseGenerator(numberOfRows, numberOfCols, conditionToWin);
     }
 
     private void beginningOfTheGameCreator() {
@@ -128,7 +128,7 @@ public class Automate {
         }
     }
 
-    private void diagonalGenerator(int numberOfRows, int numberOfCols, int inLineToWin){
+    private void diagonalGenerator(int numberOfRows, int numberOfCols, int inLineToWin) {
         inLineToWin = inLineToWin - 1;
         Player player = new Player("Bartosz");
         player.setSign(Sign.X);
@@ -148,7 +148,7 @@ public class Automate {
                 BoardPrinter boardPrinter = new BoardPrinter(board);
                 for (int i = 0; i <= inLineToWin; i++) {
                     Coordinates coordinates = new Coordinates(smallSquareX + i, smallSquareY + i);
-                    stringBuilder.append(smallSquareX+i).append('\n').append(smallSquareY+i).append('\n');
+                    stringBuilder.append(smallSquareX + i).append('\n').append(smallSquareY + i).append('\n');
                     Move move = new Move(coordinates, player);
                     board.makeAMove(move);
                     if (diagonalChecker.check(board, move, inLineToWin)) {
@@ -171,7 +171,7 @@ public class Automate {
         }
     }
 
-    private void tieGenerator(int numberOfRows,int numberOfCols,int inLineToWin) {
+    private void tieGenerator(int numberOfRows, int numberOfCols, int inLineToWin) {
 
         Player player = new Player("Bartosz");
         player.setSign(Sign.O);
@@ -225,7 +225,7 @@ public class Automate {
         }
     }
 
-    private void reverseGenerator(int numberOfRows, int numberOfCols, int inLineToWin){
+    private void reverseGenerator(int numberOfRows, int numberOfCols, int inLineToWin) {
 
         inLineToWin = inLineToWin - 1;
         Player player = new Player("Bartosz");
@@ -248,7 +248,7 @@ public class Automate {
                 for (int i = 0; i <= inLineToWin; i++) {
                     Coordinates coordinates = new Coordinates(smallSquareX - i, smallSquareY + i);
                     Move move = new Move(coordinates, player);
-                    stringBuilder.append(smallSquareX-i).append('\n').append(smallSquareY+i).append('\n');
+                    stringBuilder.append(smallSquareX - i).append('\n').append(smallSquareY + i).append('\n');
                     board.makeAMove(move);
                     if (reverseDiagonalChecker.check(board, move, inLineToWin)) {
                         boardPrinter.printBoard();

@@ -3,7 +3,7 @@ package com.OX.app;
 /**
  * @author Bartosz Kupajski
  */
- class Board {
+class Board {
 
     final Sign[][] playingBoard;
 

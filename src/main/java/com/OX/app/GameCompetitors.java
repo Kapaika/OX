@@ -26,6 +26,7 @@ class GameCompetitors {
     /**
      * Adding player to game by passing its name -
      * sign of a player is also added here.
+     *
      * @param name - name of the Player
      */
     void addingPlayersWithNameAndSign(String name) {
@@ -45,6 +46,7 @@ class GameCompetitors {
     /**
      * Game have to choose who is starting first. It provides the situation
      * adding more than 2 players.
+     *
      * @param startingPlayerName - Name of the player who should start
      * @throws NoSuchPlayerException - Thrown when there is no player given as an argument in method
      */

@@ -24,7 +24,7 @@ class Game {
      * and Player who starts.
      * . At the end the result of game is printed.
      */
-    void init(){
+    void init() {
 
         GameCompetitors gameCompetitors = settings.gameCompetitors;
         GameRules gameRules = settings.gameRules;
@@ -48,17 +48,17 @@ class Game {
         while (counter < 3) {
 
             //Single game played 3 times
-            if(singleGame(listOfPlayers,currentPlayer,boardCreator)){
+            if (singleGame(listOfPlayers, currentPlayer, boardCreator)) {
                 counter++;
             }
 
             //Changing player after every game
-            currentPlayer = changePlayer(listOfPlayers,currentPlayer);
+            currentPlayer = changePlayer(listOfPlayers, currentPlayer);
         }
     }
 
     @SuppressWarnings("SameReturnValue")
-    private boolean singleGame(List<Player> listOfPlayers, Player currentPlayer, BoardCreator boardCreator){
+    private boolean singleGame(List<Player> listOfPlayers, Player currentPlayer, BoardCreator boardCreator) {
 
         boolean gameResult = false;
         Board board = boardCreator.createBoard();
@@ -71,13 +71,13 @@ class Game {
             output.displayMessage(currentPlayer.name + " " + language.getString("move"));
 
             //Checking if move is valid
-            Move move = moveValidator(inputProvider,currentPlayer,board);
+            Move move = moveValidator(inputProvider, currentPlayer, board);
 
             //Printing Board after correct move
             boardPrinter.printBoard();
 
             //Checking game result
-            gameResult = resultChecker(listOfPlayers,inLineToWin,board,move,currentPlayer);
+            gameResult = resultChecker(listOfPlayers, inLineToWin, board, move, currentPlayer);
 
             //Changing player after every move
             currentPlayer = changePlayer(listOfPlayers, currentPlayer);
@@ -104,13 +104,13 @@ class Game {
         return list.get(0);
     }
 
-    private Move moveCreation(InputProvider inputProvider, Player currentPlayer){
+    private Move moveCreation(InputProvider inputProvider, Player currentPlayer) {
 
         Coordinates moveCoordinates;
         Move move;
         Language language = Language.getInstance();
 
-        while(true){
+        while (true) {
             try {
                 moveCoordinates = new Coordinates(inputProvider.getIntFromUser(), inputProvider.getIntFromUser());
                 move = new Move(moveCoordinates, currentPlayer);
@@ -125,51 +125,51 @@ class Game {
         return move;
     }
 
-    private boolean moveValidation(Move move, Board board){
+    private boolean moveValidation(Move move, Board board) {
 
-            try {
-                board.makeAMove(move);
-                return true;
-            } catch (ArrayIndexOutOfBoundsException e) {
-                output.displayMessage(language.getString("outOfBounds"));
-                return false;
-            } catch (FieldAlreadyTakenException e) {
-                output.displayMessage(language.getString("alreadyTaken"));
-                return false;
-            }
+        try {
+            board.makeAMove(move);
+            return true;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            output.displayMessage(language.getString("outOfBounds"));
+            return false;
+        } catch (FieldAlreadyTakenException e) {
+            output.displayMessage(language.getString("alreadyTaken"));
+            return false;
+        }
 
     }
 
-    private Move moveValidator(InputProvider inputProvider, Player currentPlayer, Board board){
+    private Move moveValidator(InputProvider inputProvider, Player currentPlayer, Board board) {
 
         Move move;
 
         do {
-             move = moveCreation(inputProvider, currentPlayer);
+            move = moveCreation(inputProvider, currentPlayer);
 
         } while (!moveValidation(move, board));
 
         return move;
     }
 
-    private boolean resultChecker(List<Player> listOfPlayers , Integer inLineToWin, Board board, Move move, Player currentPlayer){
+    private boolean resultChecker(List<Player> listOfPlayers, Integer inLineToWin, Board board, Move move, Player currentPlayer) {
 
         WinningChecker winningChecker = new WinningChecker();
         TieChecker tieChecker = new TieChecker();
 
         //Checking tie situation
-        if(tieChecker.check(board.playingBoard)){
+        if (tieChecker.check(board.playingBoard)) {
             output.displayMessage(language.getString("tie"));
             for (Player player : listOfPlayers) {
                 player.score = player.score + 1;
             }
-           return true;
+            return true;
         }
 
         //Checking winning situation
-        if (winningChecker.check2(board, move, inLineToWin)){
+        if (winningChecker.check2(board, move, inLineToWin)) {
             currentPlayer.score = currentPlayer.score + 3;
-            output.displayMessage(currentPlayer + " " + language.getString("wonARound") + " points:"  + currentPlayer.score);
+            output.displayMessage(currentPlayer + " " + language.getString("wonARound") + " points:" + currentPlayer.score);
             return true;
         }
 

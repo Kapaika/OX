@@ -4,7 +4,7 @@ package com.OX.app;
 /**
  * @author Bartosz Kupajski
  */
-class Player{
+class Player {
 
     Sign sign;
     final String name;
@@ -24,6 +24,6 @@ class Player{
 
     @Override
     public String toString() {
-        return  name ;
+        return name;
     }
 }

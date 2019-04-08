@@ -3,9 +3,6 @@ package com.OX.app;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -19,7 +16,7 @@ class Main {
         Scanner scanner = null;
 //        List<String> strings = Files.readAllLines(Paths.get(args[0]));
 //        stringBuilder.append()
-        if (args.length == 1 ) {
+        if (args.length == 1) {
             try (BufferedReader br = new BufferedReader(new FileReader(args[0]))) {
                 String line;
                 while ((line = br.readLine()) != null) {

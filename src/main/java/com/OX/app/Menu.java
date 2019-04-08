@@ -28,12 +28,12 @@ class Menu {
      * Creation of the game Settings; Language, Who is playing, Size of a Board and Winning Condition
      * and passing them to the game.
      */
-    void start(){
+    void start() {
 
         Settings settings = new Settings(inputProvider);
         settings.setSettings();
 
-        Game game = new Game(settings,inputProvider);
+        Game game = new Game(settings, inputProvider);
         game.init();
     }
 }

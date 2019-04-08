@@ -6,6 +6,7 @@ package com.OX.app;
 public interface Output {
 
     void displayMessage(String message);
+
     void displayError(String error);
 
 }

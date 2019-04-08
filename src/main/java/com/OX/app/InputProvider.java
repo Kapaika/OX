@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @author Bartosz Kupajski
  */
- class InputProvider {
+class InputProvider {
 
     private Scanner scanner;
 
@@ -16,6 +16,7 @@ import java.util.Scanner;
     int nextInt() {
         return this.scanner.nextInt();
     }
+
     String nextLine() {
         return this.scanner.nextLine();
     }

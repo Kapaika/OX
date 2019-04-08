@@ -13,13 +13,13 @@ class BoardCreator {
         this.col = col;
     }
 
-    Sign[][] createBoard(){
+    Sign[][] createBoard() {
 
         Sign[][] tabXO = new Sign[row][col];
 
-        for(int i = 0 ; i<row; i++){
-            for(int j=0; j<col;j++){
-                tabXO[i][j]= Sign.N;
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                tabXO[i][j] = Sign.N;
             }
         }
 

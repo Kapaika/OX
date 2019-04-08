@@ -16,7 +16,7 @@ class Settings {
         this.inputProvider = inputProvider;
     }
 
-    void setSettings(){
+    void setSettings() {
         languageChoice();
         addingPlayer(gameCompetitors);
         sizeOfBoard(gameRules);

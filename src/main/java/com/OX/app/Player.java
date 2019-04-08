@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * @author Bartosz Kupajski
  */
-class Player{
+class Player {
 
     Sign sign;
     String name;
@@ -25,6 +25,6 @@ class Player{
 
     @Override
     public String toString() {
-        return  name ;
+        return name;
     }
 }

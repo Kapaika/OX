@@ -18,14 +18,6 @@ public class GameCompetitorsTest{
     }
 
 
-    @Test
-    public void testConstructorWithList() throws NoSuchPlayerException {
-        ArrayList<Player> playersList = new ArrayList<>();
-        GameCompetitors gameCompetitors = new GameCompetitors(playersList);
-        gameCompetitors.addingPlayersWithNameAndSign("Bartosz");
-        gameCompetitors.addingPlayersWithNameAndSign("Maciej");
-        gameCompetitors.chooseStartingPlayer("Bartosz");
-    }
 
 
     @Test(expectedExceptions = {NoSuchPlayerException.class})

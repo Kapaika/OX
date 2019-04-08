@@ -1,14 +1,12 @@
 package com.OX.app;
 
-import java.util.Scanner;
-
 /**
  * @author Bartosz Kupajski
  */
 class Coordinates {
 
-    Integer x;
-    Integer y;
+    final Integer x;
+    final Integer y;
 
     Coordinates(Integer x, Integer y) {
         this.x = x;

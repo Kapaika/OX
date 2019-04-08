@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 /**
  *  Bartosz Kupajski
  */
+@SuppressWarnings("SuspiciousNameCombination")
 @Test
 public class WinningTest {
 
@@ -25,7 +26,7 @@ public class WinningTest {
     @Test(dataProvider = "winningHorizontalConditionCreated")
     public void testIfWinningCheckerIsWorkingHorizontalInBestScenario(int x, int y, int z, int v , Sign sign){
         BoardCreator boardCreator = new BoardCreator(5,5);
-        Board board = new Board(boardCreator.createBoard());
+        Board board = boardCreator.createBoard();
         Player player = new Player("Bartosz");
         player.setSign(sign);
         Coordinates coordinates1 = new Coordinates(x,y);
@@ -53,7 +54,7 @@ public class WinningTest {
     @Test(dataProvider = "notWinningHorizontalConditionCreated")
     public void testIfWinningCheckerIsNotWorkingHorizontalInBestScenario(int x, int y, int z, Sign sign){
         BoardCreator boardCreator = new BoardCreator(5,5);
-        Board board = new Board(boardCreator.createBoard());
+        Board board = boardCreator.createBoard();
         Player player = new Player("Bartosz");
         player.setSign(sign);
         Coordinates coordinates1 = new Coordinates(x,x);
@@ -86,7 +87,7 @@ public class WinningTest {
     @Test(dataProvider = "winningHorizontalConditionInBothLinesCreated")
     public void testIfWinningCheckerIsWorkingHorizontalInBothWays(int x, int y, int z,int v, Sign sign){
         BoardCreator boardCreator = new BoardCreator(7,7);
-        Board board = new Board(boardCreator.createBoard());
+        Board board = boardCreator.createBoard();
         Player player = new Player("Bartosz");
         player.setSign(sign);
         Coordinates coordinates1 = new Coordinates(x,y);
@@ -117,7 +118,7 @@ public class WinningTest {
     @Test(dataProvider = "winningVerticalConditionInBothLinesCreated")
     public void testIfWinningCheckerIsWorkingVerticalInBothWays(int x, int y, int z,int v, Sign sign){
         BoardCreator boardCreator = new BoardCreator(5,    5);
-        Board board = new Board(boardCreator.createBoard());
+        Board board = boardCreator.createBoard();
         Player player = new Player("Bartosz");
         player.setSign(sign);
         Coordinates coordinates1 = new Coordinates(y,x);
@@ -147,7 +148,7 @@ public class WinningTest {
     @Test(dataProvider = "winningDiagonalConditionInBothLinesCreated")
     public void testWinningDiagonalScenario(int x, int y, int z,int v, Sign sign){
         BoardCreator boardCreator = new BoardCreator(5,    5);
-        Board board = new Board(boardCreator.createBoard());
+        Board board = boardCreator.createBoard();
         Player player = new Player("Bartosz");
         player.setSign(sign);
         Coordinates coordinates1 = new Coordinates(x,x);
@@ -175,7 +176,7 @@ public class WinningTest {
     @Test(dataProvider = "winningReverseDiagonalConditionInBothLinesCreated")
     public void testWinningReverseDiagonalScenario(int x, int y, int z, int v, int b, Sign sign){
         BoardCreator boardCreator = new BoardCreator(5,    5);
-        Board board = new Board(boardCreator.createBoard());
+        Board board = boardCreator.createBoard();
         Player player = new Player("Bartosz");
         player.setSign(sign);
         Coordinates coordinates1 = new Coordinates(z,z);

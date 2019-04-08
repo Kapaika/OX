@@ -11,6 +11,37 @@ import java.util.Scanner;
 @Test
 public class GameTest {
 
+
+    public void endToEndTestWinVertical(){
+        InputProvider inputProvider = new InputProvider(new Scanner("0\n0\n0\n1\n1\n0\n0\n2\n2\n0\n2\n0\n0\n1\n1\n0\n0\n2\n0\n0\n2\n0\n0\n1\n1\n0\n0\n2\n0\n0\n"));
+        ArrayList<Player> playerArrayList = new ArrayList<>();
+        GameRules gameRules = new GameRules(3,new Coordinates(3,5));
+        GameCompetitors gameCompetitors = new GameCompetitors(playerArrayList);
+        gameCompetitors.addingPlayersWithNameAndSign("Bartosz");
+        gameCompetitors.addingPlayersWithNameAndSign("Maciej");
+        gameCompetitors.chooseStartingPlayerRandomly();
+        Settings settings = new Settings(inputProvider);
+        settings.gameRules = gameRules;
+        settings.gameCompetitors = gameCompetitors;
+        Game game = new Game(settings,inputProvider);
+        game.init();
+    }
+
+    public void endToEndTestWinHorizontalf(){
+        InputProvider inputProvider = new InputProvider(new Scanner("0\n0\n1\n1\n0\n1\n2\n2\n0\n2\n0\n0\n1\n1\n0\n1\n2\n2\n0\n2\n0\n0\n1\n1\n0\n1\n2\n2\n0\n2"));
+        ArrayList<Player> playerArrayList = new ArrayList<>();
+        GameRules gameRules = new GameRules(3,new Coordinates(4,3));
+        GameCompetitors gameCompetitors = new GameCompetitors(playerArrayList);
+        gameCompetitors.addingPlayersWithNameAndSign("Bartosz");
+        gameCompetitors.addingPlayersWithNameAndSign("Maciej");
+        gameCompetitors.chooseStartingPlayerRandomly();
+        Settings settings = new Settings(inputProvider);
+        settings.gameRules = gameRules;
+        settings.gameCompetitors = gameCompetitors;
+        Game game = new Game(settings,inputProvider);
+        game.init();
+    }
+
     public void endToEndTestWinHorizontal(){
         InputProvider inputProvider = new InputProvider(new Scanner("0\n0\n1\n1\n0\n1\n2\n2\n0\n2\n0\n0\n1\n1\n0\n1\n2\n2\n0\n2\n0\n0\n1\n1\n0\n1\n2\n2\n0\n2"));
         ArrayList<Player> playerArrayList = new ArrayList<>();
@@ -19,7 +50,10 @@ public class GameTest {
         gameCompetitors.addingPlayersWithNameAndSign("Bartosz");
         gameCompetitors.addingPlayersWithNameAndSign("Maciej");
         gameCompetitors.chooseStartingPlayerRandomly();
-        Game game = new Game(gameCompetitors,gameRules, inputProvider);
+        Settings settings = new Settings(inputProvider);
+        settings.gameRules = gameRules;
+        settings.gameCompetitors = gameCompetitors;
+        Game game = new Game(settings,inputProvider);
         game.init();
 
         assert gameCompetitors.listOfPlayers.get(0).score == 6 ;
@@ -33,7 +67,10 @@ public class GameTest {
         gameCompetitors.addingPlayersWithNameAndSign("Bartosz");
         gameCompetitors.addingPlayersWithNameAndSign("Maciej");
         gameCompetitors.chooseStartingPlayerRandomly();
-        Game game = new Game(gameCompetitors,gameRules, inputProvider);
+        Settings settings = new Settings(inputProvider);
+        settings.gameRules = gameRules;
+        settings.gameCompetitors = gameCompetitors;
+        Game game = new Game(settings,inputProvider);
         game.init();
 
         assert gameCompetitors.listOfPlayers.get(0).score == 6 && gameCompetitors.listOfPlayers.get(1).score == 3;
@@ -47,7 +84,10 @@ public class GameTest {
         gameCompetitors.addingPlayersWithNameAndSign("Bartosz");
         gameCompetitors.addingPlayersWithNameAndSign("Maciej");
         gameCompetitors.chooseStartingPlayerRandomly();
-        Game game = new Game(gameCompetitors,gameRules, inputProvider);
+        Settings settings = new Settings(inputProvider);
+        settings.gameRules = gameRules;
+        settings.gameCompetitors = gameCompetitors;
+        Game game = new Game(settings,inputProvider);
         game.init();
 
         assert gameCompetitors.listOfPlayers.get(0).score == 6 && gameCompetitors.listOfPlayers.get(1).score == 3;
@@ -64,7 +104,10 @@ public class GameTest {
         gameCompetitors.addingPlayersWithNameAndSign("Bartosz");
         gameCompetitors.addingPlayersWithNameAndSign("Maciej");
         gameCompetitors.chooseStartingPlayerRandomly();
-        Game game = new Game(gameCompetitors,gameRules, inputProvider);
+        Settings settings = new Settings(inputProvider);
+        settings.gameRules = gameRules;
+        settings.gameCompetitors = gameCompetitors;
+        Game game = new Game(settings,inputProvider);
         game.init();
 
         assert gameCompetitors.listOfPlayers.get(0).score == 4

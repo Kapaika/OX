@@ -14,7 +14,7 @@ public class TieTest {
     @Test
     public void testIfItIsATie(){
         BoardCreator boardCreator = new BoardCreator(3,    3);
-        Board board = new Board(boardCreator.createBoard());
+        Board board = boardCreator.createBoard();
         TieChecker tieChecker = new TieChecker();
         Player firstPlayer = new Player("Bartosz");
         firstPlayer.setSign(Sign.O);
@@ -47,14 +47,14 @@ public class TieTest {
         eightMove.makeAMove(board);
         Move ninenthMove = new Move(coordinates9,firstPlayer);
         ninenthMove.makeAMove(board);
-        Boolean result = tieChecker.check(board.playingBoard);
+        boolean result = tieChecker.check(board.playingBoard);
         Assert.assertTrue(result);
     }
 
     @Test
     public void testIfItIsNotATie(){
         BoardCreator boardCreator = new BoardCreator(3,    3);
-        Board board = new Board(boardCreator.createBoard());
+        Board board = boardCreator.createBoard();
         TieChecker tieChecker = new TieChecker();
         Player firstPlayer = new Player("Bartosz");
         firstPlayer.setSign(Sign.O);
@@ -85,7 +85,7 @@ public class TieTest {
         seventhMove.makeAMove(board);
         Move eightMove = new Move(coordinates8,secondPlayer);
         eightMove.makeAMove(board);
-        Boolean result = tieChecker.check(board.playingBoard);
+        boolean result = tieChecker.check(board.playingBoard);
         Assert.assertFalse(result);
     }
 

@@ -1,14 +1,13 @@
 package com.OX.app;
 
-import java.util.Random;
 
 /**
  * @author Bartosz Kupajski
  */
-class Player{
+class Player {
 
     Sign sign;
-    String name;
+    final String name;
     int score;
 
     Player(String name) {
@@ -25,6 +24,6 @@ class Player{
 
     @Override
     public String toString() {
-        return  name ;
+        return name;
     }
 }

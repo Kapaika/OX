@@ -5,24 +5,24 @@ package com.OX.app;
  */
 class BoardCreator {
 
-    private int row;
-    private int col;
+    final private int rows;
+    final private int cols;
 
-    BoardCreator(int row, int col) {
-        this.row = row;
-        this.col = col;
+    BoardCreator(int rows, int cols) {
+        this.rows = rows;
+        this.cols = cols;
     }
 
-    Sign[][] createBoard(){
+    Board createBoard() {
 
-        Sign[][] tabXO = new Sign[row][col];
+        Sign[][] tabXO = new Sign[rows][cols];
 
-        for(int i = 0 ; i<row; i++){
-            for(int j=0; j<col;j++){
-                tabXO[i][j]= Sign.N;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                tabXO[i][j] = Sign.N;
             }
         }
 
-        return tabXO;
+        return new Board(tabXO);
     }
 }

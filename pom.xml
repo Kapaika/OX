@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.OX</groupId>
+    <groupId>com.kupajski.OX</groupId>
     <artifactId>XO</artifactId>
     <version>0.1</version>
     <name>XO</name>
@@ -38,6 +38,16 @@
         </dependency>
     </dependencies>
 
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.11.0</version>
+            </plugin>
+        </plugins>
+    </reporting>
+
     <build>
         <plugins>
             <plugin>
@@ -70,7 +80,7 @@
                         <index>true</index>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.OX.app.Main</mainClass>
+                            <mainClass>com.OX.app.Automate</mainClass>
                         </manifest>
                         <manifestEntries>
                             <mode>development</mode>
@@ -91,10 +101,24 @@
 <!-- if diff enconding than UTF8 is needed: https://maven.apache.org/plugins/maven-resources-plugin/examples/encoding.html -->
                 <version>${version.plugin.maven.resources}</version>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+                <configuration>
+                    <port>9000</port>
+                    <tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
+                </configuration>
+            </plugin>
+
         </plugins>
+
+
+
         <resources>
             <resource>
-                <directory>src/main/java/resource</directory>
+                <directory>src/main/resource</directory>
             </resource>
         </resources>
     </build>

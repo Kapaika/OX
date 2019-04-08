@@ -8,12 +8,14 @@ import java.util.Scanner;
 /**
  * @author Bartosz Kupajski
  */
-public class Main {
+class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         StringBuilder stringBuilder = new StringBuilder();
         Scanner scanner = null;
+//        List<String> strings = Files.readAllLines(Paths.get(args[0]));
+//        stringBuilder.append()
         if (args.length == 1) {
             try (BufferedReader br = new BufferedReader(new FileReader(args[0]))) {
                 String line;

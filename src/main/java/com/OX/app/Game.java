@@ -77,6 +77,11 @@ class Game {
 
             //Printing Board after correct move
             boardPrinter.printBoard();
+//            try {
+//                Thread.sleep(500);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
 
             //Checking game result
             gameResult = resultChecker(listOfPlayers,inLineToWin,board,move,currentPlayer);

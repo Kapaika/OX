@@ -80,7 +80,7 @@
                         <index>true</index>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.OX.app.Main</mainClass>
+                            <mainClass>com.OX.app.Automate</mainClass>
                         </manifest>
                         <manifestEntries>
                             <mode>development</mode>

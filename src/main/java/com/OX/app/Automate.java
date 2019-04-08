@@ -1,22 +1,40 @@
 package com.OX.app;
 
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-
 import java.util.Random;
 
-@Test
-public class AutomateTest {
+/**
+ * @author Bartosz Kupajski
+ */
+public class Automate {
 
-    private int numberOfRows = 6;
-    private int numberOfCols = 6;
-    private int conditionToWin = 5;
-    int counter = 0;
+    private int numberOfRows;
+    private int numberOfCols;
+    private int conditionToWin;
+    private int counter = 0;
     private StringBuilder stringBuilder = new StringBuilder();
 
-    @BeforeTest
-    public void stringBuilderSet(){
+    public Automate(int numberOfRows, int numberOfCols, int conditionToWin) {
+        this.numberOfRows = numberOfRows;
+        this.numberOfCols = numberOfCols;
+        this.conditionToWin = conditionToWin;
+    }
+
+    public static void main(String[] args) {
+        //Automate automate = new Automate(5,5,3);
+        Automate automate = new Automate(Integer.parseInt(args[0]),Integer.parseInt(args[1]),Integer.parseInt(args[2]));
+        automate.automateGenerator();
+    }
+
+    void automateGenerator() {
+        beginningOfTheGameCreator();
+        horizontalGenerator(numberOfRows,numberOfCols,conditionToWin);
+        verticalGenerator(numberOfRows,numberOfCols,conditionToWin);
+        tieGenerator(numberOfRows,numberOfCols,conditionToWin);
+        diagonalGenerator(numberOfRows,numberOfCols,conditionToWin);
+        reverseGenerator(numberOfRows,numberOfCols,conditionToWin);
+    }
+
+    private void beginningOfTheGameCreator() {
         stringBuilder.append('1').append('\n')
                 .append('b').append('\n')
                 .append('k').append('\n')
@@ -24,18 +42,10 @@ public class AutomateTest {
                 .append(numberOfCols).append('\n')
                 .append(conditionToWin).append('\n')
                 .append('b').append('\n');
-
     }
 
-    @DataProvider
-    public Object[][] horizontalAutomateData() {
-        return new Object[][]{
-                {numberOfRows, numberOfCols, conditionToWin},
-        };
-    }
+    private void horizontalGenerator(int numberOfRows, int numberOfCols, int inLineToWin) {
 
-    @Test(dataProvider = "horizontalAutomateData")
-    public void horizontalAutomateTest(int numberOfRows, int numberOfBoardCols, int inLineToWin) {
         inLineToWin = inLineToWin - 1;
         Player firstPlayer = new Player("Bartosz");
         firstPlayer.setSign(Sign.X);
@@ -48,8 +58,8 @@ public class AutomateTest {
         Coordinates secondPlayerCoordinates;
         HorizontalChecker horizontalChecker = new HorizontalChecker();
         for (int start = 0; start < numberOfRows; start++) {
-            for (int i = 0; i <= numberOfBoardCols - inLineToWin - 1; i++) {
-                BoardCreator boardCreator = new BoardCreator(numberOfRows, numberOfBoardCols);
+            for (int i = 0; i <= numberOfCols - inLineToWin - 1; i++) {
+                BoardCreator boardCreator = new BoardCreator(numberOfRows, numberOfCols);
                 Board board = boardCreator.createBoard();
                 BoardPrinter boardPrinter = new BoardPrinter(board);
                 for (int j = i; j < i + inLineToWin + 1; j++) {
@@ -62,7 +72,7 @@ public class AutomateTest {
                         counter++;
                         break;
                     }
-                    randomY = random.nextInt(numberOfBoardCols);
+                    randomY = random.nextInt(numberOfCols);
                     do {
                         randomX = random.nextInt(numberOfRows);
                         secondPlayerCoordinates = new Coordinates(randomX, randomY);
@@ -70,22 +80,15 @@ public class AutomateTest {
                     stringBuilder.append(randomX).append('\n').append(randomY).append('\n');
                     secondPlayerMove = new Move(secondPlayerCoordinates, secondPlayer);
                     board.makeAMove(secondPlayerMove);
+                    boardPrinter.printBoard();
                 }
             }
         }
+
     }
 
+    private void verticalGenerator(int numberOfRows, int numberOfCols, int inLineToWin) {
 
-    @DataProvider
-    public Object[][] verticalAutomateData() {
-        return new Object[][]{
-                {numberOfRows, numberOfCols, conditionToWin},
-        };
-    }
-
-
-    @Test(dataProvider = "verticalAutomateData")
-    public void verticalAutomateTest(int numberOfRows, int numberOfBoardCols, int inLineToWin) {
         inLineToWin = inLineToWin - 1;
         Player player = new Player("Bartosz");
         player.setSign(Sign.X);
@@ -97,9 +100,9 @@ public class AutomateTest {
         Move secondPlayerMove;
         Coordinates secondPlayerCoordinates;
         VerticalChecker verticalChecker = new VerticalChecker();
-        for (int start = 0; start < numberOfBoardCols; start++) {
+        for (int start = 0; start < numberOfCols; start++) {
             for (int i = 0; i <= numberOfRows - inLineToWin - 1; i++) {
-                BoardCreator boardCreator = new BoardCreator(numberOfRows, numberOfBoardCols);
+                BoardCreator boardCreator = new BoardCreator(numberOfRows, numberOfCols);
                 Board board = boardCreator.createBoard();
                 BoardPrinter boardPrinter = new BoardPrinter(board);
                 for (int j = i; j < i + inLineToWin + 1; j++) {
@@ -114,7 +117,7 @@ public class AutomateTest {
                     }
                     randomX = random.nextInt(numberOfRows);
                     do {
-                        randomY = random.nextInt(numberOfBoardCols);
+                        randomY = random.nextInt(numberOfCols);
                         secondPlayerCoordinates = new Coordinates(randomX, randomY);
                     } while (randomY == start || board.playingBoard[randomX][randomY] != Sign.N);
                     secondPlayerMove = new Move(secondPlayerCoordinates, secondPlayer);
@@ -125,15 +128,7 @@ public class AutomateTest {
         }
     }
 
-    @DataProvider
-    public Object[][] diagonalAutomateData() {
-        return new Object[][]{
-                {numberOfRows, numberOfCols, conditionToWin},
-        };
-    }
-
-    @Test(dataProvider = "diagonalAutomateData")
-    public void diagonalAutomateTest(int numberOfRows, int numberOfBoardCols, int inLineToWin) {
+    private void diagonalGenerator(int numberOfRows, int numberOfCols, int inLineToWin){
         inLineToWin = inLineToWin - 1;
         Player player = new Player("Bartosz");
         player.setSign(Sign.X);
@@ -146,9 +141,9 @@ public class AutomateTest {
         Coordinates secondPlayerCoordinates;
         DiagonalChecker diagonalChecker = new DiagonalChecker();
 
-        for (int smallSquareX = 0; smallSquareX < numberOfBoardCols - inLineToWin; smallSquareX++) {
+        for (int smallSquareX = 0; smallSquareX < numberOfCols - inLineToWin; smallSquareX++) {
             for (int smallSquareY = 0; smallSquareY < numberOfRows - inLineToWin; smallSquareY++) {
-                BoardCreator boardCreator = new BoardCreator(numberOfRows, numberOfBoardCols);
+                BoardCreator boardCreator = new BoardCreator(numberOfRows, numberOfCols);
                 Board board = boardCreator.createBoard();
                 BoardPrinter boardPrinter = new BoardPrinter(board);
                 for (int i = 0; i <= inLineToWin; i++) {
@@ -163,7 +158,7 @@ public class AutomateTest {
                         break;
                     }
                     do {
-                        randomY = random.nextInt(numberOfBoardCols);
+                        randomY = random.nextInt(numberOfCols);
                         randomX = random.nextInt(numberOfRows);
                         secondPlayerCoordinates = new Coordinates(randomX, randomY);
                     } while (randomX != i || (board.playingBoard[randomX][randomY] == Sign.O || board.playingBoard[randomX][randomY] == Sign.X));
@@ -176,73 +171,21 @@ public class AutomateTest {
         }
     }
 
-    @DataProvider
-    public Object[][] reverseDiagonalAutomateData() {
-        return new Object[][]{
-                {numberOfRows, numberOfCols, conditionToWin},
-        };
-    }
+    private void tieGenerator(int numberOfRows,int numberOfCols,int inLineToWin) {
 
-    @Test(dataProvider = "reverseDiagonalAutomateData")
-    public void reverseDiagonalAutomateTest(int numberOfRows, int numberOfBoardCols, int inLineToWin) {
-        inLineToWin = inLineToWin - 1;
-        Player player = new Player("Bartosz");
-        player.setSign(Sign.X);
-        Player secondPlayer = new Player("Maciej");
-        secondPlayer.setSign(Sign.O);
-        Random random = new Random();
-        int randomX;
-        int randomY;
-        Move secondPlayerMove;
-        Coordinates secondPlayerCoordinates;
-        ReverseDiagonalChecker reverseDiagonalChecker = new ReverseDiagonalChecker();
-
-
-        for (int smallSquareX = inLineToWin; smallSquareX < numberOfBoardCols; smallSquareX++) {
-            for (int smallSquareY = 0; smallSquareY < numberOfRows - inLineToWin; smallSquareY++) {
-                BoardCreator boardCreator = new BoardCreator(numberOfRows, numberOfBoardCols);
-                Board board = boardCreator.createBoard();
-                BoardPrinter boardPrinter = new BoardPrinter(board);
-                for (int i = 0; i <= inLineToWin; i++) {
-                    Coordinates coordinates = new Coordinates(smallSquareX - i, smallSquareY + i);
-                    Move move = new Move(coordinates, player);
-                    stringBuilder.append(smallSquareX-i).append('\n').append(smallSquareY+i).append('\n');
-                    board.makeAMove(move);
-                    if (reverseDiagonalChecker.check(board, move, inLineToWin)) {
-                        boardPrinter.printBoard();
-                        System.out.println("Wygrana");
-                        counter++;
-                        break;
-                    }
-                    do {
-                        randomY = random.nextInt(numberOfBoardCols);
-                        randomX = random.nextInt(numberOfRows);
-                        secondPlayerCoordinates = new Coordinates(randomX, randomY);
-                    } while (randomX != smallSquareX || (board.playingBoard[randomX][randomY] == Sign.O || board.playingBoard[randomX][randomY] == Sign.X));
-                    secondPlayerMove = new Move(secondPlayerCoordinates, secondPlayer);
-                    stringBuilder.append(secondPlayerCoordinates.x).append('\n').append(secondPlayerCoordinates.y).append('\n');
-                    board.makeAMove(secondPlayerMove);
-                }
-
-            }
-        }
-    }
-
-    @Test(dataProvider = "reverseDiagonalAutomateData")
-    public void tieAutomateTest(int numberOfRows, int numberOfBoardCols, int inLineToWin) {
         Player player = new Player("Bartosz");
         player.setSign(Sign.O);
         Player secondPlayer = new Player("Maciej");
         secondPlayer.setSign(Sign.X);
         int changeSignFirst = 0;
 
-        BoardCreator boardCreator = new BoardCreator(numberOfRows, numberOfBoardCols);
+        BoardCreator boardCreator = new BoardCreator(numberOfRows, numberOfCols);
         Board board = boardCreator.createBoard();
         BoardPrinter boardPrinter = new BoardPrinter(board);
 
         TieChecker tieChecker = new TieChecker();
 
-        for (int smallSquareX = 0; smallSquareX < numberOfBoardCols; smallSquareX++) {
+        for (int smallSquareX = 0; smallSquareX < numberOfCols; smallSquareX++) {
 
             if (changeSignFirst == 2) {
                 if (player.sign == Sign.X) {
@@ -278,12 +221,52 @@ public class AutomateTest {
                 }
             }
             changeSignFirst++;
+
         }
     }
 
-    @Test
-    public void automateFullTest(){
-        Automate automate = new Automate(5,5,3);
-        automate.automateGenerator();
+    private void reverseGenerator(int numberOfRows, int numberOfCols, int inLineToWin){
+
+        inLineToWin = inLineToWin - 1;
+        Player player = new Player("Bartosz");
+        player.setSign(Sign.X);
+        Player secondPlayer = new Player("Maciej");
+        secondPlayer.setSign(Sign.O);
+        Random random = new Random();
+        int randomX;
+        int randomY;
+        Move secondPlayerMove;
+        Coordinates secondPlayerCoordinates;
+        ReverseDiagonalChecker reverseDiagonalChecker = new ReverseDiagonalChecker();
+
+
+        for (int smallSquareX = inLineToWin; smallSquareX < numberOfCols; smallSquareX++) {
+            for (int smallSquareY = 0; smallSquareY < numberOfRows - inLineToWin; smallSquareY++) {
+                BoardCreator boardCreator = new BoardCreator(numberOfRows, numberOfCols);
+                Board board = boardCreator.createBoard();
+                BoardPrinter boardPrinter = new BoardPrinter(board);
+                for (int i = 0; i <= inLineToWin; i++) {
+                    Coordinates coordinates = new Coordinates(smallSquareX - i, smallSquareY + i);
+                    Move move = new Move(coordinates, player);
+                    stringBuilder.append(smallSquareX-i).append('\n').append(smallSquareY+i).append('\n');
+                    board.makeAMove(move);
+                    if (reverseDiagonalChecker.check(board, move, inLineToWin)) {
+                        boardPrinter.printBoard();
+                        System.out.println("Wygrana");
+                        counter++;
+                        break;
+                    }
+                    do {
+                        randomY = random.nextInt(numberOfCols);
+                        randomX = random.nextInt(numberOfRows);
+                        secondPlayerCoordinates = new Coordinates(randomX, randomY);
+                    } while (randomX != smallSquareX || (board.playingBoard[randomX][randomY] == Sign.O || board.playingBoard[randomX][randomY] == Sign.X));
+                    secondPlayerMove = new Move(secondPlayerCoordinates, secondPlayer);
+                    stringBuilder.append(secondPlayerCoordinates.x).append('\n').append(secondPlayerCoordinates.y).append('\n');
+                    board.makeAMove(secondPlayerMove);
+                }
+
+            }
+        }
     }
 }
